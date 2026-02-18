@@ -59,3 +59,5 @@ body {
 .font-poppins {
   font-family: var(--font-poppins), sans-serif !important;
 }
+
+/* Typography classes are handled in lib/typography.ts */
