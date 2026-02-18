@@ -33,8 +33,60 @@ const cormorant = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "VRM Group",
-  description: "VRM Group - Excellence in Business",
+  title: "VRM Group - Excellence in Business",
+  description: "VRM Group - Excellence in Business. Leading diversified business group delivering excellence across multiple industries.",
+  keywords: ["VRM Group", "business", "excellence", "infrastructure", "warehousing", "engineering"],
+  authors: [{ name: "VRM Group" }],
+  creator: "VRM Group",
+  publisher: "VRM Group",
+  metadataBase: new URL("https://vrmgroup.com"), // Update with your actual domain
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "VRM Group - Excellence in Business",
+    description: "VRM Group - Excellence in Business. Leading diversified business group delivering excellence across multiple industries.",
+    url: "https://vrmgroup.com", // Update with your actual domain
+    siteName: "VRM Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "VRM Group Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VRM Group - Excellence in Business",
+    description: "VRM Group - Excellence in Business. Leading diversified business group delivering excellence across multiple industries.",
+    images: ["/logo.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/logo.png", type: "image/png" },
+      { url: "/logo.png", type: "image/png", sizes: "32x32" },
+      { url: "/logo.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: [
+      { url: "/logo.png", type: "image/png" },
+    ],
+    shortcut: "/logo.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
