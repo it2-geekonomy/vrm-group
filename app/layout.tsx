@@ -89,6 +89,9 @@ export const metadata: Metadata = {
   },
 };
 
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -97,7 +100,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${cinzel.variable} ${cormorant.variable}`}>
       <body className="antialiased">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
