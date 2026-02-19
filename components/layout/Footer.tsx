@@ -74,7 +74,10 @@ export default function Footer() {
             {footerInfo.copyright}
           </Typography>
           <Typography variant="body-lg" className="text-black font-cormorant">
-            {footerInfo.digitalPartner}
+            Digital Partner:{" "}
+            <Link href="https://thegeekonomy.com/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-black underline">
+              Geekonomy
+            </Link>
           </Typography>
         </div>
       </div>
