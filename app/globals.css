@@ -50,14 +50,68 @@ body {
 /* Ensure font variables are available */
 .font-cinzel {
   font-family: var(--font-cinzel) !important;
+  text-transform: none !important;
+  font-variant: normal !important;
+  font-feature-settings: normal !important;
+  font-variant-caps: normal !important;
 }
 
 .font-cormorant {
   font-family: var(--font-cormorant) !important;
+  text-transform: none !important;
+  font-variant: normal !important;
+  font-feature-settings: normal !important;
+  font-variant-caps: normal !important;
 }
 
 .font-poppins {
   font-family: var(--font-poppins), sans-serif !important;
+  text-transform: none !important;
+  font-variant: normal !important;
+  font-feature-settings: normal !important;
+  font-variant-caps: normal !important;
+}
+
+/* Force normal case for all headings and nav elements */
+h1, h2, h3, h4, h5, h6,
+h1.font-cinzel, h2.font-cinzel, h3.font-cinzel, h4.font-cinzel, h5.font-cinzel, h6.font-cinzel,
+h1.font-cormorant, h2.font-cormorant, h3.font-cormorant, h4.font-cormorant, h5.font-cormorant, h6.font-cormorant,
+h1.font-poppins, h2.font-poppins, h3.font-poppins, h4.font-poppins, h5.font-poppins, h6.font-poppins,
+nav h1, nav h2, nav h3, nav h4, nav h5, nav h6,
+nav a h1, nav a h2, nav a h3, nav a h4, nav a h5, nav a h6,
+nav a,
+nav a *,
+nav .font-cinzel,
+nav .font-cormorant,
+nav .font-poppins,
+nav h4.font-cinzel,
+nav a h4.font-cinzel,
+.nav-link {
+  text-transform: none !important;
+  font-variant: normal !important;
+  font-feature-settings: normal !important;
+  font-variant-caps: normal !important;
+}
+
+/* Force normal case for all nav elements */
+nav {
+  text-transform: none !important;
+}
+
+nav * {
+  text-transform: none !important;
+}
+
+/* Force normal case for navbar */
+nav h4,
+nav a h4,
+nav .font-cinzel,
+nav h4.font-cinzel,
+.nav-link {
+  text-transform: none !important;
+  font-variant: normal !important;
+  font-feature-settings: normal !important;
+  font-variant-caps: normal !important;
 }
 
 /* Typography classes are handled in lib/typography.ts */

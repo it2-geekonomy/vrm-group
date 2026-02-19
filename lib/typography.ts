@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 export interface TypographyProps {
   children: React.ReactNode;
@@ -16,6 +17,7 @@ export interface TypographyProps {
     | "caption"
     | "overline";
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const variantStyles = {
@@ -58,10 +60,47 @@ const Typography: React.FC<TypographyProps> = ({
   children,
   variant = "body-lg",
   className,
+  style,
 }) => {
   const baseStyles = "text-black";
   const variantClass = variantStyles[variant];
-  const fontFamilyClass = defaultFontFamily[variant];
+  
+  // Check if className contains a font class override
+  const hasFontOverride = className?.includes("font-cinzel") || 
+                         className?.includes("font-cormorant") || 
+                         className?.includes("font-poppins");
+  
+  // Check if className contains a font weight override
+  const hasFontWeightOverride = className?.includes("font-thin") ||
+                                className?.includes("font-extralight") ||
+                                className?.includes("font-light") ||
+                                className?.includes("font-normal") ||
+                                className?.includes("font-medium") ||
+                                className?.includes("font-semibold") ||
+                                className?.includes("font-bold") ||
+                                className?.includes("font-extrabold") ||
+                                className?.includes("font-black");
+  
+  // Remove font weight from variantClass if override is present in className
+  let finalVariantClass = variantClass;
+  if (hasFontWeightOverride && variantClass) {
+    // Remove any font weight classes from variantClass (but keep font family classes)
+    const fontFamilyClasses = ['font-cinzel', 'font-cormorant', 'font-poppins'];
+    finalVariantClass = variantClass
+      .split(/\s+/)
+      .filter(cls => {
+        // Keep font family classes
+        if (fontFamilyClasses.includes(cls)) return true;
+        // Remove font weight classes (font-thin, font-light, font-normal, etc.)
+        if (cls.startsWith('font-') && !fontFamilyClasses.includes(cls)) return false;
+        // Keep everything else
+        return true;
+      })
+      .join(' ')
+      .trim();
+  }
+  
+  const fontFamilyClass = hasFontOverride ? "" : defaultFontFamily[variant];
 
   const getTag = () => {
     if (variant === "display-2xl" || variant === "display-xl" || variant === "h1" || variant === "h2" || variant === "h3" || variant === "h4") {
@@ -70,11 +109,21 @@ const Typography: React.FC<TypographyProps> = ({
     return variant === "caption" || variant === "overline" ? "span" : "p";
   };
 
+  const elementProps: any = {
+    className: cn(baseStyles, finalVariantClass, fontFamilyClass, className),
+  };
+
+  // Merge style prop
+  if (style || className?.includes('normal-case')) {
+    elementProps.style = {
+      ...style,
+      ...(className?.includes('normal-case') && { textTransform: 'none' }),
+    };
+  }
+
   return React.createElement(
     getTag(),
-    {
-      className: clsx(baseStyles, variantClass, fontFamilyClass, className),
-    },
+    elementProps,
     children
   );
 };
