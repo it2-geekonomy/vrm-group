@@ -1,4 +1,5 @@
 import Typography from "@/components/ui/Typography";
+import VisionSection from "@/components/sections/VisionSection";
 import OurBusinessesSection from "@/components/sections/OurBusinessesSection";
 import ConnectSection from "@/components/sections/ConnectSection";
 
@@ -15,6 +16,7 @@ export default function Home() {
           </Typography>
         </div>
       </div>
+      <VisionSection />
       <OurBusinessesSection />
       <ConnectSection />
     </>
