@@ -7,7 +7,7 @@ import { footerLeftLinks, footerRightLinks, footerInfo } from "@/lib/constants";
 export default function Footer() {
   return (
     <footer className="bg-[#B2B2B2] text-black">
-      <div className="px-4 sm:px-6 lg:px-20 py-12">
+      <div className="px-4 sm:px-6 lg:px-20 py-6 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
           {/* Left Section - Company Information */}
           <div className="flex flex-col items-center lg:items-start pr-0 lg:pr-12 pb-8 lg:pb-0 mb-8 lg:mb-0 lg:border-r-2 border-white">
@@ -17,7 +17,7 @@ export default function Footer() {
                 alt="VRM Group Logo"
                 width={150}
                 height={50}
-                className="w-auto h-auto"
+                className="lg:w-auto lg:h-auto w-32"
               />
             </Link>
             <Typography variant="body-sm" className="text-black mb-2 font-cormorant font-medium text-center lg:text-left">
@@ -69,7 +69,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="px-4 sm:px-6 lg:px-8 py-2 bg-white">
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center lg:gap-4">
           <Typography variant="body-lg" className="text-black font-cormorant">
             {footerInfo.copyright}
           </Typography>
