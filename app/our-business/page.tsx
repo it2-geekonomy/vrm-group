@@ -50,7 +50,7 @@ const businessSections: BusinessSection[] = [
   {
     title: "Exotic Hospitality",
     description:
-      "Exotic Hospitality was established to provide dependable and professional management for residential properties. Backed by the strength and credibility of VRM Group, we bring organized systems, experienced supervision and consistent service standards.",
+      "Serving as the technical backbone of VRM Group's industrial ecosystem, the facility integrates CNC-enabled manufacturing systems and modern fabrication practices to support industrial requirements with accuracy and efficiency.",
     image: "https://www.figma.com/api/mcp/asset/c4cdd07d-61d6-4e4c-bcf3-98653fe1bd00",
     href: "/our-business/exotic-hospitality",
   },
@@ -95,7 +95,7 @@ function StackCard({
       className="absolute inset-0 flex items-center justify-center px-4 md:px-10"
     >
       <div className="grid w-full max-w-6xl gap-10 rounded-2xl border border-white/15 bg-[#111111]/70 p-6 backdrop-blur-sm md:grid-cols-2 md:p-10">
-        <div className={`${isImageRight ? "md:order-1" : "md:order-2"} flex items-center justify-center`}>
+        <div className={`${isImageRight ? "md:order-1" : "md:order-0"} flex items-center justify-center`}>
           <img
             src={section.image}
             alt={section.title}
@@ -104,13 +104,15 @@ function StackCard({
         </div>
         <div className={`${isImageRight ? "md:order-0" : "md:order-1"} flex flex-col justify-center`}>
           <h2 className="font-cinzel text-3xl font-semibold text-white md:text-4xl">{section.title}</h2>
-          <p className="mt-5 max-w-xl font-poppins text-base leading-7 text-white/85 md:text-lg">{section.description}</p>
+          <p className="mt-5 max-w-xl font-cormorant text-[25px] font-medium leading-[35px] tracking-normal text-white/85">
+            {section.description}
+          </p>
           <div className="mt-8">
             <Link
               href={section.href}
-              className="inline-flex items-center rounded-full border border-white bg-[#8f191d] px-8 py-3 font-poppins text-sm font-medium uppercase tracking-wide text-white transition hover:bg-[#a81f24]"
+              className="inline-flex items-center rounded-full border border-white bg-[#ED1C2475] px-14 py-4 font-poppins text-base font-medium uppercase tracking-wide text-white transition hover:bg-[#ed1c24a0] md:px-20 md:py-4 md:text-lg"
             >
-              View More
+              VIEW MORE
             </Link>
           </div>
         </div>
@@ -150,9 +152,9 @@ export default function OurBusinessPage() {
         <img
           src="https://www.figma.com/api/mcp/asset/f13a8277-a8cd-4383-b3b4-af276da49fd3"
           alt="Our Business Banner"
-          className="h-[58vh] w-full object-cover opacity-45 md:h-[72vh]"
+          className="h-[58vh] w-full object-cover md:h-[72vh]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-[#0b0b0b]" />
+        <div className="absolute inset-0 bg-black/40" />
 
         <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
           <h1 className="max-w-5xl font-cinzel text-3xl font-medium leading-tight text-white md:text-5xl">
