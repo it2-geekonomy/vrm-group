@@ -29,7 +29,7 @@ const businessSections: BusinessSection[] = [
   {
     title: "Exotic Retreat",
     description:
-      "Exotic Retreat represents VRM Group's approach to hospitality, blending comfort, accessibility and environment-driven experiences.",
+      "Exotic Retreat represents VRM Group's approach to hospitality, blending comfort, accessibility and environment-driven experiences for accommodation, families, professionals and event-visitors.",
     image:
       "https://www.figma.com/api/mcp/asset/a4acb604-59bb-42bf-beb8-3ba941caca5b",
     href: "/our-business/exotic-retreat",
@@ -37,7 +37,7 @@ const businessSections: BusinessSection[] = [
   {
     title: "Elite Infra",
     description:
-      "Elite Infra represents the group's commitment to construction strength and responsible development.",
+      "Elite Infra represents the group's commitment to construction, residential projects and infrastructure initiatives for community and growth.",
     image:
       "https://www.figma.com/api/mcp/asset/85165f4c-88ec-4e89-8fc7-747cb7c48ee1",
     href: "/our-business/elite-infra",
@@ -45,7 +45,7 @@ const businessSections: BusinessSection[] = [
   {
     title: "Exotic Enterprises",
     description:
-      "Strategically developed warehousing facilities supporting industrial growth.",
+      "Strategically developed warehousing facilities to support regional enterprise development.",
     image:
       "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
     href: "/our-business/elite-enterprises",
@@ -53,10 +53,34 @@ const businessSections: BusinessSection[] = [
   {
     title: "Exotic Bar & Bistro",
     description:
-      "A lifestyle dining space combining ambience, food and entertainment.",
+      "A lifestyle dining space combining ambience, food and entertainment as part of the group's expansion into the leisure sector.",
     image:
       "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
     href: "/our-business/exotic-bar-bistro",
+  },
+  {
+    title: "Exotic Innovation & Engineering",
+    description:
+      "The technical backbone of the group, integrating CNC-enabled manufacturing and modern fabrication practices.",
+    image:
+      "https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=800&q=80",
+    href: "/our-business/elite-innovation-engineering",
+  },
+  {
+    title: "Exotic Hospitality",
+    description:
+      "Exotic Hospitality provides dependable management for residential properties with organized services and experienced supervision.",
+    image:
+      "https://images.unsplash.com/photo-1582719478250-c89c6d9cba22?w=800&q=80",
+    href: "/our-business/exotic-hospitality",
+  },
+  {
+    title: "Greatway International School",
+    description:
+      "An early initiative within the VRM ecosystem, committed to academic discipline, personal development and foundational education.",
+    image:
+      "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80",
+    href: "/school",
   },
 ];
 
@@ -77,8 +101,9 @@ function StackCard({
   const SCALE_GAP = 0.025; // size difference: front card bigger, back cards smaller
   const PEEK = 30; // how much back cards stick up (peek from top)
 
-  const start = index * 0.25;
-  const end = start + 0.25;
+  const segment = 1 / businessSections.length;
+  const start = index * segment;
+  const end = start + segment;
 
   // Cards behind peek from top (more negative y); last/current card stays central (y=0)
   const yEnd = -(businessSections.length - 1 - index) * PEEK;
@@ -157,26 +182,26 @@ function MobileCardList() {
       {businessSections.map((section) => (
         <article
           key={section.title}
-          className="grid w-full max-w-6xl mx-auto gap-6 rounded-2xl border border-white/15 bg-[#0d0d0d]/90 p-5 text-center sm:p-6 sm:text-left"
+          className="grid w-full max-w-6xl mx-auto gap-6 rounded-2xl border border-white/15 bg-[#0d0d0d]/90 p-5 text-center md:p-6 md:text-left"
         >
           <div className="flex justify-center order-1">
             <img
               src={section.image}
               alt={section.title}
-              className="h-[220px] w-full max-w-[280px] rounded-md object-cover shadow-2xl sm:h-[280px]"
+              className="h-[220px] w-full max-w-[280px] rounded-md object-cover shadow-2xl md:h-[280px]"
             />
           </div>
-          <div className="flex flex-col items-center order-2 sm:items-start">
+          <div className="flex flex-col items-center order-2 md:items-start">
             <Typography variant="h2" className="text-white">
               {section.title}
             </Typography>
-            <Typography variant="body-xl" className="mt-3 leading-relaxed text-white/80 sm:mt-4">
+            <Typography variant="body-xl" className="mt-3 leading-relaxed text-white/80 md:mt-4">
               {section.description}
             </Typography>
             <Link
               href={section.href}
               scroll={false}
-              className="mt-6 inline-flex w-fit items-center justify-center rounded-full border border-white bg-[#ED1C2475] px-10 py-3 text-white transition hover:bg-[#ed1c24a0] sm:mt-8 sm:px-14 sm:py-4"
+              className="mt-6 inline-flex w-fit items-center justify-center rounded-full border border-white bg-[#ED1C2475] px-10 py-3 text-white transition hover:bg-[#ed1c24a0] md:mt-8 md:px-14 md:py-4"
             >
               <Typography variant="overline" className="text-white normal-case">
                 VIEW MORE
@@ -249,7 +274,6 @@ export default function OurBusinessPage() {
         </div>
       </section>
 
-      <div className="mx-auto my-10 h-px w-[92%] bg-white/20" />
 
       <BusinessStack />
     </main>
