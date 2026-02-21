@@ -5,19 +5,19 @@ import Typography from "@/lib/typography";
 
 export default function WhoWeAreSection() {
   return (
-    <section className="w-full bg-black py-6 lg:py-24 border-t border-b border-white/30">
+    <section className="w-full bg-black py-6 xl:py-24 border-t border-b border-white/30">
       <div className="w-full max-auto px-6 lg:px-10 xl:px-24 2xl:px-36">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-2 xl:gap-4 items-center">
           
           {/* IMAGE - 40% */}
           <div className="lg:col-span-2 flex justify-center lg:justify-end xl:justify-end order-1 lg:order-2 mb-4 lg:mb-0">
-            <div className="relative w-full max-w-md aspect-[4/5]">
+            <div className="relative w-full max-w-[240px] lg:max-w-md aspect-[4/5] lg:aspect-[5/5]">
               <Image
                 src="/About/About image.webp"
                 alt="Founder"
                 fill
                 priority
-                className="object-cover rounded-lg shadow-lg"
+                className="object-cover shadow-lg"
                 style={{ objectPosition: "center" }}
               />
             </div>
@@ -27,12 +27,12 @@ export default function WhoWeAreSection() {
           <div className="lg:col-span-3 order-2 lg:order-1">
             <Typography
               variant="display-2xl"
-              className="text-white mb-4 lg:mb-10 font-cormorant leading-relaxed font-medium"
+              className="text-white mb-4 lg:mb-10 font-cormorant leading-relaxed font-medium text-center lg:text-left"
             >
               Who we are
             </Typography>
 
-            <div className="space-y-3 lg:space-y-8">
+            <div className="space-y-3 lg:space-y-8 md:px-12 lg:px-0">
               <Typography
                 variant="h1"
                 className="text-white font-light font-cormorant"

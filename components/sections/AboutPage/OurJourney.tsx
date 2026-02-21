@@ -93,12 +93,12 @@ export default function TimelineSection() {
   }, [progressY, dotY]);
 
   return (
-    <section className="relative w-full bg-black py-4 lg:py-24 px-2 sm:px-4 md:px-22 lg:px-4 xl:px-32" ref={containerRef}>
-      <div className="mx-auto text-left mb-16 lg:mb-20 lg:px-6">
+    <section className="relative w-full bg-black py-4 xl:py-24 px-2 sm:px-4 md:px-22 lg:px-4 xl:px-32" ref={containerRef}>
+      <div className="mx-auto text-center lg:text-left mb-16 lg:mb-20 lg:px-6">
         <Typography variant="display-2xl" className="text-white font-cormorant mb-4 leading-relaxed font-medium whitespace-nowrap">
           {JOURNEY_HEADING}
         </Typography>
-        <Typography variant="h1" className="text-white/90 max-w-3xl font-cormorant font-light">
+        <Typography variant="h1" className="text-white/90 max-w-3xl font-cormorant font-light mx-auto lg:mx-0">
           {JOURNEY_DESCRIPTION}
         </Typography>
       </div>
