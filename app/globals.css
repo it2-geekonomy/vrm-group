@@ -115,3 +115,13 @@ nav h4.font-cinzel,
 }
 
 /* Typography classes are handled in lib/typography.ts */
+
+/* Contact form – focus border color */
+.contact-form-fields input:focus {
+  border-bottom-color: #ED1C2475 !important;
+  outline: none;
+}
+.contact-form-fields textarea:focus {
+  border-color: #ED1C2475 !important;
+  outline: none;
+}

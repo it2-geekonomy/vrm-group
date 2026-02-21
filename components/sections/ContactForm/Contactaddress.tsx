@@ -1,0 +1,85 @@
+"use client";
+
+import Typography from "@/lib/typography";
+import {
+  CONTACT_HEADING,
+  CONTACT_DESCRIPTION,
+  CONTACT_ADDRESS,
+  CONTACT_PHONE_LABEL,
+  CONTACT_PHONE,
+} from "@/lib/constants";
+
+export default function ContactForm() {
+  return (
+    <section className="w-full bg-black text-white pt-6 pb-6 lg:pt-24 lg:pb-24 pl-6 pr-6 sm:pl-8 sm:pr-8 md:pl-6 md:pr-8 lg:pl-16 lg:pr-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[60%_40%] gap-6 md:gap-3 lg:grid-cols-2 lg:gap-16 items-center">
+        {/* Left column – text (stacked: after image; from 768px: left column) */}
+        <div className="order-2 md:order-1 flex flex-col justify-center space-y-3 lg:space-y-6 min-w-0">
+          <Typography
+            variant="display-2xl"
+            className="text-[#FFFFFF] font-cormorant font-semibold"
+          >
+            {CONTACT_HEADING}
+          </Typography>
+
+          <Typography
+            variant="h1"
+            className="text-white font-cormorant font-light leading-relaxed max-w-lg min-w-0"
+          >
+            {CONTACT_DESCRIPTION}
+          </Typography>
+
+          <div className="space-y-3 lg:space-y-4 pt-1 lg:pt-2">
+            <div>
+              <Typography
+                variant="h1"
+                className="text-white font-poppins font-medium"
+              >
+                {CONTACT_ADDRESS.label}
+              </Typography>
+              <div className="mt-1.5 space-y-0.5">
+                {CONTACT_ADDRESS.lines.map((line, i) => (
+                  <Typography
+                    key={i}
+                    variant="body-xl"
+                    className="text-white font-poppins font-light leading-relaxed"
+                  >
+                    {line}
+                  </Typography>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-1">
+              <Typography
+                variant="h1"
+                className="text-white font-poppins font-medium"
+              >
+                {CONTACT_PHONE_LABEL}
+                {CONTACT_PHONE ? (
+                  <span className="text-white font-normal ml-1">
+                    {CONTACT_PHONE}
+                  </span>
+                ) : null}
+              </Typography>
+            </div>
+          </div>
+        </div>
+
+        {/* Right column – image (stacked: first; from 768px: right column) */}
+        <div
+          className="order-1 md:order-2 md:justify-self-end w-[clamp(140px,35vw,360px)] h-[clamp(140px,35vw,360px)] lg:w-[400px] lg:h-[400px] rounded overflow-hidden min-w-0 mx-auto md:mx-0"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/contactus.webp"
+            alt="VRM Group and ventures"
+            className="w-full h-full object-contain object-center"
+            width={400}
+            height={400}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}

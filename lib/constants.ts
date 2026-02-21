@@ -27,6 +27,21 @@ export const footerInfo = {
   digitalPartner: "Digital Partner: Geekonomy",
 };
 
+export const CONTACT_HEADING = "Connect With VRM Group";
+export const CONTACT_DESCRIPTION =
+  "For enquiries, partnerships, or information, reach out to our team through the form below";
+export const CONTACT_ADDRESS = {
+  label: "Address :",
+  lines: [
+    "Elite Infraa Projects",
+    "No-1, Grace City,",
+    "Palasamudram, Gorantla (M), Sathya Sai (D)",
+    "Andhra Pradesh - 515 241, India",
+  ],
+};
+export const CONTACT_PHONE_LABEL = "Contact No :";
+export const CONTACT_PHONE = ""; // Add number when available
+
 export interface Business {
   id: number;
   name: string;
@@ -101,3 +116,36 @@ export const navbarBusinesses: NavbarBusiness[] = [
 export const NAVBAR_HEIGHT_MOBILE = 64;
 export const DROPDOWN_DELAY = 150;
 export const ACCORDION_ITEM_HEIGHT = 72;
+
+
+export const LEADERSHIP_HEADING = "Legacy in place. Future in motion";
+export const LEADERSHIP_DESCRIPTION = `
+The next generation of leadership stands ready to build on the strong foundations and values that define VRM Group.
+Guided by its enduring legacy of integrity, innovation, and excellence, they are committed to carrying the vision of
+VRM Group forward into a dynamic future.
+`;
+
+export const TEAM_MEMBERS = [
+  { name: "Padmaja M", image: "/About image.webp" },
+  { name: "Kishore M", image: "/About image.webp" },
+  { name: "Kavya M", image: "/About image.webp" },
+  { name: "Abhishekar G S", image: "/About image.webp" },
+  { name: "Meena Poli", image: "/About image.webp" },
+];
+
+export const JOURNEY_HEADING = "Our Journey";
+export const JOURNEY_DESCRIPTION =
+  "The evolution of VRM Group reflects a steady expansion into sectors that shape communities, industries, and experiences.";
+
+export const TIMELINE_EVENTS: { year: number | string; title: string; description: string }[] = [
+  { year: 2008, title: "GREATWAY INTERNATIONAL SCHOOL", description: "Launch of a fully residential institution nurturing academic and holistic student development." },
+  { year: 2014, title: "VRM GRAND SUITE", description: "Entry into real estate with premium villa development focused on comfort and modern living." },
+  { year: "2015 - 2017", title: "ELITE INFRA EXPANSION", description: "Strengthening presence in construction, brick manufacturing, and infrastructure development." },
+  { year: "2016 - 2017", title: "KUBERA HILLS PROJECTS", description: "Development of residential communities promoting sustainable design and refined lifestyles." },
+  { year: 2020, title: "EXOTIC ENTERPRISES", description: "Establishment of large-scale warehousing and commercial infrastructure supporting industrial growth." },
+  { year: 2020, title: "EXOTIC RETREAT", description: "Launch of hospitality destination featuring premium accommodation and guest experiences." },
+  { year: 2023, title: "EXOTIC HOSPITALITY", description: "Expansion into contemporary residential lifestyle offerings." },
+  { year: 2023, title: "EXOTIC INNOVATION & ENGINEERING", description: "Creation of advanced manufacturing and fabrication facility integrating CNC technologies." },
+  { year: 2023, title: "FLO PUB (BANGALORE)", description: "Entry into urban lifestyle and entertainment segment." },
+  { year: 2025, title: "EXOTIC BAR & BISTRO", description: "Launch of fine dining and entertainment destination in Palasamudram." },
+];
