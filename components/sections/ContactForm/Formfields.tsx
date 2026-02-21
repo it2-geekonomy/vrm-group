@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import Typography from "@/lib/typography";
 import { validateContactForm, ContactFormData, ContactFormErrors,} from "@/lib/validation";
@@ -32,19 +31,18 @@ export default function ContactSection() {
     "w-full box-border bg-transparent border border-gray-600 rounded-md px-3 py-2 text-white focus:outline-none focus:border-[#ED1C2475] focus:ring-0 transition-all duration-300 resize-none overflow-hidden";
 
   return (
-    <section className="w-full bg-black py-4 lg:py-20 px-10 sm:px-16 md:px-32 lg:px-24 border-t border-gray-600">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
-        
-        {/* LEFT SIDE - FORM */}
-        <div>
-          <Typography
-            variant="display-2xl"
-            className="text-[#FFFFFF] font-cormorant mb-4 lg:mb-12"
-          >
-            Send Us A Message
-          </Typography>
+    <section className="w-full bg-black py-4 xl:py-20 px-10 sm:px-16 md:px-32 lg:px-14 xl:px-24 border-t border-gray-600">
+      <div className="max-w-7xl mx-auto">
+        <Typography
+          variant="display-2xl"
+          className="text-[#FFFFFF] font-cormorant mb-4 lg:mb-12 text-center lg:text-left"
+        >
+          Send Us A Message
+        </Typography>
 
-          <form onSubmit={handleSubmit} className="space-y-5 lg:space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-stretch">
+          {/* LEFT SIDE - FORM */}
+          <form onSubmit={handleSubmit} className="space-y-5 lg:space-y-8 flex flex-col">
             
             {/* NAME */}
             <div>
@@ -136,11 +134,11 @@ export default function ContactSection() {
                 className={textareaStyle}
               />
 
-              {errors.message && (
+              {/* {errors.message && (
                 <p className="text-red-500 text-xs mt-1">
                   {errors.message}
                 </p>
-              )}
+              )} */}
             </div>
 
             {/* BUTTON */}
@@ -158,18 +156,18 @@ export default function ContactSection() {
               </button>
             </div>
           </form>
-        </div>
 
-        {/* RIGHT SIDE - MAP */}
-        <div className="w-full h-[400px] rounded overflow-hidden bg-gray-900">
-          <iframe
+          {/* RIGHT SIDE - MAP */}
+          <div className="w-full h-[400px] lg:h-full min-h-[300px] rounded overflow-hidden bg-gray-900">
+            <iframe
             title="VRM Group – Elite Infraa Projects, Grace City, Palasamudram"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30973.865839485978!2d77.63120177646464!3d13.974478191317074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb19d8ceded67c9%3A0x83861c6825964fb4!2sPalasamudram%2C%20Andhra%20Pradesh%20515241!5e0!3m2!1sen!2sin!4v1771657337325!5m2!1sen!2sin"
             className="w-full h-full border-0"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          />
+            />
+          </div>
         </div>
       </div>
     </section>
