@@ -114,7 +114,6 @@ nav h4.font-cinzel,
   font-variant-caps: normal !important;
 }
 
-/* Typography classes are handled in lib/typography.ts */
 
 /* Contact form – focus border color */
 .contact-form-fields input:focus {
@@ -124,6 +123,8 @@ nav h4.font-cinzel,
 .contact-form-fields textarea:focus {
   border-color: #ED1C2475 !important;
   outline: none;
+}
+
 /* Video coverage utility - ensures no black borders */
 .video-cover {
   position: absolute;
