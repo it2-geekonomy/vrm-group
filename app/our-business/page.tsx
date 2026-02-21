@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+import Typography from "@/lib/typography";
 
 const MOBILE_BREAKPOINT = 768;
 
@@ -127,20 +128,22 @@ function StackCard({
         </div>
 
         <div className="flex flex-col justify-center">
-          <h2 className="font-cinzel text-3xl text-white md:text-4xl">
+          <Typography variant="h2" className="text-white">
             {section.title}
-          </h2>
+          </Typography>
 
-          <p className="mt-5 text-xl leading-relaxed text-white/80">
+          <Typography variant="body-xl" className="mt-5 leading-relaxed text-white/80">
             {section.description}
-          </p>
+          </Typography>
 
           <Link
             href={section.href}
             scroll={false}
-            className="mt-8 inline-flex w-fit rounded-full border border-white bg-[#ED1C2475] px-14 py-4 text-white transition hover:bg-[#ed1c24a0]"
+            className="mt-8 inline-flex w-fit items-center justify-center rounded-full border border-white bg-[#ED1C2475] px-14 py-4 text-white transition hover:bg-[#ed1c24a0]"
           >
-            VIEW MORE
+            <Typography variant="overline" className="text-white normal-case">
+              VIEW MORE
+            </Typography>
           </Link>
         </div>
       </div>
@@ -164,18 +167,20 @@ function MobileCardList() {
             />
           </div>
           <div className="flex flex-col items-center order-2 sm:items-start">
-            <h2 className="font-cinzel text-2xl text-white sm:text-3xl">
+            <Typography variant="h2" className="text-white">
               {section.title}
-            </h2>
-            <p className="mt-3 text-base leading-relaxed text-white/80 sm:mt-4 sm:text-lg">
+            </Typography>
+            <Typography variant="body-xl" className="mt-3 leading-relaxed text-white/80 sm:mt-4">
               {section.description}
-            </p>
+            </Typography>
             <Link
               href={section.href}
               scroll={false}
-              className="mt-6 inline-flex w-fit rounded-full border border-white bg-[#ED1C2475] px-10 py-3 text-white transition hover:bg-[#ed1c24a0] sm:mt-8 sm:px-14 sm:py-4"
+              className="mt-6 inline-flex w-fit items-center justify-center rounded-full border border-white bg-[#ED1C2475] px-10 py-3 text-white transition hover:bg-[#ed1c24a0] sm:mt-8 sm:px-14 sm:py-4"
             >
-              VIEW MORE
+              <Typography variant="overline" className="text-white normal-case">
+                VIEW MORE
+              </Typography>
             </Link>
           </div>
         </article>
@@ -238,9 +243,9 @@ export default function OurBusinessPage() {
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-          <h1 className="max-w-5xl font-cinzel text-3xl md:text-5xl">
+          <Typography variant="display-2xl" className="max-w-5xl text-white">
             Transforming Vision Into Lasting Development
-          </h1>
+          </Typography>
         </div>
       </section>
 
