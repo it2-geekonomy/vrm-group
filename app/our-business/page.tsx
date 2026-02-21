@@ -2,7 +2,20 @@
 
 import Link from "next/link";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+
+const MOBILE_BREAKPOINT = 768;
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+  return isMobile;
+}
 
 type BusinessSection = {
   title: string;
@@ -60,8 +73,8 @@ function StackCard({
 
   
   const GAP = 36; // vertical stack gap when moving
-  const SCALE_GAP = 0.008;
-  const PEEK = 20; // how much back cards stick up (peek from top)
+  const SCALE_GAP = 0.025; // size difference: front card bigger, back cards smaller
+  const PEEK = 30; // how much back cards stick up (peek from top)
 
   const start = index * 0.25;
   const end = start + 0.25;
@@ -135,9 +148,46 @@ function StackCard({
   );
 }
 
+function MobileCardList() {
+  return (
+    <section className="relative space-y-6 px-4 pb-16 md:px-8">
+      {businessSections.map((section) => (
+        <article
+          key={section.title}
+          className="grid w-full max-w-6xl mx-auto gap-6 rounded-2xl border border-white/15 bg-[#0d0d0d]/90 p-5 text-center sm:p-6 sm:text-left"
+        >
+          <div className="flex justify-center order-1">
+            <img
+              src={section.image}
+              alt={section.title}
+              className="h-[220px] w-full max-w-[280px] rounded-md object-cover shadow-2xl sm:h-[280px]"
+            />
+          </div>
+          <div className="flex flex-col items-center order-2 sm:items-start">
+            <h2 className="font-cinzel text-2xl text-white sm:text-3xl">
+              {section.title}
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-white/80 sm:mt-4 sm:text-lg">
+              {section.description}
+            </p>
+            <Link
+              href={section.href}
+              scroll={false}
+              className="mt-6 inline-flex w-fit rounded-full border border-white bg-[#ED1C2475] px-10 py-3 text-white transition hover:bg-[#ed1c24a0] sm:mt-8 sm:px-14 sm:py-4"
+            >
+              VIEW MORE
+            </Link>
+          </div>
+        </article>
+      ))}
+    </section>
+  );
+}
+
 function BusinessStack() {
   const ref = useRef<HTMLDivElement>(null);
   const [topCardIndex, setTopCardIndex] = useState(0);
+  const isMobile = useIsMobile();
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -156,19 +206,23 @@ function BusinessStack() {
     <section
       ref={ref}
       className="relative"
-      style={{ height: `${businessSections.length * 90}vh` }}
+      style={isMobile ? undefined : { height: `${businessSections.length * 90}vh` }}
     >
-      <div className="sticky top-0 h-screen overflow-hidden">
-        {businessSections.map((section, index) => (
-          <StackCard
-            key={section.title}
-            section={section}
-            index={index}
-            progress={scrollYProgress}
-            isTopCard={index === topCardIndex}
-          />
-        ))}
-      </div>
+      {isMobile ? (
+        <MobileCardList />
+      ) : (
+        <div className="sticky top-0 h-screen overflow-hidden">
+          {businessSections.map((section, index) => (
+            <StackCard
+              key={section.title}
+              section={section}
+              index={index}
+              progress={scrollYProgress}
+              isTopCard={index === topCardIndex}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
