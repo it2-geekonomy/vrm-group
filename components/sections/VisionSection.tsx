@@ -8,7 +8,7 @@ export default function VisionSection() {
     <section className="bg-[#F2FEFA]">
       <div className="">
         <div className="">
-          <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+          <div className="grid grid-cols-1 xl:grid-cols-2 lg:gap-12 items-stretch">
             {/* Left Side - Text Content */}
             <div className="space-y-6 flex flex-col justify-center p-8 2xl:pl-[clamp(2rem,4vw+1rem,8rem)]">
               <Typography variant="display-2xl" className="font-cormorant font-medium text-black mb-6">
