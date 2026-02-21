@@ -30,56 +30,49 @@ const businessSections: BusinessSection[] = [
     title: "Exotic Retreat",
     description:
       "Exotic Retreat represents VRM Group's approach to hospitality, blending comfort, accessibility and environment-driven experiences for accommodation, families, professionals and event-visitors.",
-    image:
-      "https://www.figma.com/api/mcp/asset/a4acb604-59bb-42bf-beb8-3ba941caca5b",
+    image: "/our-business/Exotic Retreat image.webp",
     href: "/our-business/exotic-retreat",
   },
   {
     title: "Elite Infra",
     description:
       "Elite Infra represents the group's commitment to construction, residential projects and infrastructure initiatives for community and growth.",
-    image:
-      "https://www.figma.com/api/mcp/asset/85165f4c-88ec-4e89-8fc7-747cb7c48ee1",
+    image: "/our-business/Elite Infra image.webp",
     href: "/our-business/elite-infra",
   },
   {
     title: "Exotic Enterprises",
     description:
       "Strategically developed warehousing facilities to support regional enterprise development.",
-    image:
-      "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
+    image: "/our-business/Exotic Enterprises image.webp",
     href: "/our-business/elite-enterprises",
   },
   {
     title: "Exotic Bar & Bistro",
     description:
       "A lifestyle dining space combining ambience, food and entertainment as part of the group's expansion into the leisure sector.",
-    image:
-      "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
+    image: "/our-business/Exotic Bar & Bistro image.webp",
     href: "/our-business/exotic-bar-bistro",
   },
   {
     title: "Exotic Innovation & Engineering",
     description:
       "The technical backbone of the group, integrating CNC-enabled manufacturing and modern fabrication practices.",
-    image:
-      "https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=800&q=80",
+    image: "/our-business/Exotic Innovation & Engineering image.webp",
     href: "/our-business/elite-innovation-engineering",
   },
   {
     title: "Exotic Hospitality",
     description:
       "Exotic Hospitality provides dependable management for residential properties with organized services and experienced supervision.",
-    image:
-      "https://images.unsplash.com/photo-1582719478250-c89c6d9cba22?w=800&q=80",
+    image: "/our-business/Exotic Hospitality image.webp",
     href: "/our-business/exotic-hospitality",
   },
   {
     title: "Greatway International School",
     description:
       "An early initiative within the VRM ecosystem, committed to academic discipline, personal development and foundational education.",
-    image:
-      "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80",
+    image: "/our-business/Greatway International School image.webp",
     href: "/school",
   },
 ];
@@ -262,7 +255,7 @@ export default function OurBusinessPage() {
     <main className="bg-[#0b0b0b] text-white">
       <section className="relative">
         <img
-          src="https://www.figma.com/api/mcp/asset/f13a8277-a8cd-4383-b3b4-af276da49fd3"
+          src="our-business/Transforming Vision Into Lasting Development image.webp"
           alt="Our Business Banner"
           className="h-[58vh] w-full object-cover md:h-[72vh]"
         />
