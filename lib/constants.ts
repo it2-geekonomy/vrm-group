@@ -126,11 +126,11 @@ VRM Group forward into a dynamic future.
 `;
 
 export const TEAM_MEMBERS = [
-  { name: "Padmaja M", image: "/About image.webp" },
-  { name: "Kishore M", image: "/About image.webp" },
-  { name: "Kavya M", image: "/About image.webp" },
-  { name: "Abhishekar G S", image: "/About image.webp" },
-  { name: "Meena Poli", image: "/About image.webp" },
+  { name: "Padmaja M", image: "/About/About image.webp" },
+  { name: "Kishore M", image: "/About/About image.webp" },
+  { name: "Kavya M", image: "/About/About image.webp" },
+  { name: "Abhishekar G S", image: "/About/About image.webp" },
+  { name: "Meena Poli", image: "/About/About image.webp" },
 ];
 
 export const JOURNEY_HEADING = "Our Journey";

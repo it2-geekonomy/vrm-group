@@ -11,10 +11,10 @@ import {
 
 export default function ContactForm() {
   return (
-    <section className="w-full bg-black text-white pt-6 pb-6 lg:pt-24 lg:pb-24 pl-6 pr-6 sm:pl-8 sm:pr-8 md:pl-6 md:pr-8 lg:pl-16 lg:pr-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[60%_40%] gap-6 md:gap-3 lg:grid-cols-2 lg:gap-16 items-center">
+    <section className="w-full bg-black text-white pt-6 pb-6 lg:pt-24 lg:pb-24 px-3 min-[363px]:px-4 min-[411px]:px-10 sm:px-16 md:pl-6 md:pr-4 lg:px-16 box-border">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[60%_40%] gap-6 md:gap-3 lg:grid-cols-2 lg:gap-16 items-center min-w-0 w-full">
         {/* Left column – text (stacked: after image; from 768px: left column) */}
-        <div className="order-2 md:order-1 flex flex-col justify-center space-y-3 lg:space-y-6 min-w-0">
+        <div className="order-2 md:order-1 flex flex-col justify-center space-y-3 lg:space-y-6 min-w-0 w-full max-w-full overflow-hidden">
           <Typography
             variant="display-2xl"
             className="text-[#FFFFFF] font-cormorant font-semibold"
@@ -29,20 +29,20 @@ export default function ContactForm() {
             {CONTACT_DESCRIPTION}
           </Typography>
 
-          <div className="space-y-3 lg:space-y-4 pt-1 lg:pt-2">
-            <div>
+          <div className="space-y-3 lg:space-y-4 pt-1 lg:pt-2 min-w-0">
+            <div className="min-w-0">
               <Typography
                 variant="h1"
-                className="text-white font-poppins font-medium"
+                className="text-white font-poppins font-light break-words"
               >
                 {CONTACT_ADDRESS.label}
               </Typography>
-              <div className="mt-1.5 space-y-0.5">
+              <div className="mt-1.5 space-y-0.5 min-w-0">
                 {CONTACT_ADDRESS.lines.map((line, i) => (
                   <Typography
                     key={i}
                     variant="body-xl"
-                    className="text-white font-poppins font-light leading-relaxed"
+                    className="text-white font-poppins font-light leading-relaxed break-words [overflow-wrap:anywhere]"
                   >
                     {line}
                   </Typography>
@@ -53,7 +53,7 @@ export default function ContactForm() {
             <div className="pt-1">
               <Typography
                 variant="h1"
-                className="text-white font-poppins font-medium"
+                className="text-white font-poppins font-light"
               >
                 {CONTACT_PHONE_LABEL}
                 {CONTACT_PHONE ? (
