@@ -141,7 +141,7 @@ nav h4.font-cinzel,
   transform: translate(-50%, -50%);
   transform-origin: center center;
 }
-}
+
 /* Ensure video fills container in both dimensions */
 .video-cover-wrapper {
   position: relative;
