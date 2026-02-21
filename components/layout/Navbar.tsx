@@ -13,6 +13,9 @@ export default function Navbar() {
   const [isMobileBusinessOpen, setIsMobileBusinessOpen] = useState(false);
   const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
+  const [underlineStyle, setUnderlineStyle] = useState<{ left: number; width: number } | null>(null);
+  const linkRefs = useRef<{ [key: string]: HTMLAnchorElement | null }>({});
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
@@ -22,6 +25,40 @@ export default function Navbar() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsMobileBusinessOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const updateUnderline = () => {
+      const activeLink = navLinks.find(link => pathname === link.href);
+      if (activeLink && containerRef.current) {
+        const linkElement = linkRefs.current[activeLink.href];
+        if (linkElement) {
+          // Use requestAnimationFrame to ensure DOM is ready
+          requestAnimationFrame(() => {
+            if (containerRef.current && linkElement) {
+              const containerRect = containerRef.current.getBoundingClientRect();
+              const linkRect = linkElement.getBoundingClientRect();
+              setUnderlineStyle({
+                left: linkRect.left - containerRect.left,
+                width: linkRect.width
+              });
+            }
+          });
+        }
+      } else {
+        setUnderlineStyle(null);
+      }
+    };
+
+    // Small delay to ensure DOM is ready after route change
+    const timeoutId = setTimeout(updateUnderline, 10);
+
+    // Update on window resize
+    window.addEventListener('resize', updateUnderline);
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('resize', updateUnderline);
+    };
   }, [pathname]);
 
   const closeMobileMenu = useCallback(() => {
@@ -46,16 +83,19 @@ export default function Navbar() {
       return (
         <div
           key={link.href}
-          className="relative"
+          className="relative nav-link-container"
           onMouseEnter={handleBusinessMouseEnter}
           onMouseLeave={handleBusinessMouseLeave}
         >
-          <Link href={link.href} className="transition-colors hover:text-primary relative flex items-center gap-1">
+          <Link 
+            ref={(el) => { linkRefs.current[link.href] = el; }}
+            href={link.href} 
+            className="transition-colors hover:text-primary relative flex items-center gap-1"
+          >
             <Typography variant="h4" className="font-cormorant text-black">{link.label}</Typography>
             <svg className={`w-3 h-3 mt-0.5 transition-transform duration-200 ${isBusinessDropdownOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
-            {isActive && <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-black" />}
           </Link>
           <div className={`absolute top-full right-0 mt-2 w-[700px] bg-white border border-gray-100 shadow-xl rounded-md py-6 px-6 z-50 transition-all duration-200 origin-top-right ${isBusinessDropdownOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}>
             <div className="grid grid-cols-4 gap-x-6 gap-y-6">
@@ -74,10 +114,15 @@ export default function Navbar() {
     }
 
     return (
-      <Link key={link.href} href={link.href} className="transition-colors hover:text-primary relative">
-        <Typography variant="h4" className="font-cormorant text-black">{link.label}</Typography>
-        {isActive && <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-black" />}
-      </Link>
+      <div key={link.href} className="nav-link-container">
+        <Link 
+          ref={(el) => { linkRefs.current[link.href] = el; }}
+          href={link.href} 
+          className="transition-colors hover:text-primary relative"
+        >
+          <Typography variant="h4" className="font-cormorant text-black">{link.label}</Typography>
+        </Link>
+      </div>
     );
   };
 
@@ -126,8 +171,17 @@ export default function Navbar() {
             <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
               <Image src="/logo.png" alt="VRM Group Logo" width={120} height={40} className="w-auto" priority />
             </Link>
-            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            <div ref={containerRef} className="hidden md:flex items-center space-x-6 lg:space-x-8 nav-links-container relative">
               {navLinks.map((link) => <DesktopNavLink key={link.href} link={link} />)}
+              {underlineStyle && (
+                <span 
+                  className="absolute bottom-0 h-[1.5px] bg-black transition-all duration-500 ease-in-out"
+                  style={{
+                    left: `${underlineStyle.left}px`,
+                    width: `${underlineStyle.width}px`
+                  }}
+                />
+              )}
             </div>
             <button onClick={() => setIsMobileMenuOpen((prev) => !prev)} className="md:hidden p-2 rounded-md text-black hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary transition-colors" aria-label="Toggle menu" aria-expanded={isMobileMenuOpen}>
               <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
