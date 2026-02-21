@@ -8,7 +8,7 @@ export default function VisionSection() {
     <section className="bg-[#F2FEFA]">
       <div className="">
         <div className="">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 items-stretch">
             {/* Left Side - Text Content */}
             <div className="space-y-6 flex flex-col justify-center p-8 2xl:pl-[clamp(2rem,4vw+1rem,8rem)]">
               <Typography variant="display-2xl" className="font-cormorant font-medium text-black mb-6">
@@ -31,17 +31,31 @@ export default function VisionSection() {
             </div>
 
             {/* Right Side - Video */}
-            <div className="relative w-full h-full min-h-[400px] lg:min-h-[500px] overflow-hidden">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover scale-[1.01]"
-              >
-                <source src="/Diverse%20Sectors.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            <div className="relative w-full h-full min-h-[400px] lg:min-h-[500px] overflow-hidden bg-[#F2FEFA]">
+              <div className="absolute inset-0 w-full h-full">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    width: '120%',
+                    height: '120%',
+                    minWidth: '120%',
+                    minHeight: '120%',
+                    objectFit: 'cover',
+                    objectPosition: 'center center',
+                    transform: 'translate(-50%, -50%)',
+                    transformOrigin: 'center center'
+                  }}
+                >
+                  <source src="/Diverse%20Sectors.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
         </div>
