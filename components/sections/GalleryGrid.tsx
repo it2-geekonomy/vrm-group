@@ -123,7 +123,7 @@ export default function GalleryGrid() {
             <Typography variant="display-2xl" className="font-cormorant text-white font-medium !text-[clamp(30px,3.1vw,38px)]">
               Our Gallery
             </Typography>
-            <Typography variant="body-xl" className="mt-4 text-[#b8bcc4] leading-[1.5] font-cormorant !text-[clamp(18px,2vw,25px)]">
+            <Typography variant="body-xl" className="mt-4 text-white leading-[1.5] font-normal font-cormorant !text-[clamp(18px,2vw,25px)]">
               Visual documentation across hospitality, infrastructure, residential development and industrial capabilities provides a glimpse into the VRM Group ecosystem.
             </Typography>
           </div>
@@ -156,7 +156,7 @@ export default function GalleryGrid() {
                         <button
                           type="button"
                           onClick={() => handleTabChange(tab)}
-                          className={`w-full px-5 py-3 text-left text-[13px] font-medium uppercase tracking-[0.1em] transition-colors ${
+                          className={`w-full cursor-pointer px-5 py-3 text-left text-[13px] font-medium uppercase tracking-[0.1em] transition-colors ${
                             isSelected ? "bg-white/10 text-white" : "text-[#b8bcc4] hover:bg-white/5 hover:text-white"
                           }`}
                         >
@@ -188,9 +188,9 @@ export default function GalleryGrid() {
                       ref={(el) => { tabRefs.current[index] = el; }}
                       type="button"
                       onClick={() => handleTabChange(tab)}
-                      className={`shrink-0 whitespace-nowrap pb-2 text-[14px] font-medium tracking-[0.12em] uppercase transition-colors duration-300 ease-out ${
+                      className={`shrink-0 cursor-pointer whitespace-nowrap pb-2 text-[14px] font-medium tracking-[0.12em] uppercase transition-colors duration-300 ease-out ${
                         isActive
-                          ? "text-[#67e8f9]"
+                          ? "text-white"
                           : "text-[#7f8794] hover:text-[#c7ccd4]"
                       }`}
                     >
@@ -200,7 +200,7 @@ export default function GalleryGrid() {
                 })}
                 <span
                   aria-hidden
-                  className="absolute bottom-0 left-0 h-0.5 rounded-full bg-[#67e8f9] transition-all duration-300 ease-out"
+                  className="absolute bottom-0 left-0 h-0.5 rounded-full bg-white transition-all duration-300 ease-out"
                   style={{ width: tabIndicator.width, transform: `translateX(${tabIndicator.left}px)` }}
                 />
               </div>
@@ -267,9 +267,11 @@ export default function GalleryGrid() {
               <button
                 type="button"
                 onClick={() => setVisibleCount((prev) => prev + LOAD_MORE_COUNT)}
-                className="rounded-full border border-white bg-[#ED1C2475] px-[clamp(42px,3.8vw,64px)] py-[clamp(14px,1.2vw,18px)] text-[clamp(13px,0.8vw,15px)] uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-transparent"
+                className="cursor-pointer rounded-2xl border border-white bg-[#ED1C2475] px-8 py-3 md:px-28 md:py-2 transition-colors"
               >
-                Load More Photos
+                <Typography variant="h4" className="font-cormorant text-white">
+                  Load More Photos
+                </Typography>
               </button>
             </div>
           )}
