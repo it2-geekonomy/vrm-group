@@ -21,15 +21,18 @@ export default function GallerySection({ data }: { data: GallerySectionData }) {
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         
         <Typography
-          variant="display-xl"
-          className="font-cormorant text-white text-[3rem] md:text-[3.5rem] font-semibold mb-4"
-        >
-          {data.title}
-        </Typography>
+  variant="display-xl"
+  className="text-white font-semibold text-[1.5rem] sm:text-[1.5rem] md:text-[1.8rem] lg:text-[2rem] xl:text-[2.2rem] mb-4"
+>
+  {data.title}
+</Typography>
 
-        <p className="text-white/85 font-cormorant font-light text-[1.6rem] leading-relaxed mb-12">
-          {data.subtitle}
-        </p>
+<Typography
+  variant="body-xl"
+  className="font-cormorant text-white/85 font-light text-[1.2rem] sm:text-[1.4rem] md:text-[1.6rem] lg:text-[1.7rem] xl:text-[2rem] leading-relaxed mb-12 max-w-5xl"
+>
+  {data.subtitle}
+</Typography>
 {/* Curved Scroll Container */}
 <div className="relative mt-10 w-full overflow-hidden">
 

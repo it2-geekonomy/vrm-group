@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Typography from "@/lib/typography";
 
 interface HeroBannerProps {
   backgroundImage: string;
@@ -68,43 +69,27 @@ export default function HeroBanner({
 
       {/* Center content: headline, body, button */}
       <div className="relative z-10 w-full max-w-[88rem] mx-auto text-center px-4 sm:px-6 sm:pr-40 lg:pr-48 xl:pr-44">
-        <h1
-          className="font-serif font-normal text-[1.5rem] sm:text-[1.8rem] md:text-[2rem] lg:text-[2rem] leading-snug tracking-wide text-white 2xl:whitespace-nowrap"
-          style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
-        >
-          {title}
-        </h1>
+      <Typography
+  variant="display-2xl"
+  className="text-white font-normal text-[1.3rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[1.9rem] leading-tight tracking-normal"
+>
+  {title}
+</Typography>
 
-        <p
-          className="mt-6 md:mt-8 font-serif font-normal text-[0.9375rem] sm:text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] text-white leading-relaxed max-w-3xl mx-auto"
-          style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
-        >
-          {description}
-        </p>
+       <Typography
+  variant="body-xl"
+  className="font-cormorant text-white mt-6 md:mt-8 text-[1rem] sm:text-[1.2rem] md:text-[1.4rem] lg:text-[1.5rem] leading-relaxed max-w-4xl mx-auto"
+>
+  {description}
+</Typography>
 
-        {buttonLink ? (
-          <Link href={buttonLink} className="inline-block mt-8 md:mt-10">
-            <button
-              className="w-full sm:w-auto min-w-[10rem] px-8 md:px-12 py-3.5 md:py-4 rounded-full text-sm sm:text-base font-bold uppercase tracking-wide text-white border-0 min-h-[48px] hover:opacity-95 transition-opacity"
-              style={{
-                fontFamily: "Arial, Helvetica, sans-serif",
-                backgroundColor: "#8B2F3D",
-              }}
-            >
-              {buttonText}
-            </button>
-          </Link>
-        ) : (
-          <button
-            className="mt-8 md:mt-10 w-full sm:w-auto min-w-[10rem] px-8 md:px-12 py-3.5 md:py-4 rounded-full text-sm sm:text-base font-bold uppercase tracking-wide text-white border-0 cursor-default min-h-[48px]"
-            style={{
-              fontFamily: "Arial, Helvetica, sans-serif",
-              backgroundColor: "#8B2F3D",
-            }}
-          >
-            {buttonText}
-          </button>
-        )}
+<Link
+  href={buttonLink}
+  className="inline-flex items-center justify-center mt-8 md:mt-10 w-full sm:w-auto min-w-[10rem] px-8 md:px-12 py-3.5 md:py-4 rounded-full text-sm sm:text-base font-bold uppercase tracking-wide text-white bg-[#8B2F3D] border-2 border-white min-h-[48px] hover:opacity-95 transition-all duration-300"
+  style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+>
+  {buttonText}
+</Link>
       </div>
     </section>
   );
