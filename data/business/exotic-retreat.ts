@@ -20,25 +20,31 @@ export const exoticRetreatData: BusinessDetailData = {
   },
   experienceHighlights: [
     {
-      image: "/images/ExperienceHighlights.webp",
+      image: "/our-business%20inside/ExperienceHighlights.webp",
       title: "Premium guest accommodation",
       description:
         "Experience refined comfort with elegantly designed rooms and modern conveniences. Every detail is curated to ensure a luxurious and restful stay.",
     },
     {
-      image: "/images/dining.jpg",
+      image: "/our-business%20inside/image1.webp",
       title: "A Refined Dining Experience",
       description:
-        "Savor expertly crafted cuisine in an inviting setting. Every bite is a blend of quality ingredients and thoughtful presentation.",
+        "Savor expertly crafted dishes made from the freshest ingredients. Every bite is a celebration of flavor, elegance, and passion.",
+    },
+    {
+      image: "/our-business%20inside/image2.webp",
+      title: "Poolside and leisure amenities",
+      description:
+        "Unwind by the sparkling pool and enjoy thoughtfully crafted leisure spaces. Perfect for relaxation, recreation, and memorable moments under the sun.",
     },
   ],
   facilities: [
-    { image: "/images/facilities/comfortable-double-beds.png", label: "Comfortable Double Beds" },
-    { image: "/images/facilities/modern-bathroom.png", label: "Modern Bathroom" },
-    { image: "/images/facilities/breakfast-included.png", label: "Breakfast Included" },
-    { image: "/images/facilities/free-wifi.png", label: "Free WIFI" },
-    { image: "/images/facilities/extra-patio.png", label: "Extra Patio" },
-    { image: "/images/facilities/spacious-living.png", label: "400/300 sq ft of Spacious Living" },
+    { image: "/our-business%20inside/Facilities/bed%201.webp", label: "Comfortable Double Beds" },
+    { image: "/our-business%20inside/Facilities/bathroom%201.webp", label: "Modern Bathroom" },
+    { image: "/our-business%20inside/Facilities/Group.webp", label: "Breakfast Included" },
+    { image: "/our-business%20inside/Facilities/Group%20(1).webp", label: "Free WIFI" },
+    { image: "/our-business%20inside/Facilities/living%20room.webp", label: "Extra Patio" },
+    { image: "/our-business%20inside/Facilities/Group%20(3).webp", label: "400/300 sq ft of Spacious Living" },
   ],
   gallery: {
     title: "Gallery",
