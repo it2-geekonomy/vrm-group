@@ -185,3 +185,12 @@ nav h4.font-cinzel,
     min-height: calc(100% + 8px) !important;
   }
 }
+
+/* Hide scrollbar but keep scroll behavior */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
