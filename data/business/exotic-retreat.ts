@@ -20,7 +20,7 @@ export const exoticRetreatData: BusinessDetailData = {
   },
   experienceHighlights: [
     {
-      image: "/images/room-accommodation.jpg",
+      image: "/images/ExperienceHighlights.webp",
       title: "Premium guest accommodation",
       description:
         "Experience refined comfort with elegantly designed rooms and modern conveniences. Every detail is curated to ensure a luxurious and restful stay.",
