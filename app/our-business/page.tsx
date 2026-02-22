@@ -146,11 +146,11 @@ function StackCard({
         </div>
 
         <div className="flex flex-col justify-center">
-          <Typography variant="h2" className="text-white">
+          <Typography variant="display-2xl" className="text-white">
             {section.title}
           </Typography>
 
-          <Typography variant="body-xl" className="mt-5 leading-relaxed text-white/80">
+          <Typography variant="h2" className="mt-5 leading-relaxed text-white/80">
             {section.description}
           </Typography>
 
@@ -158,7 +158,7 @@ function StackCard({
             href={section.href}
             className="mt-8 inline-flex w-fit items-center justify-center rounded-full border border-white bg-[#ED1C2475] px-14 py-4 text-white transition hover:bg-[#ed1c24a0]"
           >
-            <Typography variant="overline" className="text-white normal-case">
+            <Typography variant="body-xl" className="text-white normal-case">
               VIEW MORE
             </Typography>
           </Link>
