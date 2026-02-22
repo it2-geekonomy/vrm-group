@@ -9,7 +9,7 @@ import type { BusinessDetailData } from "@/data/business/types";
 export default function BusinessDetailContent({ data }: { data: BusinessDetailData }) {
   return (
     <main className="min-h-screen bg-[#0b0b0b] text-white">
-      <HeroSection data={data.hero} />
+      <HeroSection {...data.hero} />
       <AboutSection data={data.about} />
       <ExperienceHighlightsSection highlights={data.experienceHighlights} />
       <FacilitiesSection facilities={data.facilities} />
