@@ -52,7 +52,7 @@ export default function VisionSection() {
                     transformOrigin: 'center center'
                   }}
                 >
-                  <source src="/Diverse%20Sectors.mp4" type="video/mp4" />
+                  <source src="https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771747282640-Diverse_Sectors.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>

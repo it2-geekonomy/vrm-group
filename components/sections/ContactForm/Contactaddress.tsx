@@ -72,7 +72,7 @@ export default function ContactForm() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/contactus.webp"
+            src="https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/contactus/1771747411805-contactus.webp"
             alt="VRM Group and ventures"
             className="w-full h-full object-contain object-center"
             width={400}
