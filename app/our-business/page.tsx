@@ -159,7 +159,7 @@ function MobileCardList() {
           key={section.title}
           className="grid w-full max-w-6xl mx-auto gap-6 rounded-2xl border border-white/15 bg-[#0d0d0d]/90 p-5 text-center sm:p-6 sm:text-left"
         >
-          <div className="flex justify-center order-1">
+          <div className="flex justify-center order-1"> 
             <img
               src={section.image}
               alt={section.title}
