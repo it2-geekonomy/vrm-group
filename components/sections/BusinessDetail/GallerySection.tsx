@@ -91,23 +91,6 @@ export default function GallerySection({ data }: { data: GallerySectionData }) {
     >
       →
     </button>
-  </div>
-
-          {/* Navigation Buttons */}
-          <div className="flex justify-between mt-8">
-            <button
-              onClick={() => scroll("left")}
-              className="bg-black text-white rounded-full w-12 h-12 flex items-center justify-center"
-            >
-              ←
-            </button>
-
-            <button
-              onClick={() => scroll("right")}
-              className="bg-black text-white rounded-full w-12 h-12 flex items-center justify-center"
-            >
-              →
-            </button>
           </div>
 
         </div>
