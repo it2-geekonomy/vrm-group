@@ -33,7 +33,7 @@ export default function FacilitiesSection({
                 className="h-10 sm:h-11 md:h-12 lg:h-14 xl:h-16 w-auto object-contain"
               />
               <Typography
-                variant="body-lg"
+                variant="h1"
                 className="text-white font-light text-center sm:text-left font-cormorant leading-snug"
               >
                 {item.label}
