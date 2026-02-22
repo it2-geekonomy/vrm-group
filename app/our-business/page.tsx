@@ -234,7 +234,7 @@ function BusinessStack() {
       {isMobile ? (
         <MobileCardList />
       ) : (
-        <div className="sticky top-0 h-screen overflow-hidden">
+        <div className="sticky top-35  h-screen ">
           {businessSections.map((section, index) => (
             <StackCard
               key={section.title}
