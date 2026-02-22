@@ -1,0 +1,227 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "VRM Group Media Upload API",
+      "version": "1.0.0",
+      "description": "API for uploading and retrieving media files (images & videos) stored in Cloudflare R2.",
+      "contact": {
+        "name": "VRM Group"
+      }
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000",
+        "description": "Development"
+      },
+      {
+        "url": "https://vrmgroup.org",
+        "description": "Production"
+      }
+    ],
+    "paths": {
+      "/api/upload": {
+        "post": {
+          "summary": "Upload media file",
+          "tags": ["Upload"],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "required": ["file", "section"],
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary",
+                      "description": "Image or video file (Max 40MB)"
+                    },
+                    "section": {
+                      "type": "string",
+                      "enum": [
+                        "homepage",
+                        "about",
+                        "ourbusiness",
+                        "gallery",
+                        "contactus",
+                        "others"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Upload successful",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/UploadResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Validation error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Server error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "get": {
+          "summary": "List files by section",
+          "tags": ["Upload"],
+          "parameters": [
+            {
+              "name": "section",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "enum": [
+                  "homepage",
+                  "about",
+                  "ourbusiness",
+                  "gallery",
+                  "contactus",
+                  "others"
+                ]
+              },
+              "example": "gallery"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Files retrieved",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ListResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid section",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Server error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "ErrorResponse": {
+          "type": "object",
+          "properties": {
+            "success": {
+              "type": "boolean",
+              "example": false
+            },
+            "error": {
+              "type": "string",
+              "example": "Invalid section"
+            }
+          }
+        },
+        "UploadResponse": {
+          "type": "object",
+          "properties": {
+            "success": {
+              "type": "boolean",
+              "example": true
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "example": "https://cdn.vrmgroup.org/website/gallery/1700000000-image.jpg"
+            },
+            "key": {
+              "type": "string",
+              "example": "website/gallery/1700000000-image.jpg"
+            },
+            "section": {
+              "type": "string",
+              "example": "gallery"
+            },
+            "fileName": {
+              "type": "string",
+              "example": "1700000000-image.jpg"
+            },
+            "size": {
+              "type": "integer",
+              "example": 1024000
+            },
+            "type": {
+              "type": "string",
+              "example": "image/jpeg"
+            }
+          }
+        },
+        "FileItem": {
+          "type": "object",
+          "properties": {
+            "key": { "type": "string" },
+            "fileName": { "type": "string" },
+            "url": { "type": "string", "format": "uri" },
+            "size": { "type": "integer" },
+            "lastModified": { "type": "string", "format": "date-time" },
+            "section": { "type": "string" }
+          }
+        },
+        "ListResponse": {
+          "type": "object",
+          "properties": {
+            "success": { "type": "boolean", "example": true },
+            "section": { "type": "string", "example": "gallery" },
+            "count": { "type": "integer", "example": 5 },
+            "files": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/FileItem"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      {
+        "name": "Upload",
+        "description": "Media upload and retrieval operations"
+      }
+    ]
+  }
