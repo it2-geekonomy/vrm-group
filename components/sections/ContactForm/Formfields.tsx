@@ -158,7 +158,7 @@ export default function ContactSection() {
           </form>
 
           {/* RIGHT SIDE - MAP */}
-          <div className="w-full h-[400px] lg:h-full min-h-[300px] rounded overflow-hidden bg-gray-900">
+          <div className="w-full h-[280px] lg:h-full min-h-[280px] rounded overflow-hidden bg-gray-900">
             <iframe
             title="VRM Group – Elite Infraa Projects, Grace City, Palasamudram"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30973.865839485978!2d77.63120177646464!3d13.974478191317074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb19d8ceded67c9%3A0x83861c6825964fb4!2sPalasamudram%2C%20Andhra%20Pradesh%20515241!5e0!3m2!1sen!2sin!4v1771657337325!5m2!1sen!2sin"

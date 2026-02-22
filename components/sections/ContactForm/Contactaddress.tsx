@@ -17,7 +17,7 @@ export default function ContactForm() {
         <div className="order-2 md:order-1 flex flex-col justify-center space-y-3 lg:space-y-6 min-w-0 w-full max-w-full overflow-hidden">
           <Typography
             variant="display-2xl"
-            className="text-[#FFFFFF] font-cormorant font-semibold"
+            className="text-[#FFFFFF] font-cormorant font-semibold text-center lg:text-left"
           >
             {CONTACT_HEADING}
           </Typography>
