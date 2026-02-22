@@ -85,8 +85,11 @@ export default function HeroBanner({
 
 <Link
   href={buttonLink}
-  className="inline-flex items-center justify-center mt-8 md:mt-10 w-full sm:w-auto min-w-[10rem] px-8 md:px-12 py-3.5 md:py-4 rounded-full text-sm sm:text-base font-bold uppercase tracking-wide text-white bg-[#8B2F3D] border-2 border-white min-h-[48px] hover:opacity-95 transition-all duration-300"
-  style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+  className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border-2 border-white shadow-md hover:opacity-95 transition-all duration-300"
+  style={{
+    fontFamily: "Arial, Helvetica, sans-serif",
+    background: "linear-gradient(180deg, #A53A45 0%, #8B2F3D 100%)",
+  }}
 >
   {buttonText}
 </Link>
