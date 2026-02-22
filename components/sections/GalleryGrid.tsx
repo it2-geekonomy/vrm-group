@@ -220,7 +220,7 @@ export default function GalleryGrid() {
                   key={item.id}
                   ref={(el) => { cardRefs.current[index] = el; }}
                   data-index={index}
-                  className="relative flex h-[70vw] w-[70vw] min-w-[70vw] flex-shrink-0 snap-center items-center justify-center overflow-visible rounded-xl"
+                  className="relative flex h-[55vw] w-[70vw] min-w-[70vw] flex-shrink-0 snap-center items-center justify-center overflow-visible rounded-xl"
                 >
                   <div
                     className="relative h-full w-full overflow-hidden rounded-xl border border-[#1f2430] bg-[#10141d] transition-[transform,opacity] duration-300 ease-out"
