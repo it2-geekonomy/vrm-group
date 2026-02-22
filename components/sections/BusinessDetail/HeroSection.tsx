@@ -40,32 +40,30 @@ export default function HeroBanner({
             src={logo}
             alt="Logo"
             width={96}
-            height={96}
+            height={16}
             className="object-contain"
           />
         </div>
       ) : null}
 
-      {/* Desktop / tablet logo strip: bright at top-right, fades to bottom-left */}
-      <div
-        className="hidden sm:flex absolute top-0 right-0 z-20 h-full w-fit flex-col backdrop-blur-md overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(to bottom left, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.25) 35%, rgba(255,255,255,0.06) 60%, transparent 100%)",
-        }}
-      >
-        <div className="p-4 md:p-6">
-          {logo ? (
-            <Image
-              src={logo}
-              alt="Logo"
-              width={130}
-              height={130}
-              className="object-contain"
-            />
-          ) : null}
+      {/* Desktop/tablet dynamic logo with gradient corner background */}
+      {logo ? (
+        <div
+          className="hidden sm:flex absolute top-0 right-0 z-20 h-[220px] w-[150px] md:h-[250px] md:w-[170px] items-start justify-center p-3 md:p-4 backdrop-blur-[1px]"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 28%, rgba(255,255,255,0.45) 55%, rgba(255,255,255,0.12) 70%, rgba(255,255,255,0) 80%)",
+          }}
+        >
+          <Image
+            src={logo}
+            alt="Logo"
+            width={118}
+            height={118}
+            className="object-contain"
+          />
         </div>
-      </div>
+      ) : null}
 
       {/* Center content: headline, body, button */}
       <div className="relative z-10 w-full max-w-[88rem] mx-auto text-center px-4 sm:px-6 sm:pr-40 lg:pr-48 xl:pr-44">

@@ -132,7 +132,7 @@ function StackCard({
       }}
       className="absolute inset-0 flex items-center justify-center px-4 md:px-8"
     >
-      <div className="grid w-full max-w-6xl gap-10 rounded-2xl border border-white/15 bg-[#0d0d0d]/90 p-6 md:grid-cols-2 md:p-10">
+      <div className="grid w-full max-w-[50rem] md:max-w-[60rem] lg:max-w-[70rem] xl:max-w-[85rem] gap-10 rounded-2xl border border-white/15 bg-[#0d0d0d]/90 p-6 md:grid-cols-2 md:p-10">
         <div
           className={`flex justify-center ${
             index % 2 === 0 ? "md:order-1" : ""
@@ -170,7 +170,7 @@ function StackCard({
 
 function MobileCardList() {
   return (
-    <section className="relative space-y-6 px-4 pb-16 md:px-8">
+    <section className="relative space-y-6 px-4 py-12 md:px-8">
       {businessSections.map((section) => (
         <article
           key={section.title}
