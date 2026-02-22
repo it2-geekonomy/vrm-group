@@ -42,9 +42,9 @@ export const exoticRetreatData: BusinessDetailData = {
     { image: "/our-business%20inside/Facilities/bed%201.webp", label: "Comfortable Double Beds" },
     { image: "/our-business%20inside/Facilities/bathroom%201.webp", label: "Modern Bathroom" },
     { image: "/our-business%20inside/Facilities/Group.webp", label: "Breakfast Included" },
-    { image: "/our-business%20inside/Facilities/Group%20(1).webp", label: "Free WIFI" },
+    { image: "/our-business%20inside/Facilities/Group%20%281%29.webp", label: "Free WIFI" },
     { image: "/our-business%20inside/Facilities/living%20room.webp", label: "Extra Patio" },
-    { image: "/our-business%20inside/Facilities/Group%20(3).webp", label: "400/300 sq ft of Spacious Living" },
+    { image: "/our-business%20inside/Facilities/Group%20%283%29.webp", label: "400/300 sq ft of Spacious Living" },
   ],
   gallery: {
     title: "Gallery",

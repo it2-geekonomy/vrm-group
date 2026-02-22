@@ -171,17 +171,54 @@ export const galleryTabs: GalleryCategory[] = [
   "COMMUNITY & EVENTS",
 ];
 
+const r2Images = [
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744316165-gallery-section-01.png",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744425337-gallery-section-02.png",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744458029-gallery-section-03.png",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744474510-gallery-section-04.png",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744490071-gallery-section-05.png",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744505146-gallery-section-06.png",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744519882-gallery-section-07.png",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744533996-gallery-section-08.png",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744545746-gallery-section-09.png",
+];
+
 export const galleryItems: GalleryItem[] = [
-  { id: 1, title: "Retreat Exterior", category: "HOSPITALITY & EXPERIENCES", image: "/gallery-section/gallery-section-1.png" },
-  { id: 2, title: "Culinary Experience", category: "HOSPITALITY & EXPERIENCES", image: "/gallery-section/gallery-section-2.png" },
-  { id: 3, title: "Premium Stay", category: "HOSPITALITY & EXPERIENCES", image: "/gallery-section/gallery-section-3.png" },
-  { id: 4, title: "Dining Moments", category: "HOSPITALITY & EXPERIENCES", image: "/gallery-section/gallery-section-4.png" },
-  { id: 5, title: "Campus Development", category: "RESIDENTIAL & INFRASTRUCTURE", image: "/gallery-section/gallery-section-5.png" },
-  { id: 6, title: "Institutional Build", category: "RESIDENTIAL & INFRASTRUCTURE", image: "/gallery-section/gallery-section-6.png" },
-  { id: 7, title: "Engineering Setup", category: "INDUSTRIAL OPERATIONS", image: "/gallery-section/gallery-section-7.png" },
-  { id: 8, title: "Production Line", category: "INDUSTRIAL OPERATIONS", image: "/gallery-section/gallery-section-8.png" },
-  { id: 9, title: "Industrial Unit", category: "INDUSTRIAL OPERATIONS", image: "/gallery-section/gallery-section-9.png" },
-  { id: 10, title: "Community Outreach", category: "COMMUNITY & EVENTS", image: "/gallery-section/gallery-section-1.png" },
-  { id: 11, title: "Celebration Event", category: "COMMUNITY & EVENTS", image: "/gallery-section/gallery-section-2.png" },
-  { id: 12, title: "Public Program", category: "COMMUNITY & EVENTS", image: "/gallery-section/gallery-section-3.png" },
+  { id: 1, title: "Retreat Exterior", category: "HOSPITALITY & EXPERIENCES", image: r2Images[0] },
+  { id: 2, title: "Culinary Experience", category: "HOSPITALITY & EXPERIENCES", image: r2Images[1] },
+  { id: 3, title: "Premium Stay", category: "HOSPITALITY & EXPERIENCES", image: r2Images[2] },
+  { id: 4, title: "Dining Moments", category: "HOSPITALITY & EXPERIENCES", image: r2Images[3] },
+
+  { id: 5, title: "Campus Development", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[4] },
+  { id: 6, title: "Institutional Build", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[5] },
+  { id: 7, title: "Urban Housing", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[6] },
+  { id: 8, title: "Township Planning", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[7] },
+
+  { id: 9, title: "Engineering Setup", category: "INDUSTRIAL OPERATIONS", image: r2Images[8] },
+  { id: 10, title: "Production Line", category: "INDUSTRIAL OPERATIONS", image: r2Images[0] },
+  { id: 11, title: "Industrial Unit", category: "INDUSTRIAL OPERATIONS", image: r2Images[1] },
+  { id: 12, title: "Machinery Floor", category: "INDUSTRIAL OPERATIONS", image: r2Images[2] },
+
+  { id: 13, title: "Community Outreach", category: "COMMUNITY & EVENTS", image: r2Images[3] },
+  { id: 14, title: "Celebration Event", category: "COMMUNITY & EVENTS", image: r2Images[4] },
+  { id: 15, title: "Public Program", category: "COMMUNITY & EVENTS", image: r2Images[5] },
+  { id: 16, title: "CSR Initiative", category: "COMMUNITY & EVENTS", image: r2Images[6] },
+
+  { id: 17, title: "Luxury Retreat", category: "HOSPITALITY & EXPERIENCES", image: r2Images[7] },
+  { id: 18, title: "Fine Dining", category: "HOSPITALITY & EXPERIENCES", image: r2Images[8] },
+  { id: 19, title: "Resort View", category: "HOSPITALITY & EXPERIENCES", image: r2Images[0] },
+  { id: 20, title: "Guest Experience", category: "HOSPITALITY & EXPERIENCES", image: r2Images[1] },
+
+  { id: 21, title: "Smart Housing", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[2] },
+  { id: 22, title: "Modern Campus", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[3] },
+  { id: 23, title: "Building Structure", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[4] },
+  { id: 24, title: "Infrastructure Work", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[5] },
+
+  { id: 25, title: "Assembly Unit", category: "INDUSTRIAL OPERATIONS", image: r2Images[6] },
+  { id: 26, title: "Factory Operations", category: "INDUSTRIAL OPERATIONS", image: r2Images[7] },
+  { id: 27, title: "Manufacturing Hub", category: "INDUSTRIAL OPERATIONS", image: r2Images[8] },
+
+  { id: 28, title: "Cultural Fest", category: "COMMUNITY & EVENTS", image: r2Images[0] },
+  { id: 29, title: "Social Drive", category: "COMMUNITY & EVENTS", image: r2Images[1] },
+  { id: 30, title: "Volunteer Meet", category: "COMMUNITY & EVENTS", image: r2Images[2] },
 ];
