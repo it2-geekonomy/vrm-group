@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
     const data = await resend.emails.send({
       from: "VRM Group <no-reply@vrmgroup.org>",
-      to: ["vrmgroup.org@gmail.com"],
+      to: ["vrmgroup.digital@gmail.com"],
       subject: `🚀 New Contact Message from ${name}`,
       html: `
         <!DOCTYPE html>
