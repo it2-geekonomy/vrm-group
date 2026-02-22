@@ -15,7 +15,7 @@ export const eliteInfraData: BusinessDetailData = {
   about: {
     title: "About Elite Infra",
     description:
-      "Elite Infra represents VRM Group's commitment to construction strength and responsible development. We deliver robust infrastructure solutions that support sustainable growth and community needs.",
+      "Elite Infraa represents the group's commitment to construction strength and responsible development. Through residential projects and infrastructure initiatives, the division contributes to environments built for continuity and growth.",
     image:
       "https://www.figma.com/api/mcp/asset/85165f4c-88ec-4e89-8fc7-747cb7c48ee1",
   },
