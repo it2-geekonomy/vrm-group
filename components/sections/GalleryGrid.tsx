@@ -6,7 +6,7 @@ import Typography from "@/components/ui/Typography";
 import { galleryItems, galleryTabs, type GalleryCategory } from "@/lib/constants";
 
 const INITIAL_VISIBLE_COUNT = 9;
-const LOAD_MORE_COUNT = 3;
+const LOAD_MORE_COUNT = 9;
 const MOBILE_CARD_OPACITY_SIDE = 0.5;
 
 export default function GalleryGrid() {

@@ -206,19 +206,19 @@ export const galleryItems: GalleryItem[] = [
 
   { id: 17, title: "Luxury Retreat", category: "HOSPITALITY & EXPERIENCES", image: r2Images[7] },
   { id: 18, title: "Fine Dining", category: "HOSPITALITY & EXPERIENCES", image: r2Images[8] },
-  { id: 19, title: "Resort View", category: "HOSPITALITY & EXPERIENCES", image: r2Images[0] },
-  { id: 20, title: "Guest Experience", category: "HOSPITALITY & EXPERIENCES", image: r2Images[1] },
+  // { id: 19, title: "Resort View", category: "HOSPITALITY & EXPERIENCES", image: r2Images[0] },
+  // { id: 20, title: "Guest Experience", category: "HOSPITALITY & EXPERIENCES", image: r2Images[1] },
 
-  { id: 21, title: "Smart Housing", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[2] },
-  { id: 22, title: "Modern Campus", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[3] },
-  { id: 23, title: "Building Structure", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[4] },
-  { id: 24, title: "Infrastructure Work", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[5] },
+  // { id: 21, title: "Smart Housing", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[2] },
+  // { id: 22, title: "Modern Campus", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[3] },
+  // { id: 23, title: "Building Structure", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[4] },
+  // { id: 24, title: "Infrastructure Work", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[5] },
 
-  { id: 25, title: "Assembly Unit", category: "INDUSTRIAL OPERATIONS", image: r2Images[6] },
-  { id: 26, title: "Factory Operations", category: "INDUSTRIAL OPERATIONS", image: r2Images[7] },
-  { id: 27, title: "Manufacturing Hub", category: "INDUSTRIAL OPERATIONS", image: r2Images[8] },
+  // { id: 25, title: "Assembly Unit", category: "INDUSTRIAL OPERATIONS", image: r2Images[6] },
+  // { id: 26, title: "Factory Operations", category: "INDUSTRIAL OPERATIONS", image: r2Images[7] },
+  // { id: 27, title: "Manufacturing Hub", category: "INDUSTRIAL OPERATIONS", image: r2Images[8] },
 
-  { id: 28, title: "Cultural Fest", category: "COMMUNITY & EVENTS", image: r2Images[0] },
-  { id: 29, title: "Social Drive", category: "COMMUNITY & EVENTS", image: r2Images[1] },
-  { id: 30, title: "Volunteer Meet", category: "COMMUNITY & EVENTS", image: r2Images[2] },
+  // { id: 28, title: "Cultural Fest", category: "COMMUNITY & EVENTS", image: r2Images[0] },
+  // { id: 29, title: "Social Drive", category: "COMMUNITY & EVENTS", image: r2Images[1] },
+  // { id: 30, title: "Volunteer Meet", category: "COMMUNITY & EVENTS", image: r2Images[2] },
 ];
