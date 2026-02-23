@@ -51,8 +51,8 @@ export const eliteInfraData: BusinessDetailData = {
     ],
   },
   experienceHighlights2: {
-    sectionTitle: "Focus Area 2",
-    sectionSubtitle: "Another subtitle here",
+    sectionTitle: "Our Manufacturing Capabalities",
+    sectionSubtitle: "",
     items: [
       {
         image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp",
@@ -85,14 +85,14 @@ export const eliteInfraData: BusinessDetailData = {
     { image: "/images/facilities/post-completion-support.png", label: "Post-completion Support" },
   ],
   gallery: {
-    title: "Gallery",
-    subtitle: "Visual highlights capturing our projects and capabilities.",
-    images: ["/images/gallery/elite-infra-1.jpg", "/images/gallery/elite-infra-2.jpg"],
+    title: "Our Residential Projects",
+    subtitle: "Visual highlights capturing ambience, amenities and experiences.",
+    images: ["https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp", "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp"],
   },
   cta: {
-    heading: "Begin Your Journey With Us",
-    subtitle: "Reach out to discuss your infrastructure and development needs.",
-    buttonText: "GET IN TOUCH",
+    heading: "Build Your Vision With Us",
+    subtitle: "Partner with a team that delivers on time, every time. Let's discuss your next project.",
+    buttonText: "request project information",
     buttonLink: "/contact",
   },
 };
