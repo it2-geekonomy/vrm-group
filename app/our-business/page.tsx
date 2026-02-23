@@ -73,7 +73,7 @@ const businessSections: BusinessSection[] = [
     description:
       "An early initiative within the VRM ecosystem, committed to academic discipline, personal development and foundational education.",
     image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771822889712-Greatway_International_School_image.webp",
-    href: "/school",
+    href: "/our-business/school",
   },
 ];
 
