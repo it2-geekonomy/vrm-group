@@ -17,25 +17,25 @@ export const exoticRetreatData: BusinessDetailData = {
     description:
       "Exotic Retreat represents VRM Group's approach to hospitality, blending comfort, accessibility and environment-driven experiences. Designed to accommodate families, professionals and event visitors, the retreat prioritises ease, relaxation and quality service.",
     image:
-      "https://www.figma.com/api/mcp/asset/a4acb604-59bb-42bf-beb8-3ba941caca5b",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771834960917-retreat_image_2.webp",
   },
   experienceHighlights: {
     sectionTitle: "Experience Highlights",
     items: [
       {
-        image: "/our-business%20inside/ExperienceHighlights.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835097003-ExperienceHighlights.webp",
         title: "Premium guest accommodation",
         description:
           "Experience refined comfort with elegantly designed rooms and modern conveniences. Every detail is curated to ensure a luxurious and restful stay.",
       },
       {
-        image: "/our-business%20inside/image1.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835130924-image1.webp",
         title: "A Refined Dining Experience",
         description:
           "Savor expertly crafted dishes made from the freshest ingredients. Every bite is a celebration of flavor, elegance, and passion.",
       },
       {
-        image: "/our-business%20inside/image2.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835155758-image2.webp",
         title: "Poolside and leisure amenities",
         description:
           "Unwind by the sparkling pool and enjoy thoughtfully crafted leisure spaces. Perfect for relaxation, recreation, and memorable moments under the sun.",
@@ -54,25 +54,24 @@ export const exoticRetreatData: BusinessDetailData = {
     title: "Gallery",
     subtitle: "Visual highlights capturing ambience, amenities and experiences.",
     images: [
-      "/images/gallery/exotic-retreat-1.webp",
-      "/images/gallery/exotic-retreat-3.webp",
-
-      "/images/gallery/exotic-retreat-5.webp",
-      "/images/gallery/exotic-retreat-6.webp",
-      "/images/gallery/exotic-retreat-7.webp",
-      "/images/gallery/exotic-retreat-8.webp",
-      "/images/gallery/exotic-retreat-9.webp",
-      "/images/gallery/exotic-retreat-10.webp",
-      "/images/gallery/exotic-retreat-4.webp",
-      "/images/gallery/exotic-retreat-12.webp",
-      "/images/gallery/exotic-retreat-13.webp",
-      "/images/gallery/exotic-retreat-14.webp",
-      "/images/gallery/exotic-retreat-15.webp",
-      "/images/gallery/exotic-retreat-16.webp",
-      "/images/gallery/exotic-retreat-2.webp",
-      "/images/gallery/exotic-retreat-19.webp",
-      "/images/gallery/exotic-retreat-17.webp",
-      "/images/gallery/exotic-retreat-18.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835373108-exotic-retreat-1.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835416942-exotic-retreat-3.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835459715-exotic-retreat-5.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835480652-exotic-retreat-6.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835662292-exotic-retreat-7.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835686375-exotic-retreat-8.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835709937-exotic-retreat-9.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835729749-exotic-retreat-10.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835746166-exotic-retreat-4.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835761853-exotic-retreat-12.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835796447-exotic-retreat-13.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835808543-exotic-retreat-14.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835824693-exotic-retreat-15.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835841677-exotic-retreat-16.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835860935-exotic-retreat-2.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835872535-exotic-retreat-19.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835887842-exotic-retreat-17.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835901589-exotic-retreat-18.webp",
     ],
   },
   cta: {
