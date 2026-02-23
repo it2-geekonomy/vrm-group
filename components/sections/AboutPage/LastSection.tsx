@@ -7,7 +7,7 @@ export default function AboutPage() {
 <section className="relative w-full h-[500px] overflow-hidden">
             {/* Background Image */}
             <img
-                src="/About/Lastsectionimg.webp"  
+                src="https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/about/1771822351959-Lastsectionimg.webp"  
                 alt="Diverse Sectors"
                 className="absolute inset-0 w-full h-full object-cover"
             />

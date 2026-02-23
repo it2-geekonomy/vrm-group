@@ -54,28 +54,7 @@ const SNAP   = "cubic-bezier(0.34, 1.56, 0.64, 1)";
 const DUR    = 620;
 const IMAGE_CYCLE_MS = 3000;
 
-// Hook: cycles through images for a given business independently
-function useImageCycle(businessId: number, imageCount: number) {
-  const [imgIdx, setImgIdx] = useState(0);
-  const cycleRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  // Reset & restart whenever the business changes
-  useEffect(() => {
-    setImgIdx(0);
-    if (cycleRef.current) clearInterval(cycleRef.current);
-    if (imageCount <= 1) return;
-
-    cycleRef.current = setInterval(() => {
-      setImgIdx((prev) => (prev + 1) % imageCount);
-    }, IMAGE_CYCLE_MS);
-
-    return () => { if (cycleRef.current) clearInterval(cycleRef.current); };
-  }, [businessId, imageCount]);
-
-  return [imgIdx, setImgIdx] as const;
-}
-
-// Standalone right-side card with its own image cycling
+// Right-side card: uses separate cardImage URL (not images[])
 function RightCard({
   business,
   cardIndex,
@@ -87,7 +66,7 @@ function RightCard({
   animKey: number;
   onClick: () => void;
 }) {
-  const [imgIdx] = useImageCycle(business.id, business.images.length);
+  const cardImageSrc = business.cardImage ?? business.images[0];
 
   return (
     <button
@@ -107,21 +86,12 @@ function RightCard({
         (e.currentTarget as HTMLElement).style.boxShadow = "";
       }}
     >
-      {/* Stacked cycling images */}
-      {business.images.map((src, i) => (
-        <Image
-          key={`right-${business.id}-img-${i}`}
-          src={src}
-          alt={`${business.name} ${i + 1}`}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-          priority={i === 0}
-          style={{
-            opacity: i === imgIdx ? 1 : 0,
-            transition: "opacity 700ms ease",
-          }}
-        />
-      ))}
+      <Image
+        src={cardImageSrc}
+        alt={business.name}
+        fill
+        className="object-cover transition-transform duration-700 group-hover:scale-105"
+      />
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/40 hover:from-black/40 hover:to-black/20 transition-all duration-300" />
       <div
@@ -230,7 +200,7 @@ export default function OurBusinessesSection() {
                   onClick={() => handleCardClick(index, true)}
                   className={`relative w-full h-24 rounded-lg overflow-hidden transition-all duration-300 ${isActive ? "hidden" : "block"}`}
                 >
-                  <Image src={business.images[0]} alt={business.name} fill className="object-cover" />
+                  <Image src={business.cardImage ?? business.images[0]} alt={business.name} fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/40 hover:from-black/40 hover:to-black/20" />
                   <div className="absolute inset-0 flex items-center px-4">
                     <Typography variant="h3" className="font-cormorant text-white">
