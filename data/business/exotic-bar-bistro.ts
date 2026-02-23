@@ -3,8 +3,8 @@ import type { BusinessDetailData } from "./types";
 export const exoticBarBistroData: BusinessDetailData = {
   name: "Exotic Bar & Bistro",
   hero: {
-    backgroundImage:
-      "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
+
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // fallback video
     logo: "/images/logo.png",
     title: "Where Ambience Meets Flavour",
     description:
