@@ -97,7 +97,7 @@ export default function Navbar() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </Link>
-          <div className={`absolute top-full right-0 mt-2 w-[700px] bg-black border border-white/20 shadow-xl rounded-md py-6 px-6 z-50 transition-all duration-200 origin-top-right ${isBusinessDropdownOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}>
+          <div className={`absolute top-full right-0 mt-2 w-[700px] bg-[#1a1a1a] border border-white/20 shadow-xl rounded-md py-6 px-6 z-50 transition-all duration-200 origin-top-right ${isBusinessDropdownOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}>
             <div className="grid grid-cols-4 gap-x-6 gap-y-6">
               {navbarBusinesses.map((biz) => (
                 <Link key={biz.name} href={biz.href} className="flex flex-col items-start gap-2 group" onClick={() => setIsBusinessDropdownOpen(false)}>
