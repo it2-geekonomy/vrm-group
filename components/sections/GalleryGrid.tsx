@@ -248,7 +248,7 @@ export default function GalleryGrid() {
             {visibleItems.map((item) => (
               <article
                 key={item.id}
-                className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-[#1f2430] bg-[#10141d]"
+                className="group relative aspect-[13.5/9] overflow-hidden rounded-xl border border-[#1f2430] bg-[#10141d]"
               >
                 <Image
                   src={item.image}
