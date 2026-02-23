@@ -36,3 +36,4 @@ export default function AboutSection({ data }: { data: AboutSectionData }) {
     </section>
   );
 }
+
