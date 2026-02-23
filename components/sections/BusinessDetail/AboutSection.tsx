@@ -17,7 +17,7 @@ export default function AboutSection({ data }: { data: AboutSectionData }) {
               {data.title}
             </Typography>
             <Typography
-              variant="body-xl"
+              variant="h2"
               className="font-cormorant font-light text-[#e8e8e8] leading-[1.75] text-left"
             >
               {data.description}
