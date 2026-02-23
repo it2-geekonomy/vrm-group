@@ -7,9 +7,11 @@ import type { ExperienceHighlight } from "@/data/business/types";
 export default function ExperienceHighlightsSection({
   highlights,
   sectionTitle = "Experience Highlights",
+  sectionSubtitle,
 }: {
   highlights: ExperienceHighlight[];
   sectionTitle?: string;
+  sectionSubtitle?: string;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -60,6 +62,14 @@ export default function ExperienceHighlightsSection({
           >
             {sectionTitle}
           </Typography>
+          {sectionSubtitle && (
+            <Typography
+              variant="h2"
+              className="font-cormorant text-white "
+            >
+              {sectionSubtitle}
+            </Typography>
+          )}
         </div>
 
         {/* Slider + Arrows Row */}

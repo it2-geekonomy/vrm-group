@@ -22,6 +22,7 @@ export const eliteInfraData: BusinessDetailData = {
   },
   experienceHighlights: {
     sectionTitle: "Focus Area",
+    sectionSubtitle: "",
     items: [
       {
         image:
@@ -45,6 +46,32 @@ export const eliteInfraData: BusinessDetailData = {
         image:
           "https://www.figma.com/api/mcp/asset/1973342515",
         title: "Long-term assured reliability",
+        description: "",
+      },
+    ],
+  },
+  experienceHighlights2: {
+    sectionTitle: "Focus Area 2",
+    sectionSubtitle: "Another subtitle here",
+    items: [
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp",
+        title: "",
+        description: "",
+      },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp",
+        title: "",
+        description: "",
+      },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp",
+        title: "",
+        description: "",
+      },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp",
+        title: "",
         description: "",
       },
     ],

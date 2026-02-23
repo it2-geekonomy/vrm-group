@@ -1,56 +1,66 @@
 import type { BusinessDetailData } from "./types";
 
 export const eliteInnovationEngineeringData: BusinessDetailData = {
-  name: "Elite Innovation Engineering",
+  name: "Precision Engineering for Modern Industry",
   hero: {
     backgroundImage: "/images/pool.jpg",
     logo: "/images/logo.png",
-    title: "Engineering Excellence & Innovation",
+    title: "Precision Engineering for Modern Industry",
     description:
-      "Precision engineering and innovative solutions for industry and infrastructure.",
-    buttonText: "CONTACT",
+      "Exotic Innovation & Engineering delivers fabrication and manufacturing  capabilities built on advanced technology and execution expertise.",
+    buttonText: "Our Capabilities",
     buttonLink: "/contact",
   },
   about: {
-    title: "About Elite Innovation Engineering",
+    title: "About Exotic Innovation & Engineering",
     description:
-      "Elite Innovation Engineering delivers precision engineering and innovative solutions for industry and infrastructure. We combine technical expertise with a focus on quality and reliability.",
+      "Serving as the technical backbone of VRM Group’s industrial ecosystem, the  facility integrates CNC-enabled manufacturing systems and modern  fabrication practices to support industrial requirements with accuracy and  efficiency.",
     image: "/images/pool.jpg",
   },
   experienceHighlights: {
-    sectionTitle: "Experience Highlights",
+    sectionTitle: "Capabilities",
     items: [
       {
         image: "/images/pool.jpg",
-        title: "Technical expertise",
+        title: "3 Meter Press Brake Machine ",
         description:
-          "Skilled teams and modern equipment for complex engineering projects.",
+          "A 6 kW Fiber Laser Cutting Machine is a high-power, CNC-controlled metal cutting system designed for heavy-duty industrial applications. It delivers high-speed cutting with superior precision and is suitable for thick metal sheets used in structural, automotive, and heavy fabrication industries.Cutting Capacity: Mild Steel: Up to 25 mm, Stainless Steel: Up to 20 mm, Aluminium: Up to 16 mm             ",
       },
       {
         image: "/images/pool.jpg",
-        title: "Innovation focus",
+        title: "1.5 kW Laser Cutting Machine",
         description:
-          "Continuous improvement and adoption of best practices and technology.",
+          "A 3 Meter Press Brake Machine is a heavy-duty sheet metal bending machine designed to bend metal sheets and plates up to 3000 mm length with high precision and accuracy. It is widely used in fabrication industries, electrical panel manufacturing, structural works, and automotive component production.Bending Length: 3000 mm (3 Meter) Capacity: 80 Ton – 160 Ton (depending on model)",
+      },
+       {
+        image: "/images/pool.jpg",
+        title: "3 kW Advanced Technology Laser Cutting Machine",
+        description:
+          "A 3 kW Advanced Technology Laser Cutting Machine is a high-precision CNC-controlled cutting system designed for fast and accurate cutting of metal sheets using a high-power fiber laser source. It is widely used in fabrication, automotive, electrical panel manufacturing, and precision engineering industries.Cutting Thickness Capacity: Mild Steel: Up to 20 mm, Stainless Steel: Up to 12 mm, Aluminium: Up to 8 mm",
+      },
+       {
+        image: "/images/pool.jpg",
+        title: "100 kVA Nut Projection Welding Machine",
+        description:
+          "A 100 kVA Nut Projection Welding Machine is a heavy-duty resistance welding machine specially designed for welding nuts, bolts, studs, and fasteners onto sheet metal components using the projection welding process. It ensures strong, accurate, and repeatable weld joints with high production efficiency.",
+      },
+       {
+        image: "/images/pool.jpg",
+        title: "Shearing Machine",
+        description:
+          "A Shearing Machine is an industrial metal cutting machine used to cut sheet metal plates, strips, and flat materials into required sizes by applying a high shear force. It is widely used in fabrication industries, sheet metal manufacturing, automotive, and structural applications.",
+      },
+      {
+        image: "/images/pool.jpg",
+        title: "6 kW Fiber Laser Cutting Machine",
+        description:
+          "A 6 kW Fiber Laser Cutting Machine is a high-power, CNC-controlled metal cutting system designed for heavy-duty industrial applications. It delivers high-speed cutting with superior precision and is suitable for thick metal sheets used in structural, automotive, and heavy fabrication industries.Cutting Capacity: Mild Steel: Up to 25 mm, Stainless Steel: Up to 20 mm, Aluminium: Up to 16 mm",
       },
     ],
   },
-  facilities: [
-    { image: "/images/facilities/design-engineering.png", label: "Design & Engineering" },
-    { image: "/images/facilities/fabrication.png", label: "Fabrication" },
-    { image: "/images/facilities/quality-control.png", label: "Quality Control" },
-    { image: "/images/facilities/testing-commissioning.png", label: "Testing & Commissioning" },
-    { image: "/images/facilities/technical-support.png", label: "Technical Support" },
-    { image: "/images/facilities/custom-solutions.png", label: "Custom Solutions" },
-  ],
-  gallery: {
-    title: "Gallery",
-    subtitle: "Visual highlights capturing our engineering and innovation work.",
-    images: ["/images/gallery/elite-innovation-1.jpg", "/images/gallery/elite-innovation-2.jpg"],
-  },
   cta: {
-    heading: "Begin Your Journey With Us",
-    subtitle: "Reach out to discuss your engineering and technical requirements.",
-    buttonText: "CONTACT",
+    heading: "Optimize Your Supply Chain",
+    buttonText: "Connect with our engineering team",
     buttonLink: "/contact",
   },
 };

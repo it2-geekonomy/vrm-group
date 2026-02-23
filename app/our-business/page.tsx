@@ -257,7 +257,7 @@ export default function OurBusinessPage() {
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-          <Typography variant="display-2xl" className="max-w-5xl text-white">
+          <Typography variant="display-2xl" className="max-w-5xl text-white font-cormorant">
             Transforming Vision Into Lasting Development
           </Typography>
         </div>
