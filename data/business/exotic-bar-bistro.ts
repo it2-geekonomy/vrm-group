@@ -6,55 +6,47 @@ export const exoticBarBistroData: BusinessDetailData = {
     backgroundImage:
       "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
     logo: "/images/logo.png",
-    title: "Where Ambience Meets Flavour",
+    title: "Where Dining Meets Atmosphere",
     description:
-      "A lifestyle dining space combining ambience, food and entertainment.",
-    buttonText: "RESERVE",
+      "Exotic Bar & Bistro delivers a curated social and culinary environment designed for gatherings, celebrations and relaxed evenings. ",
+     buttonText: "RESERVE",
     buttonLink: "/reserve",
-  },
+    },
   about: {
     title: "About Exotic Bar & Bistro",
     description:
-      "Exotic Bar & Bistro is a lifestyle dining space that combines ambience, food and entertainment. Perfect for casual meals, celebrations and evening gatherings.",
+      "Combining ambience, food and entertainment, Exotic Bar & Bistro reflects VRM  Group’s expansion into lifestyle experiences. It is designed as a welcoming  space where quality dining and social interaction come together seamlessly.",
     image:
-      "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
+      "/our-business/Exotic Bar & Bistro image.webp",
   },
-  experienceHighlights: {
-    sectionTitle: "Experience Highlights",
-    items: [
-      {
-        image:
-          "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
-        title: "Curated menu",
-        description:
-          "A blend of local and international flavours prepared with care and presented with style.",
-      },
-      {
-        image:
-          "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
-        title: "Live entertainment",
-        description:
-          "Regular events and live music to elevate your dining experience.",
-      },
-    ],
-  },
-  facilities: [
-    { image: "/images/facilities/indoor-outdoor-seating.png", label: "Indoor & Outdoor Seating" },
-    { image: "/images/facilities/full-bar.png", label: "Full Bar" },
-    { image: "/images/facilities/free-wifi.png", label: "Free WIFI" },
-    { image: "/images/facilities/private-events.png", label: "Private Events Space" },
-    { image: "/images/facilities/parking.png", label: "Parking Available" },
-    { image: "/images/facilities/extended-hours.png", label: "Extended Hours" },
+   experienceHighlights: {
+    sectionTitle: "The Experience",
+    items:[
+    {
+      image:
+        "/images/gallery/exoticbarbistro1.webp",
+      title: "Curated Ambience",
+    },
+    {
+      image:
+        "/images/gallery/exoticbarbistro2.webp",
+      title: "Contemporary Dining Environment",
+    },
+     {
+      image:
+        "/images/gallery/exoticbarbistro3.webp",
+      title: "Social Gathering Space",
+    },
+     {
+      image:
+        "/images/gallery/exoticbarbistro4.webp",
+      title: "Event and Celebration Hosting",
+    },
   ],
-  gallery: {
-    title: "Gallery",
-    subtitle: "Visual highlights capturing ambience, food and entertainment.",
-    images: ["/images/gallery/exotic-bar-bistro-1.jpg", "/images/gallery/exotic-bar-bistro-2.jpg"],
-  },
+},
   cta: {
-    heading: "Begin Your Journey With Us",
-    subtitle: "Reach out to reserve a table or plan your event.",
-    buttonText: "RESERVE",
+    heading: "Taste The Extraordinary",
+    buttonText: "PLAN YOUR VISIT",
     buttonLink: "/contact",
   },
 };
