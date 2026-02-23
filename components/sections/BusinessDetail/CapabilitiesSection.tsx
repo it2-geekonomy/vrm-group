@@ -83,7 +83,7 @@ export default function CapabilitiesSection({
       <div className="mx-auto w-full max-w-[1200px] sm:w-[90%] md:w-[85%] lg:w-[80%]">
 
         {/* Header */}
-        <div className="mb-6 sm:mb-8 md:mb-12">
+        <div className="mb-6 sm:mb-8 md:mb-12 pl-3 sm:pl-16">
           <Typography
             variant="display-xl"
             className="font-cormorant text-white text-center sm:text-left"

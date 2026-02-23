@@ -23,22 +23,22 @@ export const exoticEnterprisesData: BusinessDetailData = {
   experienceHighlights: {
     items: [
       {
-        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836164452-exotic-enterprises_image3.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771844102985-exotic-enterprises_image3.webp",
         title: "Large-scale storage capacity",
         description: "",
       },
       {
-        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836185810-exotic-enterprises_image4.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771844221164-exotic-enterprises_image4.webp",
         title: "Strategic location advantages",
         description: "",
       },
       {
-        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836202835-exotic-enterprises_image5.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771844258866-exotic-enterprises_image5.webp",
         title: "Commercial infrastructure support",
         description: "",
       },
       {
-        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836221408-exotic-enterprises_image6.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771844286590-exotic-enterprises_image6.webp",
         title: "Business oriented planning",
         description: "",
       },
