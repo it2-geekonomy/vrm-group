@@ -47,8 +47,8 @@ export interface Business {
   name: string;
   description: string;
   href: string;
+  images: string[]; // ← array of images; swap /dummy.jpg with real paths later
 }
-
 
 export const businesses: Business[] = [
   {
@@ -56,42 +56,77 @@ export const businesses: Business[] = [
     name: "Exotic Retreat",
     description: "Our residential developments focus on community growth, security and long-term value.",
     href: "/our-business/exotic-retreat",
+    images: [
+      "/dummy.jpg",
+      "/dummy.jpg",
+      "/dummy.jpg",
+    ],
   },
   {
     id: 2,
     name: "Elite Infra",
     description: "Infrastructure solutions and development for modern communities.",
     href: "/our-business/elite-infra",
+    images: [
+      "/dummy.jpg",
+      "/dummy.jpg",
+      "/dummy.jpg",
+    ],
   },
   {
     id: 3,
     name: "Exotic Enterprises",
     description: "Comprehensive business solutions and enterprise services.",
     href: "/our-business/exotic-enterprises",
+    images: [
+      "/dummy.jpg",
+      "/dummy.jpg",
+      "/dummy.jpg",
+    ],
   },
   {
     id: 4,
     name: "Exotic Bar & Bistro",
     description: "Fine dining experience with exotic flavors and exceptional service.",
     href: "/our-business/exotic-bar-bistro",
+    images: [
+      "/dummy.jpg",
+      "/dummy.jpg",
+      "/dummy.jpg",
+    ],
   },
   {
     id: 5,
     name: "Elite Innovation & Engineering",
     description: "Cutting-edge engineering solutions and innovative technologies.",
     href: "/our-business/elite-innovation-engineering",
+    images: [
+      "/dummy.jpg",
+      "/dummy.jpg",
+      "/dummy.jpg",
+    ],
   },
   {
     id: 6,
     name: "Exotic Hospitality",
     description: "Premium hospitality services and luxury accommodations.",
     href: "/our-business/exotic-hospitality",
+    images: [
+      "/dummy.jpg",
+      "/dummy.jpg",
+      "/dummy.jpg",
+    ],
   },
   {
     id: 7,
     name: "Greatway International School",
     description: "Excellence in education with a focus on holistic development.",
     href: "/our-business/greatway-international-school",
+    images: [
+      "/dummy.jpg",
+      "/dummy.jpg",
+      "/dummy.jpg",
+    ],
   },
 ];
 
@@ -149,6 +184,7 @@ export const TIMELINE_EVENTS: { year: number | string; title: string; descriptio
   { year: 2023, title: "FLO PUB (BANGALORE)", description: "Entry into urban lifestyle and entertainment segment." },
   { year: 2025, title: "EXOTIC BAR & BISTRO", description: "Launch of fine dining and entertainment destination in Palasamudram." },
 ];
+
 export type GalleryCategory =
   | "ALL"
   | "HOSPITALITY & EXPERIENCES"
@@ -206,19 +242,4 @@ export const galleryItems: GalleryItem[] = [
 
   { id: 17, title: "Luxury Retreat", category: "HOSPITALITY & EXPERIENCES", image: r2Images[7] },
   { id: 18, title: "Fine Dining", category: "HOSPITALITY & EXPERIENCES", image: r2Images[8] },
-  // { id: 19, title: "Resort View", category: "HOSPITALITY & EXPERIENCES", image: r2Images[0] },
-  // { id: 20, title: "Guest Experience", category: "HOSPITALITY & EXPERIENCES", image: r2Images[1] },
-
-  // { id: 21, title: "Smart Housing", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[2] },
-  // { id: 22, title: "Modern Campus", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[3] },
-  // { id: 23, title: "Building Structure", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[4] },
-  // { id: 24, title: "Infrastructure Work", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[5] },
-
-  // { id: 25, title: "Assembly Unit", category: "INDUSTRIAL OPERATIONS", image: r2Images[6] },
-  // { id: 26, title: "Factory Operations", category: "INDUSTRIAL OPERATIONS", image: r2Images[7] },
-  // { id: 27, title: "Manufacturing Hub", category: "INDUSTRIAL OPERATIONS", image: r2Images[8] },
-
-  // { id: 28, title: "Cultural Fest", category: "COMMUNITY & EVENTS", image: r2Images[0] },
-  // { id: 29, title: "Social Drive", category: "COMMUNITY & EVENTS", image: r2Images[1] },
-  // { id: 30, title: "Volunteer Meet", category: "COMMUNITY & EVENTS", image: r2Images[2] },
 ];
