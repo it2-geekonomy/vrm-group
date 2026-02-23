@@ -22,10 +22,6 @@ const ANIM_CSS = `
     from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-  @keyframes _vrm-line-grow {
-    from { transform: scaleX(0); }
-    to   { transform: scaleX(1); }
-  }
   @keyframes _vrm-card-in {
     0%   { opacity: 0; transform: translateX(20px) scale(0.97); }
     65%  { opacity: 1; transform: translateX(-3px) scale(1.005); }
@@ -58,24 +54,112 @@ const SNAP   = "cubic-bezier(0.34, 1.56, 0.64, 1)";
 const DUR    = 620;
 const IMAGE_CYCLE_MS = 3000;
 
+// Hook: cycles through images for a given business independently
+function useImageCycle(businessId: number, imageCount: number) {
+  const [imgIdx, setImgIdx] = useState(0);
+  const cycleRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  // Reset & restart whenever the business changes
+  useEffect(() => {
+    setImgIdx(0);
+    if (cycleRef.current) clearInterval(cycleRef.current);
+    if (imageCount <= 1) return;
+
+    cycleRef.current = setInterval(() => {
+      setImgIdx((prev) => (prev + 1) % imageCount);
+    }, IMAGE_CYCLE_MS);
+
+    return () => { if (cycleRef.current) clearInterval(cycleRef.current); };
+  }, [businessId, imageCount]);
+
+  return [imgIdx, setImgIdx] as const;
+}
+
+// Standalone right-side card with its own image cycling
+function RightCard({
+  business,
+  cardIndex,
+  animKey,
+  onClick,
+}: {
+  business: (typeof businesses)[number];
+  cardIndex: number;
+  animKey: number;
+  onClick: () => void;
+}) {
+  const [imgIdx] = useImageCycle(business.id, business.images.length);
+
+  return (
+    <button
+      key={`${business.id}-${animKey}`}
+      onClick={onClick}
+      className="relative flex-1 rounded-lg overflow-hidden group text-left"
+      style={{
+        animation: `_vrm-card-in 480ms ${SNAP} ${cardIndex * 48}ms both`,
+        transition: `transform 380ms ${SPRING}, box-shadow 300ms ease`,
+      }}
+      onMouseEnter={(e) => {
+        (e.currentTarget as HTMLElement).style.transform = "scale(1.02) translateX(-3px)";
+        (e.currentTarget as HTMLElement).style.boxShadow = "0 18px 50px rgba(0,0,0,0.5)";
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget as HTMLElement).style.transform = "";
+        (e.currentTarget as HTMLElement).style.boxShadow = "";
+      }}
+    >
+      {/* Stacked cycling images */}
+      {business.images.map((src, i) => (
+        <Image
+          key={`right-${business.id}-img-${i}`}
+          src={src}
+          alt={`${business.name} ${i + 1}`}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          priority={i === 0}
+          style={{
+            opacity: i === imgIdx ? 1 : 0,
+            transition: "opacity 700ms ease",
+          }}
+        />
+      ))}
+
+      <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/40 hover:from-black/40 hover:to-black/20 transition-all duration-300" />
+      <div
+        className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#ED1C24] origin-top scale-y-0 group-hover:scale-y-100"
+        style={{ transition: `transform 350ms ${SNAP}` }}
+      />
+      <div className="absolute inset-0 flex items-center px-6">
+        <Typography variant="h2" className="font-cormorant text-white font-medium">
+          {business.name}
+        </Typography>
+      </div>
+      <div
+        className="absolute inset-y-0 w-1/3 pointer-events-none z-10"
+        style={{
+          background: "linear-gradient(105deg, transparent, rgba(255,255,255,0.06), transparent)",
+          animation: `_vrm-shimmer 550ms ${SPRING} ${cardIndex * 48 + 160}ms both`,
+        }}
+      />
+    </button>
+  );
+}
+
 export default function OurBusinessesSection() {
   useInjectCSS(ANIM_CSS);
 
-  const [activeIndex, setActiveIndex]   = useState(0);
-  const [animKey, setAnimKey]           = useState(0);
-  const [direction, setDirection]       = useState<"right" | "left">("right");
-  const [locked, setLocked]             = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animKey, setAnimKey]         = useState(0);
+  const [direction, setDirection]     = useState<"right" | "left">("right");
+  const [locked, setLocked]           = useState(false);
 
-  // Per-business image cycling — shared between mobile & desktop
-  const [imgIndex, setImgIndex]         = useState(0);
-  const [imgFadeKey, setImgFadeKey]     = useState(0);
-  const cycleRef                        = useRef<ReturnType<typeof setInterval> | null>(null);
+  // Active (left panel) image cycling
+  const [imgIndex, setImgIndex]       = useState(0);
+  const [imgFadeKey, setImgFadeKey]   = useState(0);
+  const cycleRef                      = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Start/restart the image cycle whenever the active business changes
   useEffect(() => {
     setImgIndex(0);
     setImgFadeKey((k) => k + 1);
-
     if (cycleRef.current) clearInterval(cycleRef.current);
 
     const images = businesses[activeIndex].images;
@@ -89,9 +173,7 @@ export default function OurBusinessesSection() {
       });
     }, IMAGE_CYCLE_MS);
 
-    return () => {
-      if (cycleRef.current) clearInterval(cycleRef.current);
-    };
+    return () => { if (cycleRef.current) clearInterval(cycleRef.current); };
   }, [activeIndex]);
 
   const goTo = useCallback((index: number, dir?: "right" | "left") => {
@@ -136,7 +218,6 @@ export default function OurBusinessesSection() {
         <div className="lg:hidden space-y-4">
           {businesses.map((business, index) => {
             const isActive = index === activeIndex;
-            // For inactive cards always show first image; active card uses shared imgIndex
             const mobileImgIdx = isActive ? imgIndex : 0;
 
             return (
@@ -223,10 +304,8 @@ export default function OurBusinessesSection() {
         {/* ── Desktop ───────────────────────────────────────────────────────── */}
         <div className="hidden lg:grid grid-cols-2 gap-6 md:gap-8 items-stretch">
 
-          {/* Left panel */}
+          {/* Left panel — active business with cycling images */}
           <div className="relative h-[clamp(500px,50vw,750px)] rounded-lg overflow-hidden">
-
-            {/* Clip-path wipe wraps image + overlay together */}
             <div
               key={`panel-${animKey}`}
               style={{
@@ -235,7 +314,6 @@ export default function OurBusinessesSection() {
                 animation: `${direction === "right" ? "_vrm-wipe-right" : "_vrm-wipe-left"} ${DUR}ms ${SPRING} both`,
               }}
             >
-              {/* Ken Burns + cycling image layer */}
               <div
                 key={`kb-${animKey}`}
                 style={{
@@ -324,53 +402,18 @@ export default function OurBusinessesSection() {
             </div>
           </div>
 
-          {/* Right — card stack */}
+          {/* Right — each card has its own independent image cycling via RightCard */}
           <div className="flex flex-col gap-4 h-[clamp(500px,50vw,750px)]">
             {rightSideBusinesses.map((business, cardIndex) => {
               const originalIndex = businesses.findIndex((b) => b.id === business.id);
-
               return (
-                <button
+                <RightCard
                   key={`${business.id}-${animKey}`}
+                  business={business}
+                  cardIndex={cardIndex}
+                  animKey={animKey}
                   onClick={() => handleCardClick(originalIndex)}
-                  className="relative flex-1 rounded-lg overflow-hidden group text-left"
-                  style={{
-                    animation: `_vrm-card-in 480ms ${SNAP} ${cardIndex * 48}ms both`,
-                    transition: `transform 380ms ${SPRING}, box-shadow 300ms ease`,
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.transform = "scale(1.02) translateX(-3px)";
-                    (e.currentTarget as HTMLElement).style.boxShadow = "0 18px 50px rgba(0,0,0,0.5)";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.transform = "";
-                    (e.currentTarget as HTMLElement).style.boxShadow = "";
-                  }}
-                >
-                  <Image
-                    src={business.images[0]}
-                    alt={business.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/40 hover:from-black/40 hover:to-black/20 transition-all duration-300" />
-                  <div
-                    className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#ED1C24] origin-top scale-y-0 group-hover:scale-y-100"
-                    style={{ transition: `transform 350ms ${SNAP}` }}
-                  />
-                  <div className="absolute inset-0 flex items-center px-6">
-                    <Typography variant="h2" className="font-cormorant text-white font-medium">
-                      {business.name}
-                    </Typography>
-                  </div>
-                  <div
-                    className="absolute inset-y-0 w-1/3 pointer-events-none z-10"
-                    style={{
-                      background: "linear-gradient(105deg, transparent, rgba(255,255,255,0.06), transparent)",
-                      animation: `_vrm-shimmer 550ms ${SPRING} ${cardIndex * 48 + 160}ms both`,
-                    }}
-                  />
-                </button>
+                />
               );
             })}
           </div>
