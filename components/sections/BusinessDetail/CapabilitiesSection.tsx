@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Typography from "@/lib/typography";
 import type { ExperienceHighlight } from "@/data/business/types";
 
@@ -13,6 +13,38 @@ export default function CapabilitiesSection({
 
   const isDragging = useRef(false);
   const startX = useRef(0);
+
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    // Use a small buffer (10px) to handle sub-pixel precision and scroll boundaries
+    const isAtStart = el.scrollLeft <= 5;
+    const isAtEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 10;
+
+    setCanScrollLeft(!isAtStart);
+    setCanScrollRight(!isAtEnd);
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    checkScroll();
+
+    // Listen to scroll events
+    el.addEventListener("scroll", checkScroll);
+    // Listen to resize events as they can change scrollWidth/clientWidth
+    window.addEventListener("resize", checkScroll);
+
+    return () => {
+      el.removeEventListener("scroll", checkScroll);
+      window.removeEventListener("resize", checkScroll);
+    };
+  }, [highlights]); // Re-run if highlights change
 
   const scroll = (direction: "left" | "right") => {
     const el = scrollRef.current;
@@ -67,9 +99,10 @@ export default function CapabilitiesSection({
           <button
             type="button"
             onClick={() => scroll("left")}
-            className="bg-black text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center"
+            className={`bg-black text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-black border border-white/20 active:scale-95 ${canScrollLeft ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
           >
-          ←
+            ←
           </button>
 
           {/* Slider */}
@@ -121,9 +154,10 @@ export default function CapabilitiesSection({
           <button
             type="button"
             onClick={() => scroll("right")}
-            className="bg-black text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center"
+            className={`bg-black text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-black border border-white/20 active:scale-95 ${canScrollRight ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
           >
-       →
+            →
           </button>
 
         </div>
