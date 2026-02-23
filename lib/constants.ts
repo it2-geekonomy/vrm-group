@@ -47,7 +47,10 @@ export interface Business {
   name: string;
   description: string;
   href: string;
-  images: string[]; // ← array of images; swap /dummy.jpg with real paths later
+  /** Images for the left carousel / hero only */
+  images: string[];
+  /** Separate image for the right-side card thumbnail (optional; falls back to images[0] if omitted) */
+  cardImage?: string;
 }
 
 export const businesses: Business[] = [
@@ -57,10 +60,11 @@ export const businesses: Business[] = [
     description: "Our residential developments focus on community growth, security and long-term value.",
     href: "/our-business/exotic-retreat",
     images: [
-      "/dummy.jpg",
-      "/dummy.jpg",
-      "/dummy.jpg",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828260043-retreat.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828260043-retreat.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828260043-retreat.webp",
     ],
+    cardImage: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828260043-retreat.webp",
   },
   {
     id: 2,
@@ -68,10 +72,11 @@ export const businesses: Business[] = [
     description: "Infrastructure solutions and development for modern communities.",
     href: "/our-business/elite-infra",
     images: [
-      "/dummy.jpg",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828290021-elite_infra_image.webp",
       "/dummy.jpg",
       "/dummy.jpg",
     ],
+    cardImage: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828290021-elite_infra_image.webp",
   },
   {
     id: 3,
@@ -79,10 +84,11 @@ export const businesses: Business[] = [
     description: "Comprehensive business solutions and enterprise services.",
     href: "/our-business/exotic-enterprises",
     images: [
-      "/dummy.jpg",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828692105-exotic_enterprises_image.webp",
       "/dummy.jpg",
       "/dummy.jpg",
     ],
+    cardImage: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828692105-exotic_enterprises_image.webp",
   },
   {
     id: 4,
@@ -90,10 +96,11 @@ export const businesses: Business[] = [
     description: "Fine dining experience with exotic flavors and exceptional service.",
     href: "/our-business/exotic-bar-bistro",
     images: [
-      "/dummy.jpg",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828734140-exotic_bar___bistro_image.webp",
       "/dummy.jpg",
       "/dummy.jpg",
     ],
+    cardImage: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828734140-exotic_bar___bistro_image.webp",
   },
   {
     id: 5,
@@ -101,10 +108,11 @@ export const businesses: Business[] = [
     description: "Cutting-edge engineering solutions and innovative technologies.",
     href: "/our-business/elite-innovation-engineering",
     images: [
-      "/dummy.jpg",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828761359-exotic_engineering_image.webp",
       "/dummy.jpg",
       "/dummy.jpg",
     ],
+    cardImage: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828761359-exotic_engineering_image.webp",
   },
   {
     id: 6,
@@ -112,10 +120,11 @@ export const businesses: Business[] = [
     description: "Premium hospitality services and luxury accommodations.",
     href: "/our-business/exotic-hospitality",
     images: [
-      "/dummy.jpg",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828794157-hospitality.webp",
       "/dummy.jpg",
       "/dummy.jpg",
     ],
+    cardImage: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828794157-hospitality.webp",
   },
   {
     id: 7,
@@ -123,10 +132,11 @@ export const businesses: Business[] = [
     description: "Excellence in education with a focus on holistic development.",
     href: "/our-business/greatway-international-school",
     images: [
-      "/dummy.jpg",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828818041-school.webp",
       "/dummy.jpg",
       "/dummy.jpg",
     ],
+    cardImage: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828818041-school.webp",
   },
 ];
 
@@ -210,36 +220,49 @@ export const galleryTabs: GalleryCategory[] = [
 const r2Images = [
   "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744316165-gallery-section-01.png",
   "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744425337-gallery-section-02.png",
-  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744458029-gallery-section-03.png",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771826350343-DSC00178.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771826395693-DSC00180.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771826639358-VRM_GRAND_STAY__86_.webp",
   "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744474510-gallery-section-04.png",
   "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744490071-gallery-section-05.png",
   "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744505146-gallery-section-06.png",
   "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744519882-gallery-section-07.png",
   "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744533996-gallery-section-08.png",
   "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771744545746-gallery-section-09.png",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825235161-VRM_GRAND_STAY__61_.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825422376-VRM_GRAND_STAY__26_.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825516350-VRM_GRAND_STAY__32_.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825580930-VRM_GRAND_STAY__60_.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825629755-VRM_GRAND_STAY__67_.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825709742-VRM_GRAND_STAY__64_.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825814799-VRM_GRAND_STAY__70_.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771826090305-VRM_GRAND_STAY__124_.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771826132979-VRM_GRAND_STAY__123_.webp"
 ];
 
 export const galleryItems: GalleryItem[] = [
-  { id: 1, title: "Retreat Exterior", category: "HOSPITALITY & EXPERIENCES", image: r2Images[0] },
-  { id: 2, title: "Culinary Experience", category: "HOSPITALITY & EXPERIENCES", image: r2Images[1] },
-  { id: 3, title: "Premium Stay", category: "HOSPITALITY & EXPERIENCES", image: r2Images[2] },
-  { id: 4, title: "Dining Moments", category: "HOSPITALITY & EXPERIENCES", image: r2Images[3] },
+  { id: 1, title: "Premium Stay", category: "HOSPITALITY & EXPERIENCES", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771826350343-DSC00178.webp" },
+  { id: 2, title: "Premium Stay", category: "HOSPITALITY & EXPERIENCES", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771826395693-DSC00180.webp" },
+  { id: 3, title: "Premium Stay", category: "HOSPITALITY & EXPERIENCES", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771826971090-VRM_GRAND_STAY__107_.webp" },
+  { id: 4, title: "Premium Stay", category: "HOSPITALITY & EXPERIENCES", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771826639358-VRM_GRAND_STAY__86_.webp" },
 
-  { id: 5, title: "Campus Development", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[4] },
-  { id: 6, title: "Institutional Build", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[5] },
-  { id: 7, title: "Urban Housing", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[6] },
-  { id: 8, title: "Township Planning", category: "RESIDENTIAL & INFRASTRUCTURE", image: r2Images[7] },
+  { id: 5, title: "Campus Development", category: "RESIDENTIAL & INFRASTRUCTURE", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825235161-VRM_GRAND_STAY__61_.webp" },
+  { id: 6, title: "Institutional Build", category: "RESIDENTIAL & INFRASTRUCTURE", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825422376-VRM_GRAND_STAY__26_.webp" },
+  { id: 7, title: "Urban Housing", category: "RESIDENTIAL & INFRASTRUCTURE", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825516350-VRM_GRAND_STAY__32_.webp" },
+  { id: 8, title: "Township Planning", category: "RESIDENTIAL & INFRASTRUCTURE", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825580930-VRM_GRAND_STAY__60_.webp" },
+  { id: 9, title: "Township Planning", category: "RESIDENTIAL & INFRASTRUCTURE", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825629755-VRM_GRAND_STAY__67_.webp" },
+  { id: 10, title: "Township Planning", category: "RESIDENTIAL & INFRASTRUCTURE", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825709742-VRM_GRAND_STAY__64_.webp" },
+  { id: 11, title: "Township Planning", category: "RESIDENTIAL & INFRASTRUCTURE", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771825814799-VRM_GRAND_STAY__70_.webp" },
+  { id: 12, title: "Township Planning", category: "RESIDENTIAL & INFRASTRUCTURE", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771826090305-VRM_GRAND_STAY__124_.webp" },
+  { id: 13, title: "Township Planning", category: "RESIDENTIAL & INFRASTRUCTURE", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771826132979-VRM_GRAND_STAY__123_.webp" },
 
-  { id: 9, title: "Engineering Setup", category: "INDUSTRIAL OPERATIONS", image: r2Images[8] },
-  { id: 10, title: "Production Line", category: "INDUSTRIAL OPERATIONS", image: r2Images[0] },
-  { id: 11, title: "Industrial Unit", category: "INDUSTRIAL OPERATIONS", image: r2Images[1] },
-  { id: 12, title: "Machinery Floor", category: "INDUSTRIAL OPERATIONS", image: r2Images[2] },
+  { id: 14, title: "Engineering Setup", category: "INDUSTRIAL OPERATIONS", image: r2Images[8] },
+  { id: 15, title: "Production Line", category: "INDUSTRIAL OPERATIONS", image: r2Images[0] },
+  { id: 16, title: "Industrial Unit", category: "INDUSTRIAL OPERATIONS", image: r2Images[1] },
+  { id: 17, title: "Machinery Floor", category: "INDUSTRIAL OPERATIONS", image: r2Images[2] },
 
-  { id: 13, title: "Community Outreach", category: "COMMUNITY & EVENTS", image: r2Images[3] },
-  { id: 14, title: "Celebration Event", category: "COMMUNITY & EVENTS", image: r2Images[4] },
-  { id: 15, title: "Public Program", category: "COMMUNITY & EVENTS", image: r2Images[5] },
-  { id: 16, title: "CSR Initiative", category: "COMMUNITY & EVENTS", image: r2Images[6] },
-
-  { id: 17, title: "Luxury Retreat", category: "HOSPITALITY & EXPERIENCES", image: r2Images[7] },
-  { id: 18, title: "Fine Dining", category: "HOSPITALITY & EXPERIENCES", image: r2Images[8] },
+  { id: 18, title: "Community Outreach", category: "COMMUNITY & EVENTS", image: r2Images[3] },
+  { id: 19, title: "Celebration Event", category: "COMMUNITY & EVENTS", image: r2Images[4] },
+  { id: 20, title: "Public Program", category: "COMMUNITY & EVENTS", image: r2Images[5] },
+  { id: 21, title: "CSR Initiative", category: "COMMUNITY & EVENTS", image: r2Images[6] },
 ];
