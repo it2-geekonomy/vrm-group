@@ -40,6 +40,22 @@ export const exoticRetreatData: BusinessDetailData = {
         description:
           "Unwind by the sparkling pool and enjoy thoughtfully crafted leisure spaces. Perfect for relaxation, recreation, and memorable moments under the sun.",
       },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839415327-VRM_GRAND_STAY__42_.webp",
+        title: "Event and Celebration Hosting",
+        description:
+          "Host memorable events and celebrations in our dedicated spaces. From intimate gatherings to grand occasions, we ensure every moment is special and well-organised.",
+      },{
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839445921-VRM_GRAND_STAY__43_.webp",
+        title: "Event and Celebration Hosting",
+        description:
+          "Host memorable events and celebrations in our dedicated spaces. From intimate gatherings to grand occasions, we ensure every moment is special and well-organised.",
+      },{
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839454527-VRM_GRAND_STAY__53_.webp",
+        title: "Event and Celebration Hosting",
+        description:
+          "Host memorable events and celebrations in our dedicated spaces. From intimate gatherings to grand occasions, we ensure every moment is special and well-organised.",
+      }
     ],
   },
   facilities: [
