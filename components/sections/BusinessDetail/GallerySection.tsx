@@ -2,20 +2,36 @@
 
 import Typography from "@/lib/typography";
 import type { GallerySectionData } from "@/data/business/types";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function GallerySection({ data }: { data: GallerySectionData }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
   const isDragging = useRef(false);
   const lastX = useRef(0);
 
+  const updateScrollState = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const { scrollLeft, scrollWidth, clientWidth } = el;
+
+    setCanScrollLeft(scrollLeft > 0);
+    setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1);
+  };
+
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
+
     scrollRef.current.scrollBy({
       left: direction === "left" ? -600 : 600,
       behavior: "smooth",
     });
+
+    setTimeout(updateScrollState, 400);
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -31,6 +47,7 @@ export default function GallerySection({ data }: { data: GallerySectionData }) {
       const delta = e.clientX - lastX.current;
       scrollRef.current.scrollLeft -= delta;
       lastX.current = e.clientX;
+      updateScrollState();
     };
 
     const handleMouseUp = () => {
@@ -38,20 +55,28 @@ export default function GallerySection({ data }: { data: GallerySectionData }) {
       document.body.style.userSelect = "auto";
     };
 
+    const el = scrollRef.current;
+    if (el) {
+      el.addEventListener("scroll", updateScrollState);
+    }
+
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseup", handleMouseUp);
 
+    updateScrollState();
+
     return () => {
+      if (el) el.removeEventListener("scroll", updateScrollState);
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
     };
   }, []);
 
   return (
-    <section className="w-full bg-[#0d0d0d] py-20 border-t border-white/10">
+    <section className="w-full bg-[#0d0d0d] py-20 border-t border-white/10 px-3 sm:px-6">
 
       {/* TEXT */}
-      <div className="mx-auto max-w-[90rem] px-6 md:px-10">
+      <div className="mx-auto w-full max-w-[1200px] sm:w-[90%] md:w-[85%] lg:w-[80%]">
         <Typography
           variant="display-xl"
           className="text-white font-semibold text-[1.5rem] md:text-[1.8rem] lg:text-[2rem] mb-4"
@@ -69,29 +94,29 @@ export default function GallerySection({ data }: { data: GallerySectionData }) {
 
       {/* GALLERY ROW */}
       <div className="mx-auto max-w-[95rem] px-4 md:px-6">
-
         <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
 
           {/* LEFT ARROW */}
-          <div className="flex flex-shrink-0">
-            <button
-              onClick={() => scroll("left")}
-              className="
-                bg-black text-white
-                rounded-full
-                w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12
-                flex items-center justify-center
-                hover:bg-white hover:text-black
-                transition
-              "
-            >
-              ←
-            </button>
-          </div>
+          {canScrollLeft && (
+            <div className="flex flex-shrink-0">
+              <button
+                onClick={() => scroll("left")}
+                className="
+                  bg-black text-white
+                  rounded-full
+                  w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12
+                  flex items-center justify-center
+                  hover:bg-white hover:text-black
+                  transition
+                "
+              >
+                ←
+              </button>
+            </div>
+          )}
 
           {/* GALLERY */}
           <div className="flex-1 overflow-hidden relative">
-
             <svg width="0" height="0">
               <defs>
                 <clipPath id="galleryCurve" clipPathUnits="objectBoundingBox">
@@ -135,28 +160,28 @@ export default function GallerySection({ data }: { data: GallerySectionData }) {
                 />
               ))}
             </div>
-
           </div>
 
           {/* RIGHT ARROW */}
-          <div className="flex flex-shrink-0">
-            <button
-              onClick={() => scroll("right")}
-              className="
-                bg-black text-white
-                rounded-full
-                w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12
-                flex items-center justify-center
-                hover:bg-white hover:text-black
-                transition
-              "
-            >
-              →
-            </button>
-          </div>
+          {canScrollRight && (
+            <div className="flex flex-shrink-0">
+              <button
+                onClick={() => scroll("right")}
+                className="
+                  bg-black text-white
+                  rounded-full
+                  w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12
+                  flex items-center justify-center
+                  hover:bg-white hover:text-black
+                  transition
+                "
+              >
+                →
+              </button>
+            </div>
+          )}
 
         </div>
-
       </div>
 
     </section>
