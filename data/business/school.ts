@@ -16,7 +16,7 @@ export const SchoolData: BusinessDetailData = {
     description:
       "The School initiative within VRM Group provides quality education through structured learning environments designed to support holistic student development. Our educational programs focus on academic excellence, character building, and preparing students for future success while contributing to community growth.",
     image:
-      "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771838836881-schoolabout.webp",
   },
   experienceHighlights: {
     items: [],
@@ -25,7 +25,14 @@ export const SchoolData: BusinessDetailData = {
   gallery: {
     title: "Gallery",
     subtitle: "Campus Life / Environment Visual",
-    images: [],
+    images: [
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839098113-schoolgallery1.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839126150-schoolgallery2.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839157254-schoolgallery3.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839185244-schoolgallery4.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839209425-schoolgallery5.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839233617-schoolgallery6.webp",
+    ],
   },
   cta: {
     heading: "Begin Your Educational Journey",
