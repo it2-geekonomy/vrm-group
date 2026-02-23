@@ -178,7 +178,7 @@ export default function ContactSection() {
                 className={`cursor-pointer px-12 py-2 rounded-full border border-gray-300 transition-all duration-300 ${
                   loading
                     ? "bg-gray-500 cursor-not-allowed"
-                    : "bg-[#ED1C2475] hover:bg-[#ED1C24]"
+                    : "bg-[#ED1C2475]"
                 }`}
               >
                 <Typography
