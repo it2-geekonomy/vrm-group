@@ -11,7 +11,7 @@ export default function Page() {
     <main className="min-h-screen bg-[#0b0b0b] text-white">
       <HeroSection {...data.hero} />
       <AboutSection data={data.about} />
-      {data.gallery && <GallerySection data={data.gallery} />}
+      <GallerySection data={data.gallery} />
     </main>
   );
 }
