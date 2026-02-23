@@ -11,6 +11,37 @@ export default function ExperienceHighlightsSection({
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  const isDown = useRef(false);
+const startX = useRef(0);
+const scrollLeft = useRef(0);
+
+const handleMouseDown = (e: React.MouseEvent) => {
+  const el = scrollRef.current;
+  if (!el) return;
+
+  isDown.current = true;
+  startX.current = e.pageX - el.offsetLeft;
+  scrollLeft.current = el.scrollLeft;
+};
+
+const handleMouseLeave = () => {
+  isDown.current = false;
+};
+
+const handleMouseUp = () => {
+  isDown.current = false;
+};
+
+const handleMouseMove = (e: React.MouseEvent) => {
+  const el = scrollRef.current;
+  if (!el || !isDown.current) return;
+
+  e.preventDefault();
+  const x = e.pageX - el.offsetLeft;
+  const walk = (x - startX.current) * 1.2; // drag speed
+  el.scrollLeft = scrollLeft.current - walk;
+};
+
   const scroll = (direction: "left" | "right") => {
     const el = scrollRef.current;
     if (!el) return;
@@ -53,9 +84,13 @@ export default function ExperienceHighlightsSection({
           </div>
         </div>
         <div
-          ref={scrollRef}
-          className="no-scrollbar overflow-x-auto overflow-y-hidden scroll-smooth touch-pan-x"
-          style={{ scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch" }}
+           ref={scrollRef}
+           onMouseDown={handleMouseDown}
+           onMouseLeave={handleMouseLeave}
+           onMouseUp={handleMouseUp}
+           onMouseMove={handleMouseMove}
+           className="no-scrollbar overflow-x-auto overflow-y-hidden scroll-smooth touch-pan-x cursor-grab active:cursor-grabbing"
+           style={{ scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch" }}
         >
           <div
             className="flex min-w-0"
@@ -80,14 +115,14 @@ export default function ExperienceHighlightsSection({
                 </div>
                 <div className="min-h-0 flex flex-col justify-center py-1">
                   <Typography
-                    variant="h3"
+                    variant="display-2xl"
                     className="font-cormorant text-white font-medium text-base sm:text-lg md:text-xl"
                   >
                     {item.title}
                   </Typography>
                   <Typography
-                    variant="body-lg"
-                    className="font-poppins text-white/90 font-light leading-relaxed text-sm sm:text-base"
+                    variant="h2"
+                    className="font-cormorant text-white/90 font-light leading-relaxed text-sm sm:text-base"
                   >
                     {item.description}
                   </Typography>
