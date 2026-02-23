@@ -67,12 +67,12 @@ export default function HeroBanner({
 
       {/* Center content: headline, body, button */}
       <div className="relative z-10 w-full max-w-[88rem] mx-auto text-center px-4 sm:px-6 sm:pr-40 lg:pr-48 xl:pr-44">
-        <Typography
-          variant="display-2xl"
-          className="text-white font-normal text-[1.3rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[1.9rem] leading-tight tracking-normal"
-        >
-          {title}
-        </Typography>
+      <Typography
+  variant="display-2xl"
+  className="text-white font-cormorant font-normal text-[2rem] sm:text-[2.2rem] md:text-[2.3rem] lg:text-[2.5rem] leading-tight tracking-normal"
+>
+  {title}
+</Typography>
 
         <Typography
           variant="body-xl"
