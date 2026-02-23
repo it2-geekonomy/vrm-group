@@ -3,7 +3,8 @@ import type { BusinessDetailData } from "./types";
 export const exoticRetreatData: BusinessDetailData = {
   name: "Exotic Retreat",
   hero: {
-    backgroundImage: "/images/pool.jpg",
+
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // fallback video
     logo: "/images/logo.png",
     title: "A Destination Designed for Relaxation and Celebration",
     description:

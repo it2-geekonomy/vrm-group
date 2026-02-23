@@ -5,7 +5,7 @@ import Link from "next/link";
 import Typography from "@/lib/typography";
 
 interface HeroBannerProps {
-  backgroundImage: string;
+  videoSrc: string;
   logo: string;
   title: string;
   description: string;
@@ -14,7 +14,7 @@ interface HeroBannerProps {
 }
 
 export default function HeroBanner({
-  backgroundImage,
+  videoSrc,
   logo,
   title,
   description,
@@ -22,14 +22,17 @@ export default function HeroBanner({
   buttonLink,
 }: HeroBannerProps) {
   return (
-    <section
-      className="relative min-h-screen w-full flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 text-center text-white"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="relative min-h-screen w-full flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 text-center text-white overflow-hidden">
+      {/* Background Video */}
+      <video
+        src={videoSrc}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60" />
 
@@ -67,12 +70,12 @@ export default function HeroBanner({
 
       {/* Center content: headline, body, button */}
       <div className="relative z-10 w-full max-w-[88rem] mx-auto text-center px-4 sm:px-6 sm:pr-40 lg:pr-48 xl:pr-44">
-        <Typography
-          variant="display-2xl"
-          className="text-white font-normal text-[1.3rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[1.9rem] leading-tight tracking-normal"
-        >
-          {title}
-        </Typography>
+      <Typography
+  variant="display-2xl"
+  className="text-white font-cormorant font-normal text-[2rem] sm:text-[2.2rem] md:text-[2.3rem] lg:text-[2.5rem] leading-tight tracking-normal"
+>
+  {title}
+</Typography>
 
         <Typography
           variant="body-xl"
