@@ -12,10 +12,11 @@ export default function Page() {
     <main className="min-h-screen bg-[#0b0b0b] text-white">
       <HeroSection {...data.hero} />
       <AboutSection data={data.about} />
-<ExperienceHighlightsSection
+      <ExperienceHighlightsSection
         sectionTitle={data.experienceHighlights.sectionTitle}
         highlights={data.experienceHighlights.items}
-      />      <CTASection data={data.cta} />
+      />
+      <CTASection data={data.cta} />
     </main>
   );
 }

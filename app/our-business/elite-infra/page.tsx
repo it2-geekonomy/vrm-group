@@ -7,6 +7,7 @@ import { eliteInfraData } from "@/data/business/elite-infra";
 
 export default function EliteInfraPage() {
   const data = eliteInfraData;
+  
   return (
     <main className="min-h-screen bg-[#0b0b0b] text-white">
       <HeroSection {...data.hero} />

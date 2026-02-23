@@ -4,7 +4,12 @@ import Link from "next/link";
 import type { CTASectionData } from "@/data/business/types";
 import Typography from "@/lib/typography";
 
-export default function CTASection({ data }: { data: CTASectionData }) {
+interface CTASectionProps {
+  data: CTASectionData;
+  onEnquiryClick?: () => void;
+}
+
+export default function CTASection({ data, onEnquiryClick }: CTASectionProps) {
   return (
     <section className="w-full bg-[#0b0b0b] py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
@@ -20,13 +25,23 @@ export default function CTASection({ data }: { data: CTASectionData }) {
 >
   {data.subtitle}
 </Typography>
-        <Link
-          href={data.buttonLink}
-          className="inline-flex items-center justify-center rounded-full px-10 sm:px-12 md:px-16 py-2 md:py-3 text-white font-bold uppercase tracking-wider text-lg bg-[#ED1C2475] border border-white transition-all duration-300"
-          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
-        >
-          {data.buttonText}
-        </Link>
+        {onEnquiryClick ? (
+          <button
+            onClick={onEnquiryClick}
+            className="inline-flex items-center justify-center rounded-full px-10 sm:px-12 md:px-16 py-2 md:py-3 text-white font-bold uppercase tracking-wider text-lg bg-[#ED1C2475] border border-white transition-all duration-300 cursor-pointer"
+            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
+            {data.buttonText}
+          </button>
+        ) : (
+          <Link
+            href={data.buttonLink}
+            className="inline-flex items-center justify-center rounded-full px-10 sm:px-12 md:px-16 py-2 md:py-3 text-white font-bold uppercase tracking-wider text-lg bg-[#ED1C2475] border border-white transition-all duration-300"
+            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
+            {data.buttonText}
+          </Link>
+        )}
       </div>
     </section>
   );
