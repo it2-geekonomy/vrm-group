@@ -3,8 +3,7 @@ import type { BusinessDetailData } from "./types";
 export const eliteInfraData: BusinessDetailData = {
   name: "Elite Infra",
   hero: {
-    backgroundImage:
-      "https://www.figma.com/api/mcp/asset/85165f4c-88ec-4e89-8fc7-747cb7c48ee1",
+
     videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // ← replace with your actual video URL
     logo: "/images/logo.png",
     title: "Developing Communities with Purpose",
