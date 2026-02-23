@@ -19,22 +19,25 @@ export const eliteEnterprisesData: BusinessDetailData = {
     image:
       "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
   },
-  experienceHighlights: [
-    {
-      image:
-        "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
-      title: "Modern warehousing",
-      description:
-        "State-of-the-art facilities with optimal layout and handling systems for diverse industrial needs.",
-    },
-    {
-      image:
-        "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
-      title: "Logistics support",
-      description:
-        "Strategic locations and connectivity to support supply chain and distribution requirements.",
-    },
-  ],
+  experienceHighlights: {
+    sectionTitle: "Experience Highlights",
+    items: [
+      {
+        image:
+          "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
+        title: "Modern warehousing",
+        description:
+          "State-of-the-art facilities with optimal layout and handling systems for diverse industrial needs.",
+      },
+      {
+        image:
+          "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
+        title: "Logistics support",
+        description:
+          "Strategic locations and connectivity to support supply chain and distribution requirements.",
+      },
+    ],
+  },
   facilities: [
     { image: "/images/facilities/spacious-warehouses.png", label: "Spacious Warehouses" },
     { image: "/images/facilities/loading-docks.png", label: "Loading Docks" },

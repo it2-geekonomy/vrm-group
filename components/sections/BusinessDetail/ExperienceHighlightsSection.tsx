@@ -6,8 +6,10 @@ import type { ExperienceHighlight } from "@/data/business/types";
 
 export default function ExperienceHighlightsSection({
   highlights,
+  sectionTitle = "Experience Highlights",
 }: {
   highlights: ExperienceHighlight[];
+  sectionTitle?: string;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -51,12 +53,12 @@ export default function ExperienceHighlightsSection({
       <div className="mx-auto w-full max-w-[1200px] sm:w-[90%] md:w-[85%] lg:w-[80%]">
 
         {/* Header */}
-        <div className="mb-6 sm:mb-8 md:mb-12">
+        <div className="mb-6 sm:mb-8 md:mb-12 pl-3 sm:pl-16">
           <Typography
             variant="display-xl"
             className="font-cormorant text-white text-center sm:text-left"
           >
-            Experience Highlights
+            {sectionTitle}
           </Typography>
         </div>
 
@@ -67,24 +69,9 @@ export default function ExperienceHighlightsSection({
           <button
             type="button"
             onClick={() => scroll("left")}
-            className="flex h-10 w-10 shrink-0 items-center justify-center
-                       rounded-full border border-white/40 text-white
-                       bg-black/40 backdrop-blur-sm
-                       transition hover:bg-white/10 active:scale-95"
+            className="bg-black text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center"
           >
-            <svg
-              className="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
+            ←
           </button>
 
           {/* Slider */}
@@ -136,24 +123,9 @@ export default function ExperienceHighlightsSection({
           <button
             type="button"
             onClick={() => scroll("right")}
-            className="flex h-10 w-10 shrink-0 items-center justify-center
-                       rounded-full border border-white/40 text-white
-                       bg-black/40 backdrop-blur-sm
-                       transition hover:bg-white/10 active:scale-95"
+            className="bg-black text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center"
           >
-            <svg
-              className="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
+            →
           </button>
 
         </div>

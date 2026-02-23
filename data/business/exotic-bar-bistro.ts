@@ -17,9 +17,11 @@ export const exoticBarBistroData: BusinessDetailData = {
     description:
       "Combining ambience, food and entertainment, Exotic Bar & Bistro reflects VRM  Group’s expansion into lifestyle experiences. It is designed as a welcoming  space where quality dining and social interaction come together seamlessly.",
     image:
-      "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
+      "/our-business/Exotic Bar & Bistro image.webp",
   },
-  experienceHighlights: [
+   experienceHighlights: {
+    sectionTitle: "The Experience",
+    items:[
     {
       image:
         "/images/gallery/exoticbarbistro1.webp",
@@ -41,6 +43,7 @@ export const exoticBarBistroData: BusinessDetailData = {
       title: "Event and Celebration Hosting",
     },
   ],
+},
   cta: {
     heading: "Taste The Extraordinary",
     buttonText: "PLAN YOUR VISIT",
