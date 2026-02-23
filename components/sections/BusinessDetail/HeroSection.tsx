@@ -96,16 +96,24 @@ export default function HeroBanner({
         )}
       </button>
 
-      {/* Mobile logo – simple top-center (no tall strip so it doesn't cover content) */}
+      {/* Mobile logo – top-right with gradient background */}
       {logo ? (
-        <div className="absolute top-4 left-1/2 z-20 -translate-x-1/2 sm:hidden">
-          <Image
-            src={logo}
-            alt="Logo"
-            width={96}
-            height={16}
-            className="object-contain"
-          />
+        <div
+          className="absolute top-0 right-0 z-20 sm:hidden h-[120px] w-[80px] flex items-start justify-center p-3 backdrop-blur-[1px] transition-all duration-300"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 28%, rgba(255,255,255,0.45) 55%, rgba(255,255,255,0.12) 70%, rgba(255,255,255,0) 80%)",
+          }}
+        >
+          <div className="relative w-full aspect-square max-w-[80%]">
+            <Image
+              src={logo}
+              alt="Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
       ) : null}
 
