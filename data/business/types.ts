@@ -16,9 +16,9 @@ export type FacilityItem = {
 };
 
 export type GallerySectionData = {
-  title: string;
-  subtitle: string;
-  images: string[];
+  title?: string;
+  subtitle?: string;
+  images?: string[];
 };
 
 export type CTASectionData = {

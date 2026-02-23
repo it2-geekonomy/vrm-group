@@ -4,7 +4,7 @@ import Typography from "@/lib/typography";
 import type { GallerySectionData } from "@/data/business/types";
 import { useRef, useEffect } from "react";
 
-export default function GallerySection({ data }: { data: GallerySectionData }) {
+export default function GallerySection({ data }: { data?: GallerySectionData }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const isDragging = useRef(false);
@@ -46,6 +46,8 @@ export default function GallerySection({ data }: { data: GallerySectionData }) {
       window.removeEventListener("mouseup", handleMouseUp);
     };
   }, []);
+
+  if (!data || !data.images || data.images.length === 0) return null;
 
   return (
     <section className="w-full bg-[#0d0d0d] py-20 border-t border-white/10">
