@@ -134,12 +134,28 @@ export default function Navbar() {
       const accordionMaxHeight = navbarBusinesses.length * ACCORDION_ITEM_HEIGHT + 16;
       return (
         <div key={link.href} className="flex flex-col">
-          <button onClick={() => setIsMobileBusinessOpen((prev) => !prev)} className="flex items-center justify-between w-full px-6 py-4 text-left select-none">
-            <Typography variant="h4" className="font-cormorant text-black">{link.label}</Typography>
-            <svg className={`w-4 h-4 shrink-0 transition-transform duration-300 ${isMobileBusinessOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
+          <div className="flex items-center justify-between w-full">
+            <Link 
+              href={link.href} 
+              onClick={closeMobileMenu}
+              className="flex-1 px-6 py-4 hover:bg-gray-50 active:bg-gray-100 transition-colors"
+            >
+              <Typography variant="h4" className="font-cormorant text-black">{link.label}</Typography>
+            </Link>
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsMobileBusinessOpen((prev) => !prev);
+              }} 
+              className="px-4 py-4 hover:bg-gray-50 active:bg-gray-100 transition-colors"
+              aria-label="Toggle businesses menu"
+            >
+              <svg className={`w-4 h-4 shrink-0 transition-transform duration-300 ${isMobileBusinessOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
           <div className="overflow-hidden transition-all duration-300 ease-in-out" style={{ maxHeight: isMobileBusinessOpen ? `${accordionMaxHeight}px` : "0px" }}>
             <div className="flex flex-col gap-1 px-4 pb-4">
               {navbarBusinesses.map((biz) => (

@@ -17,28 +17,28 @@ export const exoticEnterprisesData: BusinessDetailData = {
     title: "About Exotic Enterprises",
     description:
       "Strategically developed warehousing facilities enable businesses to operate efficiently within growing industrial corridors. The initiative reflects VRM Group's commitment to supporting regional enterprise development.",
-    image: "/our-business inside/exotic-enterprises/exotic-enterprises image2.webp",
+    image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771835757634-exotic-enterprises_image2.webp",
   },
 
   experienceHighlights: {
     items: [
       {
-        image: "/our-business inside/exotic-enterprises/exotic-enterprises image3.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836164452-exotic-enterprises_image3.webp",
         title: "Large-scale storage capacity",
         description: "",
       },
       {
-        image: "/our-business inside/exotic-enterprises/exotic-enterprises image4.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836185810-exotic-enterprises_image4.webp",
         title: "Strategic location advantages",
         description: "",
       },
       {
-        image: "/our-business inside/exotic-enterprises/exotic-enterprises image5.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836202835-exotic-enterprises_image5.webp",
         title: "Commercial infrastructure support",
         description: "",
       },
       {
-        image: "/our-business inside/exotic-enterprises/exotic-enterprises image6.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836221408-exotic-enterprises_image6.webp",
         title: "Business oriented planning",
         description: "",
       },
