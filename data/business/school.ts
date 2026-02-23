@@ -7,7 +7,7 @@ export const SchoolData: BusinessDetailData = {
     logo: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771831257635-school_logo.webp",
     title: "Nurturing Future Generations",
     description:
-      "The educational initiative within VRM Group contributes to community  development through structured learning environments and holistic student  growth.",
+      "The educational initiative within VRM Group contributes to community development through structured learning environments and holistic student growth.",
     buttonText: "LEARN MORE",
     buttonLink: "/contact",
   },

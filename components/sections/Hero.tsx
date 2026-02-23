@@ -37,22 +37,30 @@ export default function AboutPage() {
   };
 
   return (
-    <section ref={sectionRef} className="relative w-full h-[50vh] md:h-[80vh] overflow-hidden">
+    <section ref={sectionRef} className="relative w-full h-[50vh] md:h-[80vh] lg:h-[85vh] overflow-hidden">
 
       {/* Background Video */}
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        playsInline
-        muted
-        className="absolute inset-0 w-full h-full object-fill md:object-cover md:object-center"
-      >
-        <source
-          src="https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4"
-          type="video/mp4"
-        />
-      </video>
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            objectPosition: 'center center',
+            minWidth: '100%',
+            minHeight: '100%',
+            width: '100%',
+            height: '100%',
+          }}
+        >
+          <source
+            src="https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/50" />
@@ -79,7 +87,7 @@ export default function AboutPage() {
               <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
               <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
             </svg>
-            <Typography variant="h4">Mute</Typography>
+            <Typography variant="body-sm" className="text-white">Mute</Typography>
           </>
         )}
       </button>
