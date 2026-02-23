@@ -24,7 +24,7 @@ const ALLOWED_MIME_TYPES = [
   'video/ogg',
 ];
 
-const MAX_FILE_SIZE = 40 * 1024 * 1024; // 40MB
+const MAX_FILE_SIZE = 500 * 1024 * 1024; // 40MB
 const BUCKET_NAME = 'vrm-media';
 
 /* ===============================
