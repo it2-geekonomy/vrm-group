@@ -150,7 +150,7 @@ export interface NavbarBusiness {
 export const navbarBusinesses: NavbarBusiness[] = [
   { name: "Exotic Retreat", image: "/navbardropdown/exoticretreat.webp", href: "/our-business/exotic-retreat" },
   { name: "Elite Infraa", image: "/navbardropdown/infraa.webp", href: "/our-business/elite-infra" },
-  { name: "Exotic Enterprises", image: "/navbardropdown/exoticenterprises.webp", href: "/our-business/elite-enterprises" },
+  { name: "Exotic Enterprises", image: "/navbardropdown/exoticenterprises.webp", href: "/our-business/exotic-enterprises" },
   { name: "Exotic Bar & Bistro", image: "/navbardropdown/exoticbar&bistro.webp", href: "/our-business/exotic-bar-bistro" },
   { name: "Elite Innovation & Engineering", image: "/navbardropdown/eliteinnovation&engineering.webp", href: "/our-business/elite-innovation-engineering" },
   { name: "Exotic Hospitality", image: "/navbardropdown/exotichospitality.webp", href: "/our-business/exotic-hospitality" },
