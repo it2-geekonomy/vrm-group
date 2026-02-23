@@ -7,7 +7,7 @@ export type AboutSectionData = {
 export type ExperienceHighlight = {
   image: string;
   title: string;
-  description: string;
+  description?: string;
 };
 
 export type FacilityItem = {
@@ -23,7 +23,7 @@ export type GallerySectionData = {
 
 export type CTASectionData = {
   heading: string;
-  subtitle: string;
+  subtitle?: string;
   buttonText: string;
   buttonLink: string;
 };
@@ -35,12 +35,16 @@ export type BusinessDetailData = {
     logo: string;
     title: string;
     description: string;
+    // ✅ Make optional
     buttonText: string;
     buttonLink: string;
   };
+
   about: AboutSectionData;
   experienceHighlights: ExperienceHighlight[];
-  facilities: FacilityItem[];
-  gallery: GallerySectionData;
+
+  facilities?: FacilityItem[];
+  gallery?: GallerySectionData;
+
   cta: CTASectionData;
 };

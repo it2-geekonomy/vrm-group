@@ -81,16 +81,18 @@ export default function HeroBanner({
   {description}
 </Typography>
 
-<Link
-  href={buttonLink}
-  className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border-2 border-white shadow-md hover:opacity-95 transition-all duration-300"
-  style={{
-    fontFamily: "Arial, Helvetica, sans-serif",
-    background: "linear-gradient(180deg, #A53A45 0%, #8B2F3D 100%)",
-  }}
->
-  {buttonText}
-</Link>
+{buttonText && buttonLink && (
+  <Link
+    href={buttonLink}
+    className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border-2 border-white shadow-md hover:opacity-95 transition-all duration-300"
+    style={{
+      fontFamily: "Arial, Helvetica, sans-serif",
+      background: "linear-gradient(180deg, #A53A45 0%, #8B2F3D 100%)",
+    }}
+  >
+    {buttonText}
+  </Link>
+)}
       </div>
     </section>
   );
