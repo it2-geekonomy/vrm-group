@@ -3,7 +3,8 @@ import type { BusinessDetailData } from "./types";
 export const exoticRetreatData: BusinessDetailData = {
   name: "Exotic Retreat",
   hero: {
-    backgroundImage: "/images/pool.jpg",
+
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // fallback video
     logo: "/images/logo.png",
     title: "A Destination Designed for Relaxation and Celebration",
     description:
@@ -18,26 +19,29 @@ export const exoticRetreatData: BusinessDetailData = {
     image:
       "https://www.figma.com/api/mcp/asset/a4acb604-59bb-42bf-beb8-3ba941caca5b",
   },
-  experienceHighlights: [
-    {
-      image: "/our-business%20inside/ExperienceHighlights.webp",
-      title: "Premium guest accommodation",
-      description:
-        "Experience refined comfort with elegantly designed rooms and modern conveniences. Every detail is curated to ensure a luxurious and restful stay.",
-    },
-    {
-      image: "/our-business%20inside/image1.webp",
-      title: "A Refined Dining Experience",
-      description:
-        "Savor expertly crafted dishes made from the freshest ingredients. Every bite is a celebration of flavor, elegance, and passion.",
-    },
-    {
-      image: "/our-business%20inside/image2.webp",
-      title: "Poolside and leisure amenities",
-      description:
-        "Unwind by the sparkling pool and enjoy thoughtfully crafted leisure spaces. Perfect for relaxation, recreation, and memorable moments under the sun.",
-    },
-  ],
+  experienceHighlights: {
+    sectionTitle: "Experience Highlights",
+    items: [
+      {
+        image: "/our-business%20inside/ExperienceHighlights.webp",
+        title: "Premium guest accommodation",
+        description:
+          "Experience refined comfort with elegantly designed rooms and modern conveniences. Every detail is curated to ensure a luxurious and restful stay.",
+      },
+      {
+        image: "/our-business%20inside/image1.webp",
+        title: "A Refined Dining Experience",
+        description:
+          "Savor expertly crafted dishes made from the freshest ingredients. Every bite is a celebration of flavor, elegance, and passion.",
+      },
+      {
+        image: "/our-business%20inside/image2.webp",
+        title: "Poolside and leisure amenities",
+        description:
+          "Unwind by the sparkling pool and enjoy thoughtfully crafted leisure spaces. Perfect for relaxation, recreation, and memorable moments under the sun.",
+      },
+    ],
+  },
   facilities: [
     { image: "/our-business%20inside/Facilities/bed%201.webp", label: "Comfortable Double Beds" },
     { image: "/our-business%20inside/Facilities/bathroom%201.webp", label: "Modern Bathroom" },
@@ -52,7 +56,7 @@ export const exoticRetreatData: BusinessDetailData = {
     images: [
       "/images/gallery/exotic-retreat-1.webp",
       "/images/gallery/exotic-retreat-3.webp",
-      
+
       "/images/gallery/exotic-retreat-5.webp",
       "/images/gallery/exotic-retreat-6.webp",
       "/images/gallery/exotic-retreat-7.webp",

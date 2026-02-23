@@ -11,9 +11,13 @@ export default function BusinessDetailContent({ data }: { data: BusinessDetailDa
     <main className="min-h-screen bg-[#0b0b0b] text-white">
       <HeroSection {...data.hero} />
       <AboutSection data={data.about} />
-      <ExperienceHighlightsSection highlights={data.experienceHighlights} />
-      <FacilitiesSection facilities={data.facilities} />
-      <GallerySection data={data.gallery} />
+      <ExperienceHighlightsSection
+        sectionTitle={data.experienceHighlights.sectionTitle}
+        sectionSubtitle={data.experienceHighlights.sectionSubtitle}
+        highlights={data.experienceHighlights.items}
+      />
+      {data.facilities && <FacilitiesSection facilities={data.facilities} />}
+      {data.gallery && <GallerySection data={data.gallery} />}
       <CTASection data={data.cta} />
     </main>
   );

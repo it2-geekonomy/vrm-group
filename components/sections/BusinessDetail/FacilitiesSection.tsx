@@ -4,7 +4,7 @@ import Typography from "@/lib/typography";
 import type { FacilityItem } from "@/data/business/types";
 
 type FacilitiesSectionProps = {
-  facilities: FacilityItem[];
+  facilities?: FacilityItem[];
   title?: string;
 };
 
@@ -12,6 +12,8 @@ export default function FacilitiesSection({
   facilities,
   title = "Facilities",
 }: FacilitiesSectionProps) {
+  if (!facilities || facilities.length === 0) return null;
+
   return (
     <section className="w-full bg-[#0d0d0d] py-10 sm:py-12 md:py-16 lg:py-20 border-t border-white/10">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8 lg:px-10">

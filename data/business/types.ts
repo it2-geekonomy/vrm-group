@@ -7,7 +7,7 @@ export type AboutSectionData = {
 export type ExperienceHighlight = {
   image: string;
   title: string;
-  description: string;
+  description?: string;
 };
 
 export type FacilityItem = {
@@ -16,14 +16,14 @@ export type FacilityItem = {
 };
 
 export type GallerySectionData = {
-  title: string;
-  subtitle: string;
-  images: string[];
+  title?: string;
+  subtitle?: string;
+  images?: string[];
 };
 
 export type CTASectionData = {
   heading: string;
-  subtitle: string;
+  subtitle?: string;
   buttonText: string;
   buttonLink: string;
 };
@@ -31,16 +31,27 @@ export type CTASectionData = {
 export type BusinessDetailData = {
   name: string;
   hero: {
-    backgroundImage: string;
+    videoSrc: string;
     logo: string;
     title: string;
     description: string;
+    // ✅ Make optional
     buttonText: string;
     buttonLink: string;
   };
+
   about: AboutSectionData;
-  experienceHighlights: ExperienceHighlight[];
-  facilities: FacilityItem[];
-  gallery: GallerySectionData;
+  experienceHighlights: {
+    sectionTitle?: string;
+    sectionSubtitle?: string;
+    items: ExperienceHighlight[];
+  };
+  experienceHighlights2?: {
+    sectionTitle?: string;
+    sectionSubtitle?: string;
+    items: ExperienceHighlight[];
+  };
+  facilities?: FacilityItem[];
+  gallery?: GallerySectionData;
   cta: CTASectionData;
 };

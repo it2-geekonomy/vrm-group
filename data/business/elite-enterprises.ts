@@ -3,8 +3,7 @@ import type { BusinessDetailData } from "./types";
 export const eliteEnterprisesData: BusinessDetailData = {
   name: "Exotic Enterprises",
   hero: {
-    backgroundImage:
-      "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // fallback video
     logo: "/images/logo.png",
     title: "Strategic Warehousing & Industrial Growth",
     description:
@@ -19,22 +18,25 @@ export const eliteEnterprisesData: BusinessDetailData = {
     image:
       "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
   },
-  experienceHighlights: [
-    {
-      image:
-        "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
-      title: "Modern warehousing",
-      description:
-        "State-of-the-art facilities with optimal layout and handling systems for diverse industrial needs.",
-    },
-    {
-      image:
-        "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
-      title: "Logistics support",
-      description:
-        "Strategic locations and connectivity to support supply chain and distribution requirements.",
-    },
-  ],
+  experienceHighlights: {
+    sectionTitle: "Experience Highlights",
+    items: [
+      {
+        image:
+          "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
+        title: "Modern warehousing",
+        description:
+          "State-of-the-art facilities with optimal layout and handling systems for diverse industrial needs.",
+      },
+      {
+        image:
+          "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
+        title: "Logistics support",
+        description:
+          "Strategic locations and connectivity to support supply chain and distribution requirements.",
+      },
+    ],
+  },
   facilities: [
     { image: "/images/facilities/spacious-warehouses.png", label: "Spacious Warehouses" },
     { image: "/images/facilities/loading-docks.png", label: "Loading Docks" },
