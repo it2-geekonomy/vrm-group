@@ -154,7 +154,7 @@ export const navbarBusinesses: NavbarBusiness[] = [
   { name: "Exotic Bar & Bistro", image: "/navbardropdown/exoticbar&bistro.webp", href: "/our-business/exotic-bar-bistro" },
   { name: "Elite Innovation & Engineering", image: "/navbardropdown/eliteinnovation&engineering.webp", href: "/our-business/elite-innovation-engineering" },
   { name: "Exotic Hospitality", image: "/navbardropdown/exotichospitality.webp", href: "/our-business/exotic-hospitality" },
-  { name: "Greatway International School", image: "/navbardropdown/greatwayinternationalschool.webp", href: "/school" },
+  { name: "Greatway International School", image: "/navbardropdown/greatwayinternationalschool.webp", href: "/our-business/school" },
 ];
 
 // Navbar constants
