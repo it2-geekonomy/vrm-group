@@ -3,8 +3,8 @@ import type { BusinessDetailData } from "./types";
 export const SchoolData: BusinessDetailData = {
   name: "School",
   hero: {
-    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // fallback video
-    logo: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771831257635-school_logo.webp",
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4",
+    logo: "/images/logo.png",
     title: "Nurturing Future Generations",
     description:
       "The educational initiative within VRM Group contributes to community development through structured learning environments and holistic student growth.",
