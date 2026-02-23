@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Typography from "@/lib/typography";
@@ -21,10 +22,42 @@ export default function HeroBanner({
   buttonText,
   buttonLink,
 }: HeroBannerProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const [muted, setMuted] = useState(true);
+
+  // Auto-mute when section leaves viewport
+  useEffect(() => {
+    const section = sectionRef.current;
+    const video = videoRef.current;
+    if (!section || !video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          video.muted = true;
+          setMuted(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = !video.muted;
+    setMuted(video.muted);
+  };
+
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 text-center text-white overflow-hidden">
+    <section ref={sectionRef} className="relative w-full h-[50vh] md:h-[80vh] lg:h-[85vh] flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 text-center text-white overflow-hidden">
       {/* Background Video */}
       <video
+        ref={videoRef}
         src={videoSrc}
         autoPlay
         muted
@@ -36,46 +69,84 @@ export default function HeroBanner({
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60" />
 
-      {/* Mobile logo – simple top-center (no tall strip so it doesn’t cover content) */}
-      {logo ? (
-        <div className="absolute top-4 left-1/2 z-20 -translate-x-1/2 sm:hidden">
-          <Image
-            src={logo}
-            alt="Logo"
-            width={96}
-            height={16}
-            className="object-contain"
-          />
-        </div>
-      ) : null}
+      {/* Mute / Unmute Button */}
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute video" : "Mute video"}
+        className="absolute bottom-2 right-2 lg:bottom-6 lg:right-6 z-20 flex items-center gap-2 rounded-full bg-black/50 px-4 py-2 text-white backdrop-blur-sm transition hover:bg-black/70"
+      >
+        {muted ? (
+          <>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+              <line x1="23" y1="9" x2="17" y2="15" />
+              <line x1="17" y1="9" x2="23" y2="15" />
+            </svg>
+            <Typography variant="body-sm" className="text-white">Unmute</Typography>
+          </>
+        ) : (
+          <>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+            </svg>
+            <Typography variant="body-sm" className="text-white">Mute</Typography>
+          </>
+        )}
+      </button>
 
-      {/* Desktop/tablet dynamic logo with gradient corner background */}
+      {/* Mobile logo – top-right with gradient background */}
       {logo ? (
         <div
-          className="hidden sm:flex absolute top-0 right-0 z-20 h-[220px] w-[150px] md:h-[250px] md:w-[170px] items-start justify-center p-3 md:p-4 backdrop-blur-[1px]"
+          className="absolute top-0 right-0 z-20 sm:hidden h-[120px] w-[80px] flex items-start justify-center p-3 backdrop-blur-[1px] transition-all duration-300"
           style={{
             background:
               "linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 28%, rgba(255,255,255,0.45) 55%, rgba(255,255,255,0.12) 70%, rgba(255,255,255,0) 80%)",
           }}
         >
-          <Image
-            src={logo}
-            alt="Logo"
-            width={118}
-            height={118}
-            className="object-contain"
-          />
+          <div className="relative w-full aspect-square max-w-[80%]">
+            <Image
+              src={logo}
+              alt="Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        </div>
+      ) : null}
+
+      {/* Desktop/laptop dynamic logo with gradient corner background */}
+      {logo ? (
+        <div
+          className="hidden sm:flex absolute top-0 right-0 z-20 h-[200px] w-[130px] sm:h-[220px] sm:w-[150px] md:h-[250px] md:w-[170px] lg:h-[280px] lg:w-[190px] xl:h-[320px] xl:w-[220px] items-start justify-center p-3 md:p-4 lg:p-6 backdrop-blur-[1px] transition-all duration-300"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 28%, rgba(255,255,255,0.45) 55%, rgba(255,255,255,0.12) 70%, rgba(255,255,255,0) 80%)",
+          }}
+        >
+          <div className="relative w-full aspect-square max-w-[80%] sm:max-w-[85%] md:max-w-[90%] lg:max-w-full">
+            <Image
+              src={logo}
+              alt="Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
       ) : null}
 
       {/* Center content: headline, body, button */}
-      <div className="relative z-10 w-full max-w-[88rem] mx-auto text-center px-4 sm:px-6 sm:pr-40 lg:pr-48 xl:pr-44">
-      <Typography
-  variant="display-2xl"
-  className="text-white font-cormorant font-normal text-[2rem] sm:text-[2.2rem] md:text-[2.3rem] lg:text-[2.5rem] leading-tight tracking-normal"
->
-  {title}
-</Typography>
+      <div className="relative z-10 w-full max-w-[88rem] mx-auto text-center px-4 sm:px-6">
+        <Typography
+          variant="display-2xl"
+          className="text-white font-cormorant font-normal text-[2rem] sm:text-[2.2rem] md:text-[2.3rem] lg:text-[2.5rem] leading-tight tracking-normal"
+        >
+          {title}
+        </Typography>
+
 
         <Typography
           variant="body-xl"
@@ -86,10 +157,10 @@ export default function HeroBanner({
 
         <Link
           href={buttonLink}
-          className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border-2 border-white shadow-md hover:opacity-95 transition-all duration-300"
+          className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border border-white shadow-md transition-all duration-300"
           style={{
             fontFamily: "Arial, Helvetica, sans-serif",
-            background: "linear-gradient(180deg, #A53A45 0%, #8B2F3D 100%)",
+            background: "#ED1C2475",
           }}
         >
           {buttonText}

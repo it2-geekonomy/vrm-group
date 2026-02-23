@@ -17,29 +17,29 @@ export const exoticBarBistroData: BusinessDetailData = {
     description:
       "Combining ambience, food and entertainment, Exotic Bar & Bistro reflects VRM  Group’s expansion into lifestyle experiences. It is designed as a welcoming  space where quality dining and social interaction come together seamlessly.",
     image:
-      "/our-business/Exotic Bar & Bistro image.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771837665630-Screenshot_2026-02-18_113705.webp",
   },
    experienceHighlights: {
     sectionTitle: "The Experience",
     items:[
     {
       image:
-        "/images/gallery/exoticbarbistro1.webp",
+        "/https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837943805-exoticbarbistro1.webp",
       title: "Curated Ambience",
     },
     {
       image:
-        "/images/gallery/exoticbarbistro2.webp",
+        "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837960615-exoticbarbistro2.webp",
       title: "Contemporary Dining Environment",
     },
      {
       image:
-        "/images/gallery/exoticbarbistro3.webp",
+        "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837976955-exoticbarbistro3.webp",
       title: "Social Gathering Space",
     },
      {
       image:
-        "/images/gallery/exoticbarbistro4.webp",
+        "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837994961-exoticbarbistro4.webp",
       title: "Event and Celebration Hosting",
     },
   ],
