@@ -19,9 +19,19 @@ export const SchoolData: BusinessDetailData = {
     image:
       "https://www.figma.com/api/mcp/asset/966f7466-865c-4cfb-ad84-ac12fe3ea0f2",
   },
+  experienceHighlights: {
+    items: [],
+  },
+  facilities: [],
   gallery: {
     title: "Gallery",
     subtitle: "Campus Life / Environment Visual",
     images: ["/images/gallery/elite-enterprises-1.jpg", "/images/gallery/elite-enterprises-2.jpg"],
+  },
+  cta: {
+    heading: "Begin Your Educational Journey",
+    subtitle: "Reach out to learn more about our programs and enrollment.",
+    buttonText: "CONTACT US",
+    buttonLink: "/contact",
   },
 };

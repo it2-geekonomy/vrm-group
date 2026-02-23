@@ -20,28 +20,30 @@ export const exoticEnterprisesData: BusinessDetailData = {
     image: "/our-business inside/exotic-enterprises/exotic-enterprises image2.webp",
   },
 
-  experienceHighlights: [
-    {
-      image: "/our-business inside/exotic-enterprises/exotic-enterprises image3.webp",
-      title: "Large-scale storage capacity",
-      description: "",
-    },
-    {
-      image: "/our-business inside/exotic-enterprises/exotic-enterprises image4.webp",
-      title: "Strategic location advantages",
-      description: "",
-    },
-    {
-      image: "/our-business inside/exotic-enterprises/exotic-enterprises image5.webp",
-      title: "Commercial infrastructure support",
-      description: "",
-    },
-    {
-      image: "/our-business inside/exotic-enterprises/exotic-enterprises image6.webp",
-      title: "Business oriented planning",
-      description: "",
-    },
-  ],
+  experienceHighlights: {
+    items: [
+      {
+        image: "/our-business inside/exotic-enterprises/exotic-enterprises image3.webp",
+        title: "Large-scale storage capacity",
+        description: "",
+      },
+      {
+        image: "/our-business inside/exotic-enterprises/exotic-enterprises image4.webp",
+        title: "Strategic location advantages",
+        description: "",
+      },
+      {
+        image: "/our-business inside/exotic-enterprises/exotic-enterprises image5.webp",
+        title: "Commercial infrastructure support",
+        description: "",
+      },
+      {
+        image: "/our-business inside/exotic-enterprises/exotic-enterprises image6.webp",
+        title: "Business oriented planning",
+        description: "",
+      },
+    ],
+  },
 
   facilities: [],
 
