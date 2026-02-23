@@ -5,6 +5,14 @@ import Image from "next/image";
 import Typography from "@/components/ui/Typography";
 import { galleryItems, galleryTabs, type GalleryCategory } from "@/lib/constants";
 
+// Sticky filter sits below navbar: mobile nav ~68px, desktop ~84px
+const NAVBAR_OFFSET_MOBILE = 68;
+const NAVBAR_OFFSET_DESKTOP = 84;
+// Unstick earlier when scrolling up so title/description return to original position (no overlap)
+const UNSTICK_MARGIN = 120;
+// When user scrolls back near top of page, always unstick so "Our Gallery" is in original place
+const UNSTICK_SCROLL_TOP = 280;
+
 const INITIAL_VISIBLE_COUNT = 9;
 const LOAD_MORE_COUNT = 9;
 const MOBILE_CARD_OPACITY_SIDE = 0.5;
@@ -15,6 +23,8 @@ export default function GalleryGrid() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [focusedCardIndex, setFocusedCardIndex] = useState<number>(1);
   const [tabIndicator, setTabIndicator] = useState({ left: 0, width: 0 });
+  const [isFilterSticky, setIsFilterSticky] = useState(false);
+  const [filterBarHeight, setFilterBarHeight] = useState(0);
   const initialScrollDone = useRef(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -22,6 +32,8 @@ export default function GalleryGrid() {
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const tabsRowRef = useRef<HTMLDivElement>(null);
   const tabsScrollRef = useRef<HTMLDivElement>(null);
+  const filterBarRef = useRef<HTMLDivElement>(null);
+  const loadMoreSentinelRef = useRef<HTMLDivElement>(null);
 
   const filteredItems = useMemo(() => {
     if (activeTab === "ALL") {
@@ -77,6 +89,40 @@ export default function GalleryGrid() {
     return () => ro.disconnect();
   }, [activeTab]);
 
+  // Sticky filter: switch to fixed when filter bar would scroll past navbar
+  useEffect(() => {
+    const bar = filterBarRef.current;
+    if (!bar) return;
+
+    const getNavOffset = () => (typeof window !== "undefined" && window.innerWidth >= 768 ? NAVBAR_OFFSET_DESKTOP : NAVBAR_OFFSET_MOBILE);
+
+    const updateSticky = () => {
+      const scrollY = typeof window !== "undefined" ? window.scrollY : 0;
+      // When near top of page, always unstick so "Our Gallery" title/description stay in original position
+      if (scrollY < UNSTICK_SCROLL_TOP) {
+        setIsFilterSticky(false);
+        return;
+      }
+      const rect = bar.getBoundingClientRect();
+      const offset = getNavOffset();
+      const unstickThreshold = offset + UNSTICK_MARGIN;
+      if (rect.top <= offset) {
+        setIsFilterSticky(true);
+        setFilterBarHeight(bar.offsetHeight);
+      } else if (rect.top > unstickThreshold) {
+        setIsFilterSticky(false);
+      }
+    };
+
+    updateSticky();
+    window.addEventListener("scroll", updateSticky, { passive: true });
+    window.addEventListener("resize", updateSticky);
+    return () => {
+      window.removeEventListener("scroll", updateSticky);
+      window.removeEventListener("resize", updateSticky);
+    };
+  }, []);
+
   useEffect(() => {
     const container = scrollRef.current;
     const cards = cardRefs.current.slice(0, visibleItems.length).filter(Boolean);
@@ -107,6 +153,23 @@ export default function GalleryGrid() {
     };
   }, [visibleItems.length]);
 
+  // Load more when user scrolls near the bottom (infinite scroll)
+  useEffect(() => {
+    const sentinel = loadMoreSentinelRef.current;
+    if (!sentinel || !hasMore) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setVisibleCount((prev) => prev + LOAD_MORE_COUNT);
+        }
+      },
+      { root: null, rootMargin: "200px", threshold: 0 }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [hasMore, visibleCount]);
+
   const handleTabChange = (tab: GalleryCategory) => {
     setActiveTab(tab);
     setVisibleCount(INITIAL_VISIBLE_COUNT);
@@ -115,21 +178,10 @@ export default function GalleryGrid() {
     initialScrollDone.current = false;
   };
 
-  return (
-    <section className="w-full min-w-0 bg-[#0a0d12]">
-      <div className="flex w-full min-w-0 justify-center px-[clamp(16px,2vw,32px)]">
-        <div className="w-full min-w-0 max-w-[1700px] pt-[clamp(52px,5.6vw,88px)] pb-14 md:pb-[clamp(52px,5.6vw,88px)]">
-          <div className="max-w-[clamp(620px,52vw,980px)]">
-            <Typography variant="display-2xl" className="font-cormorant text-white font-medium !text-[clamp(30px,3.1vw,38px)]">
-              Our Gallery
-            </Typography>
-            <Typography variant="body-xl" className="mt-4 text-white leading-[1.5] font-normal font-cormorant !text-[clamp(18px,2vw,25px)]">
-              Visual documentation across hospitality, infrastructure, residential development and industrial capabilities provides a glimpse into the VRM Group ecosystem.
-            </Typography>
-          </div>
-
-          {/* Mobile: dropdown (default ALL) */}
-          <div className="mt-[clamp(24px,2.1vw,34px)] md:hidden" ref={dropdownRef}>
+  const filterContent = (
+    <>
+      {/* Mobile: dropdown (default ALL) */}
+      <div className="md:hidden" ref={dropdownRef}>
             <div className="relative w-full">
               <button
                 type="button"
@@ -171,7 +223,7 @@ export default function GalleryGrid() {
           </div>
 
           {/* Desktop: horizontal tabs — scrollable; sliding underline; active tab scrolls into view when changed */}
-          <div className="mt-[clamp(24px,2.1vw,34px)] hidden border-b border-[#2a2f39] md:block">
+          <div className="hidden border-b border-[#2a2f39] md:block">
             <div
               ref={tabsScrollRef}
               className="min-w-0 overflow-x-auto pr-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -206,6 +258,41 @@ export default function GalleryGrid() {
               </div>
             </div>
           </div>
+    </>
+  );
+
+  return (
+    <section className="w-full min-w-0 bg-[#0a0d12]">
+      <div className="flex w-full min-w-0 justify-center px-[clamp(16px,2vw,32px)]">
+        <div className="w-full min-w-0 max-w-[1700px] pt-[clamp(52px,5.6vw,88px)] pb-14 md:pb-[clamp(52px,5.6vw,88px)]">
+          <div className="max-w-[clamp(620px,52vw,980px)]">
+            <Typography variant="display-2xl" className="font-cormorant text-white font-medium !text-[clamp(30px,3.1vw,38px)]">
+              Our Gallery
+            </Typography>
+            <Typography variant="body-xl" className="mt-4 text-white leading-[1.5] font-normal font-cormorant !text-[clamp(18px,2vw,25px)]">
+              Visual documentation across hospitality, infrastructure, residential development and industrial capabilities provides a glimpse into the VRM Group ecosystem.
+            </Typography>
+          </div>
+
+          {/* Filter bar: in-flow when not sticky, fixed + spacer when sticky so images scroll behind */}
+          {isFilterSticky ? (
+            <>
+              <div ref={filterBarRef} style={{ height: filterBarHeight }} aria-hidden="true" />
+              <div
+                className="fixed left-0 right-0 z-10 bg-[#0a0d12] border-b border-[#2a2f39] shadow-[0_4px_12px_rgba(0,0,0,0.4)] top-[68px] md:top-[84px]"
+              >
+                <div className="flex w-full min-w-0 justify-center px-[clamp(16px,2vw,32px)] pt-3 pb-1 md:pt-4 md:pb-0">
+                  <div className="w-full min-w-0 max-w-[1700px] py-[clamp(12px,0.95vw,16px)] md:pb-[clamp(12px,0.95vw,16px)]">
+                    {filterContent}
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : (
+            <div ref={filterBarRef} className="mt-[clamp(24px,2.1vw,34px)]">
+              {filterContent}
+            </div>
+          )}
 
           {/* Mobile: center bit big, sides smaller; opacity only (no blur). Debounce avoids shaking. */}
           <div
@@ -262,19 +349,8 @@ export default function GalleryGrid() {
             ))}
           </div>
 
-          {hasMore && (
-            <div className="mt-12 hidden justify-center md:flex">
-              <button
-                type="button"
-                onClick={() => setVisibleCount((prev) => prev + LOAD_MORE_COUNT)}
-                className="cursor-pointer rounded-2xl border border-white bg-[#ED1C2475] px-8 py-3 md:px-28 md:py-2 transition-colors"
-              >
-                <Typography variant="h4" className="font-cormorant text-white">
-                  Load More Photos
-                </Typography>
-              </button>
-            </div>
-          )}
+          {/* Sentinel: when visible, load more photos (infinite scroll) */}
+          {hasMore && <div ref={loadMoreSentinelRef} className="h-1 w-full" aria-hidden="true" />}
         </div>
       </div>
     </section>

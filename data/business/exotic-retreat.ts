@@ -4,7 +4,7 @@ export const exoticRetreatData: BusinessDetailData = {
   name: "Exotic Retreat",
   hero: {
 
-    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // fallback video
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771843257663-excotic_retreat.mp4", // fallback video
     logo: "/images/logo.png",
     title: "A Destination Designed for Relaxation and Celebration",
     description:
@@ -51,7 +51,13 @@ export const exoticRetreatData: BusinessDetailData = {
         description:
           "Host memorable events and celebrations in our dedicated spaces. From intimate gatherings to grand occasions, we ensure every moment is special and well-organised.",
       },{
-        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839454527-VRM_GRAND_STAY__53_.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839899834-VRM_GRAND_STAY__120_.webp",
+        title: "Event and Celebration Hosting",
+        description:
+          "Host memorable events and celebrations in our dedicated spaces. From intimate gatherings to grand occasions, we ensure every moment is special and well-organised.",
+      },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771839790122-4__1_.webp",
         title: "Event and Celebration Hosting",
         description:
           "Host memorable events and celebrations in our dedicated spaces. From intimate gatherings to grand occasions, we ensure every moment is special and well-organised.",

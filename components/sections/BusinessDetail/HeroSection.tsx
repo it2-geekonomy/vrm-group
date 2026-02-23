@@ -12,6 +12,7 @@ interface HeroBannerProps {
   description: string;
   buttonText: string;
   buttonLink: string;
+  onEnquiryClick?: () => void;
 }
 
 export default function HeroBanner({
@@ -21,10 +22,26 @@ export default function HeroBanner({
   description,
   buttonText,
   buttonLink,
+  onEnquiryClick,
 }: HeroBannerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [muted, setMuted] = useState(true);
+
+  // Sync video muted property with state and handle autoplay
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = muted;
+
+    // Attempt to play if autoplay was blocked
+    if (video.paused) {
+      video.play().catch(err => {
+        console.log("Autoplay was prevented:", err);
+      });
+    }
+  }, [muted]);
 
   // Auto-mute when section leaves viewport
   useEffect(() => {
@@ -47,10 +64,7 @@ export default function HeroBanner({
   }, []);
 
   const toggleMute = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    video.muted = !video.muted;
-    setMuted(video.muted);
+    setMuted(prev => !prev);
   };
 
   return (
@@ -155,16 +169,29 @@ export default function HeroBanner({
           {description}
         </Typography>
 
-        <Link
-          href={buttonLink}
-          className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border border-white shadow-md transition-all duration-300"
-          style={{
-            fontFamily: "Arial, Helvetica, sans-serif",
-            background: "#ED1C2475",
-          }}
-        >
-          {buttonText}
-        </Link>
+        {onEnquiryClick ? (
+          <button
+            onClick={onEnquiryClick}
+            className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border border-white shadow-md transition-all duration-300 cursor-pointer"
+            style={{
+              fontFamily: "Arial, Helvetica, sans-serif",
+              background: "#ED1C2475",
+            }}
+          >
+            {buttonText}
+          </button>
+        ) : (
+          <Link
+            href={buttonLink}
+            className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border border-white shadow-md transition-all duration-300"
+            style={{
+              fontFamily: "Arial, Helvetica, sans-serif",
+              background: "#ED1C2475",
+            }}
+          >
+            {buttonText}
+          </Link>
+        )}
       </div>
     </section>
   );
