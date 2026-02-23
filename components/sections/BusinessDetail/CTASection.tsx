@@ -22,7 +22,7 @@ export default function CTASection({ data }: { data: CTASectionData }) {
 </Typography>
         <Link
           href={data.buttonLink}
-          className="inline-flex items-center justify-center rounded-full px-10 sm:px-12 md:px-16 py-2 md:py-3 text-white font-bold uppercase tracking-wider text-lg bg-[#8B0000] hover:bg-[#A52A2A] border-2 border-white transition-all duration-300"
+          className="inline-flex items-center justify-center rounded-full px-10 sm:px-12 md:px-16 py-2 md:py-3 text-white font-bold uppercase tracking-wider text-lg bg-[#ED1C2475] border border-white transition-all duration-300"
           style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
         >
           {data.buttonText}
