@@ -49,33 +49,36 @@ export default function HeroBanner({
         </div>
       ) : null}
 
-      {/* Desktop/tablet dynamic logo with gradient corner background */}
+      {/* Desktop/laptop dynamic logo with gradient corner background */}
       {logo ? (
         <div
-          className="hidden sm:flex absolute top-0 right-0 z-20 h-[220px] w-[150px] md:h-[250px] md:w-[170px] items-start justify-center p-3 md:p-4 backdrop-blur-[1px]"
+          className="hidden sm:flex absolute top-0 right-0 z-20 h-[200px] w-[130px] sm:h-[220px] sm:w-[150px] md:h-[250px] md:w-[170px] lg:h-[280px] lg:w-[190px] xl:h-[320px] xl:w-[220px] items-start justify-center p-3 md:p-4 lg:p-6 backdrop-blur-[1px] transition-all duration-300"
           style={{
             background:
               "linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 28%, rgba(255,255,255,0.45) 55%, rgba(255,255,255,0.12) 70%, rgba(255,255,255,0) 80%)",
           }}
         >
-          <Image
-            src={logo}
-            alt="Logo"
-            width={118}
-            height={118}
-            className="object-contain"
-          />
+          <div className="relative w-full aspect-square max-w-[80%] sm:max-w-[85%] md:max-w-[90%] lg:max-w-full">
+            <Image
+              src={logo}
+              alt="Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
       ) : null}
 
       {/* Center content: headline, body, button */}
-      <div className="relative z-10 w-full max-w-[88rem] mx-auto text-center px-4 sm:px-6 sm:pr-40 lg:pr-48 xl:pr-44">
-      <Typography
-  variant="display-2xl"
-  className="text-white font-cormorant font-normal text-[2rem] sm:text-[2.2rem] md:text-[2.3rem] lg:text-[2.5rem] leading-tight tracking-normal"
->
-  {title}
-</Typography>
+      <div className="relative z-10 w-full max-w-[88rem] mx-auto text-center px-4 sm:px-6">
+        <Typography
+          variant="display-2xl"
+          className="text-white font-cormorant font-normal text-[2rem] sm:text-[2.2rem] md:text-[2.3rem] lg:text-[2.5rem] leading-tight tracking-normal"
+        >
+          {title}
+        </Typography>
+
 
         <Typography
           variant="body-xl"
