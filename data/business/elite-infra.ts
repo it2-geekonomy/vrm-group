@@ -54,22 +54,52 @@ export const eliteInfraData: BusinessDetailData = {
     sectionSubtitle: "",
     items: [
       {
-        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838590988-4__block.webp",
         title: "",
         description: "",
       },
       {
-        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838616257-6__block.webp",
         title: "",
         description: "",
       },
       {
-        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838641436-8__block.webp",
         title: "",
         description: "",
       },
       {
-        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp",
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838662702-9__block.webp",
+        title: "",
+        description: "",
+      },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838689081-150mm.webp",
+        title: "",
+        description: "",
+      },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838726509-paver1.webp",
+        title: "",
+        description: "",
+      },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838740235-paver2.webp",
+        title: "",
+        description: "",
+      },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838753859-paver3.webp",
+        title: "",
+        description: "",
+      },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838785528-paver4.webp",
+        title: "",
+        description: "",
+      },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838806185-paver5.webp",
         title: "",
         description: "",
       },
