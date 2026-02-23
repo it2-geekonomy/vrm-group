@@ -52,10 +52,25 @@
 import { useEffect, useRef, useState } from "react";
 import Typography from "@/lib/typography";
 
-export default function AboutPage() {
+export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [muted, setMuted] = useState(true);
+
+  // Sync video muted property with state and handle autoplay
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = muted;
+
+    // Attempt to play if autoplay was blocked
+    if (video.paused) {
+      video.play().catch(err => {
+        console.log("Autoplay was prevented:", err);
+      });
+    }
+  }, [muted]);
 
   // Auto-mute when section leaves viewport
   useEffect(() => {
@@ -78,10 +93,7 @@ export default function AboutPage() {
   }, []);
 
   const toggleMute = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    video.muted = !video.muted;
-    setMuted(video.muted);
+    setMuted(prev => !prev);
   };
 
   return (
@@ -95,6 +107,7 @@ export default function AboutPage() {
           ref={videoRef}
           autoPlay
           loop
+          muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           style={{
