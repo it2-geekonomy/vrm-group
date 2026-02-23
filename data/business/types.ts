@@ -31,8 +31,7 @@ export type CTASectionData = {
 export type BusinessDetailData = {
   name: string;
   hero: {
-    backgroundImage: string;
-    videoSrc?: string;
+    videoSrc: string;
     logo: string;
     title: string;
     description: string;
