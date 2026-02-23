@@ -10,8 +10,9 @@ const NAVBAR_OFFSET_MOBILE = 68;
 const NAVBAR_OFFSET_DESKTOP = 84;
 // Unstick earlier when scrolling up so title/description return to original position (no overlap)
 const UNSTICK_MARGIN = 120;
-// When user scrolls back near top of page, always unstick so "Our Gallery" is in original place
-const UNSTICK_SCROLL_TOP = 280;
+// Hysteresis: stick only after scrolling past this, unstick only when above the other (avoids mobile shake)
+const STICK_SCROLL_TOP = 320;
+const UNSTICK_SCROLL_TOP = 240;
 
 const INITIAL_VISIBLE_COUNT = 9;
 const LOAD_MORE_COUNT = 9;
@@ -98,18 +99,24 @@ export default function GalleryGrid() {
 
     const updateSticky = () => {
       const scrollY = typeof window !== "undefined" ? window.scrollY : 0;
-      // When near top of page, always unstick so "Our Gallery" title/description stay in original position
+      // Hysteresis: unstick when above UNSTICK_SCROLL_TOP, stick only when past STICK_SCROLL_TOP (stops mobile shake)
       if (scrollY < UNSTICK_SCROLL_TOP) {
         setIsFilterSticky(false);
+        return;
+      }
+      if (scrollY >= STICK_SCROLL_TOP) {
+        const rect = bar.getBoundingClientRect();
+        const offset = getNavOffset();
+        if (rect.top <= offset) {
+          setIsFilterSticky(true);
+          setFilterBarHeight(bar.offsetHeight);
+        }
         return;
       }
       const rect = bar.getBoundingClientRect();
       const offset = getNavOffset();
       const unstickThreshold = offset + UNSTICK_MARGIN;
-      if (rect.top <= offset) {
-        setIsFilterSticky(true);
-        setFilterBarHeight(bar.offsetHeight);
-      } else if (rect.top > unstickThreshold) {
+      if (rect.top > unstickThreshold) {
         setIsFilterSticky(false);
       }
     };
@@ -298,7 +305,7 @@ export default function GalleryGrid() {
           <div
             ref={scrollRef}
             className="mt-[clamp(26px,2.2vw,38px)] flex gap-3 overflow-x-auto overflow-y-visible snap-x snap-mandatory py-[3vw] pl-[15vw] pr-[15vw] md:hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [scroll-snap-stop:always]"
-            style={{ WebkitOverflowScrolling: "touch" }}
+            style={{ WebkitOverflowScrolling: "touch", touchAction: "pan-x" }}
           >
             {visibleItems.map((item, index) => {
               const isActive = focusedCardIndex === index;
