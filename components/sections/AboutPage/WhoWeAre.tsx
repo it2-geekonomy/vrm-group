@@ -13,7 +13,7 @@ export default function WhoWeAreSection() {
           <div className="lg:col-span-2 flex justify-center lg:justify-end xl:justify-end order-1 lg:order-2 mb-4 lg:mb-0">
             <div className="relative w-full max-w-[240px] lg:max-w-md aspect-[4/5] lg:aspect-[5/5]">
               <Image
-                src="/About/About image.webp"
+                src="https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/about/1771822088022-About_image.webp"
                 alt="Founder"
                 fill
                 priority

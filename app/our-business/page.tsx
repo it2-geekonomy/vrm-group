@@ -30,49 +30,49 @@ const businessSections: BusinessSection[] = [
     title: "Exotic Retreat",
     description:
       "Exotic Retreat represents VRM Group's approach to hospitality, blending comfort, accessibility and environment-driven experiences for accommodation, families, professionals and event-visitors.",
-    image: "/our-business/Exotic Retreat image.webp",
+    image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771822643848-Exotic_Retreat_image.webp",
     href: "/our-business/exotic-retreat",
   },
   {
     title: "Elite Infra",
     description:
       "Elite Infra represents the group's commitment to construction, residential projects and infrastructure initiatives for community and growth.",
-    image: "/our-business/Elite Infra image.webp",
+    image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771822701066-Elite_Infra_image.webp",
     href: "/our-business/elite-infra",
   },
   {
     title: "Exotic Enterprises",
     description:
       "Strategically developed warehousing facilities to support regional enterprise development.",
-    image: "/our-business/Exotic Enterprises image.webp",
+    image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771822726858-Exotic_Enterprises_image.webp",
     href: "/our-business/elite-enterprises",
   },
   {
     title: "Exotic Bar & Bistro",
     description:
       "A lifestyle dining space combining ambience, food and entertainment as part of the group's expansion into the leisure sector.",
-    image: "/our-business/Exotic Bar & Bistro image.webp",
+    image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771822754872-Exotic_Bar___Bistro_image.webp",
     href: "/our-business/exotic-bar-bistro",
   },
   {
     title: "Exotic Innovation & Engineering",
     description:
       "The technical backbone of the group, integrating CNC-enabled manufacturing and modern fabrication practices.",
-    image: "/our-business/Exotic Innovation & Engineering image.webp",
+    image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771822826870-Exotic_Innovation___Engineering_image.webp",
     href: "/our-business/elite-innovation-engineering",
   },
   {
     title: "Exotic Hospitality",
     description:
       "Exotic Hospitality provides dependable management for residential properties with organized services and experienced supervision.",
-    image: "/our-business/Exotic Hospitality image.webp",
+    image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771822864592-Exotic_Hospitality_image.webp",
     href: "/our-business/exotic-hospitality",
   },
   {
     title: "Greatway International School",
     description:
       "An early initiative within the VRM ecosystem, committed to academic discipline, personal development and foundational education.",
-    image: "/our-business/Greatway International School image.webp",
+    image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771822889712-Greatway_International_School_image.webp",
     href: "/school",
   },
 ];
@@ -89,7 +89,7 @@ function StackCard({
   isTopCard: boolean;
 }) {
 
-  
+
   const GAP = 36; // vertical stack gap when moving
   const SCALE_GAP = 0.025; // size difference: front card bigger, back cards smaller
   const PEEK = 30; // how much back cards stick up (peek from top)
@@ -134,9 +134,8 @@ function StackCard({
     >
       <div className="grid w-full max-w-[50rem] md:max-w-[60rem] lg:max-w-[70rem] xl:max-w-[85rem] gap-10 rounded-2xl border border-white/15 bg-[#0d0d0d]/90 p-6 md:grid-cols-2 md:p-10">
         <div
-          className={`flex justify-center ${
-            index % 2 === 0 ? "md:order-1" : ""
-          }`}
+          className={`flex justify-center ${index % 2 === 0 ? "md:order-1" : ""
+            }`}
         >
           <img
             src={section.image}
@@ -176,7 +175,7 @@ function MobileCardList() {
           key={section.title}
           className="grid w-full max-w-6xl mx-auto gap-6 rounded-2xl border border-white/15 bg-[#0d0d0d]/90 p-5 text-center md:p-6 md:text-left"
         >
-          <div className="flex justify-center order-1"> 
+          <div className="flex justify-center order-1">
             <img
               src={section.image}
               alt={section.title}
@@ -253,8 +252,7 @@ export default function OurBusinessPage() {
     <main className="bg-[#0b0b0b] text-white">
       <section className="relative">
         <img
-          src="our-business/Transforming Vision Into Lasting Development image.webp"
-          alt="Our Business Banner"
+          src="https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771822498911-Transforming_Vision_Into_Lasting_Development_image.webp" alt="Our Business Banner"
           className="h-[58vh] w-full object-cover md:h-[72vh]"
         />
         <div className="absolute inset-0 bg-black/40" />
