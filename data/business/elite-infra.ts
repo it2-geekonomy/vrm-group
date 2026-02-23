@@ -94,7 +94,9 @@ export const eliteInfraData: BusinessDetailData = {
     "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838020306-VRM_GRAND_STAY__60_.webp",
   "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838140005-VRM_GRAND_STAY__30_.webp",
   "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838174623-VRM_GRAND_STAY__125_.webp",
-  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838198646-VRM_GRAND_STAY__26_.webp"],
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838198646-VRM_GRAND_STAY__26_.webp",
+"https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838274773-VRM_GRAND_STAY__126_.webp" ,
+"https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838459218-VRM_GRAND_STAY__67_.webp"],
   },
   cta: {
     heading: "Build Your Vision With Us",
