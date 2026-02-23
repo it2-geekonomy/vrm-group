@@ -67,30 +67,30 @@ export default function HeroBanner({
 
       {/* Center content: headline, body, button */}
       <div className="relative z-10 w-full max-w-[88rem] mx-auto text-center px-4 sm:px-6 sm:pr-40 lg:pr-48 xl:pr-44">
-      <Typography
-  variant="display-2xl"
-  className="text-white font-normal text-[1.3rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[1.9rem] leading-tight tracking-normal"
->
-  {title}
-</Typography>
+        <Typography
+          variant="display-2xl"
+          className="text-white font-normal text-[1.3rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[1.9rem] leading-tight tracking-normal"
+        >
+          {title}
+        </Typography>
 
-       <Typography
-  variant="body-xl"
-  className="font-cormorant text-white mt-6 md:mt-8 text-[1rem] sm:text-[1.2rem] md:text-[1.4rem] lg:text-[1.5rem] leading-relaxed max-w-4xl mx-auto"
->
-  {description}
-</Typography>
+        <Typography
+          variant="body-xl"
+          className="font-cormorant text-white mt-6 md:mt-8 text-[1rem] sm:text-[1.2rem] md:text-[1.4rem] lg:text-[1.5rem] leading-relaxed max-w-4xl mx-auto"
+        >
+          {description}
+        </Typography>
 
-<Link
-  href={buttonLink}
-  className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border-2 border-white shadow-md hover:opacity-95 transition-all duration-300"
-  style={{
-    fontFamily: "Arial, Helvetica, sans-serif",
-    background: "linear-gradient(180deg, #A53A45 0%, #8B2F3D 100%)",
-  }}
->
-  {buttonText}
-</Link>
+        <Link
+          href={buttonLink}
+          className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border-2 border-white shadow-md hover:opacity-95 transition-all duration-300"
+          style={{
+            fontFamily: "Arial, Helvetica, sans-serif",
+            background: "linear-gradient(180deg, #A53A45 0%, #8B2F3D 100%)",
+          }}
+        >
+          {buttonText}
+        </Link>
       </div>
     </section>
   );
