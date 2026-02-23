@@ -3,6 +3,7 @@ import type { BusinessDetailData } from "./types";
 export const exoticHospitalityData = {
   name: "Exotic Hospitality",
   hero: {
+    videoSrc: "/videos/hospitality-hero.mp4",
     backgroundImage: "/images/hospitality-hero.jpg",
     logo: "/images/exotic-hospitality-logo.png",
     title: "Residential Property Management, Delivered with Professional Care",
