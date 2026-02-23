@@ -6,7 +6,7 @@ import { footerLeftLinks, footerRightLinks, footerInfo } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#B2B2B2] text-black">
+    <footer className="bg-black text-white">
       <div className="px-4 sm:px-6 lg:px-20 py-6 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
           {/* Left Section - Company Information */}
@@ -20,10 +20,10 @@ export default function Footer() {
                 className="lg:w-auto lg:h-auto w-32"
               />
             </Link>
-            <Typography variant="body-sm" className="text-black mb-2 font-cormorant font-medium text-center lg:text-left">
+            <Typography variant="body-sm" className="text-white mb-2 font-cormorant font-medium text-center lg:text-left">
               {footerInfo.tagline}
             </Typography>
-            <Typography variant="body-xl" className="text-black font-cormorant font-medium text-center lg:text-left">
+            <Typography variant="body-xl" className="text-white font-cormorant font-medium text-center lg:text-left">
               {footerInfo.address}
             </Typography>
           </div>
@@ -37,9 +37,9 @@ export default function Footer() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="transition-colors hover:text-black"
+                    className="transition-colors hover:text-white/80"
                   >
-                    <Typography variant="h4" className="text-black font-cormorant font-medium uppercase">
+                    <Typography variant="h4" className="text-white font-cormorant font-medium uppercase">
                       {link.label}
                     </Typography>
                   </Link>
@@ -54,9 +54,9 @@ export default function Footer() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="transition-colors hover:text-black"
+                    className="transition-colors hover:text-white/80"
                   >
-                    <Typography variant="h4" className="text-black font-cormorant font-medium uppercase">
+                    <Typography variant="h4" className="text-white font-cormorant font-medium uppercase">
                       {link.label}
                     </Typography>
                   </Link>
@@ -68,14 +68,14 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="px-4 sm:px-6 lg:px-8 py-2 bg-white">
+      <div className="px-4 sm:px-6 lg:px-8 py-2 bg-black border-t border-white/20">
         <div className="flex flex-col sm:flex-row justify-between items-center lg:gap-4">
-          <Typography variant="body-lg" className="text-black font-cormorant">
+          <Typography variant="body-lg" className="text-white font-cormorant">
             {footerInfo.copyright}
           </Typography>
-          <Typography variant="body-lg" className="text-black font-cormorant">
+          <Typography variant="body-lg" className="text-white font-cormorant">
             Digital Partner:{" "}
-            <Link href="https://thegeekonomy.com/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-black underline">
+            <Link href="https://thegeekonomy.com/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white/80 underline">
               Geekonomy
             </Link>
           </Typography>
