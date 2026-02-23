@@ -28,6 +28,21 @@ export default function HeroBanner({
   const sectionRef = useRef<HTMLElement>(null);
   const [muted, setMuted] = useState(true);
 
+  // Sync video muted property with state and handle autoplay
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = muted;
+
+    // Attempt to play if autoplay was blocked
+    if (video.paused) {
+      video.play().catch(err => {
+        console.log("Autoplay was prevented:", err);
+      });
+    }
+  }, [muted]);
+
   // Auto-mute when section leaves viewport
   useEffect(() => {
     const section = sectionRef.current;
@@ -49,10 +64,7 @@ export default function HeroBanner({
   }, []);
 
   const toggleMute = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    video.muted = !video.muted;
-    setMuted(video.muted);
+    setMuted(prev => !prev);
   };
 
   return (
