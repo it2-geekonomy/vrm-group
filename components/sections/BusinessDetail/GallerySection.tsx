@@ -70,16 +70,16 @@ export default function GallerySection({ data }: { data: GallerySectionData }) {
       {/* GALLERY ROW */}
       <div className="mx-auto max-w-[95rem] px-4 md:px-6">
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
 
           {/* LEFT ARROW */}
-          <div className="hidden md:flex flex-shrink-0">
+          <div className="flex flex-shrink-0">
             <button
               onClick={() => scroll("left")}
               className="
                 bg-black text-white
                 rounded-full
-                w-12 h-12
+                w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12
                 flex items-center justify-center
                 hover:bg-white hover:text-black
                 transition
@@ -112,11 +112,11 @@ export default function GallerySection({ data }: { data: GallerySectionData }) {
               ref={scrollRef}
               onMouseDown={handleMouseDown}
               className="
-                flex gap-6 md:gap-8
+                flex gap-4 sm:gap-6 md:gap-8
                 overflow-x-scroll no-scrollbar
                 bg-black
                 w-full
-                h-[220px] sm:h-[280px] md:h-[350px] lg:h-[400px]
+                h-[200px] sm:h-[280px] md:h-[350px] lg:h-[400px]
               "
               style={{ clipPath: "url(#galleryCurve)" }}
             >
@@ -128,7 +128,7 @@ export default function GallerySection({ data }: { data: GallerySectionData }) {
                   alt={`${data.title} ${index + 1}`}
                   className="
                     flex-shrink-0
-                    w-[300px] sm:w-[400px] md:w-[500px] lg:w-[800px]
+                    w-[250px] sm:w-[400px] md:w-[500px] lg:w-[800px]
                     h-full
                     object-cover
                   "
@@ -139,13 +139,13 @@ export default function GallerySection({ data }: { data: GallerySectionData }) {
           </div>
 
           {/* RIGHT ARROW */}
-          <div className="hidden md:flex flex-shrink-0">
+          <div className="flex flex-shrink-0">
             <button
               onClick={() => scroll("right")}
               className="
                 bg-black text-white
                 rounded-full
-                w-12 h-12
+                w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12
                 flex items-center justify-center
                 hover:bg-white hover:text-black
                 transition
