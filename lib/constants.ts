@@ -150,7 +150,7 @@ export interface NavbarBusiness {
 export const navbarBusinesses: NavbarBusiness[] = [
   { name: "Exotic Retreat", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834904758-exoticretreat.webp", href: "/our-business/exotic-retreat" },
   { name: "Elite Infraa", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834954008-infraa.webp", href: "/our-business/elite-infra" },
-  { name: "Exotic Enterprises", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834839854-exoticenterprises.webp", href: "/our-business/elite-enterprises" },
+  { name: "Exotic Enterprises", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834839854-exoticenterprises.webp", href: "/our-business/exotic-enterprises" },
   { name: "Exotic Bar & Bistro", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834814205-exoticbar_bistro.webp", href: "/our-business/exotic-bar-bistro" },
   { name: "Elite Innovation & Engineering", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834776152-eliteinnovation_engineering.webp", href: "/our-business/elite-innovation-engineering" },
   { name: "Exotic Hospitality", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834861460-exotichospitality.webp", href: "/our-business/exotic-hospitality" },
