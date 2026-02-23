@@ -24,7 +24,7 @@ export const exoticBarBistroData: BusinessDetailData = {
     items:[
     {
       image:
-        "/https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837943805-exoticbarbistro1.webp",
+        "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837943805-exoticbarbistro1.webp",
       title: "Curated Ambience",
     },
     {
