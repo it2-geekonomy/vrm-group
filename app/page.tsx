@@ -1,4 +1,3 @@
-import Typography from "@/components/ui/Typography";
 import VisionSection from "@/components/sections/VisionSection";
 import OurBusinessesSection from "@/components/sections/OurBusinessesSection";
 import ConnectSection from "@/components/sections/ConnectSection";
