@@ -6,7 +6,7 @@ import GallerySection from "@/components/sections/BusinessDetail/GallerySection"
 import { SchoolData } from "@/data/business/school";
 
 
-export default function ExoticHospitalityPage() {
+export default function SchoolPage() {
   return (
     <main className="min-h-screen bg-[#0B0B0B] text-white">
       <HeroSection {...SchoolData.hero} />
