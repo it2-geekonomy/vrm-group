@@ -4,7 +4,7 @@ export const exoticEnterprisesData: BusinessDetailData = {
   name: "Exotic Enterprises",
 
   hero: {
-    backgroundImage: "/images/enterprises-hero.webp",
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // fallback video
     logo: "/our-business inside/exotic-enterprises/exotic-enterprises image1.webp",
     title: "Infrastructure Supporting Industry",
     description:

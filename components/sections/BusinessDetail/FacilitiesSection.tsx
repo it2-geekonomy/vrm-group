@@ -4,7 +4,7 @@ import Typography from "@/lib/typography";
 import type { FacilityItem } from "@/data/business/types";
 
 type FacilitiesSectionProps = {
-  facilities: FacilityItem[];
+  facilities?: FacilityItem[];
   title?: string;
 };
 
