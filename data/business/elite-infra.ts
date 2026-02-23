@@ -17,7 +17,7 @@ export const eliteInfraData: BusinessDetailData = {
     description:
       "Elite Infraa represents the group’s commitment to construction strength and  responsible development. Through residential projects and infrastructure initiatives, the division contributes to environments built for continuity and growth.",
     image:
-      "https://www.figma.com/api/mcp/asset/85165f4c-88ec-4e89-8fc7-747cb7c48ee1",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836957885-elite_infra2.webp",
   },
   experienceHighlights: {
     sectionTitle: "Focus Area",
@@ -25,25 +25,25 @@ export const eliteInfraData: BusinessDetailData = {
     items: [
       {
         image:
-          "https://www.figma.com/api/mcp/asset/1973342518",
+          "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836630362-VRM_GRAND_STAY__123_.webp",
         title: "Residential community development",
         description: "",
       },
       {
         image:
-          "https://www.figma.com/api/mcp/asset/1973342517",
+          "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836666839-VRM_GRAND_STAY__69_.webp",
         title: "Infrastructure resources",
         description: "",
       },
       {
         image:
-          "https://www.figma.com/api/mcp/asset/1973342516",
+          "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837762240-machine__1_.webp",
         title: "Material manufacturing support",
         description: "",
       },
       {
         image:
-          "https://www.figma.com/api/mcp/asset/1973342515",
+          "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771836728681-VRM_GRAND_STAY__92_.webp",
         title: "Long-term assured reliability",
         description: "",
       },
@@ -86,7 +86,15 @@ export const eliteInfraData: BusinessDetailData = {
   gallery: {
     title: "Our Residential Projects",
     subtitle: "Visual highlights capturing ambience, amenities and experiences.",
-    images: ["https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp", "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771830678002-VRM_GRAND_STAY__23_.webp"],
+    images: ["https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837479110-VRM_GRAND_STAY__17_.webp",
+       "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837517500-VRM_GRAND_STAY__64_.webp",
+          "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837650188-VRM_GRAND_STAY__123_.webp" ,
+        "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837910490-VRM_GRAND_STAY__32_.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837937381-VRM_GRAND_STAY__70_.webp",
+    "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838020306-VRM_GRAND_STAY__60_.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838140005-VRM_GRAND_STAY__30_.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838174623-VRM_GRAND_STAY__125_.webp",
+  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838198646-VRM_GRAND_STAY__26_.webp"],
   },
   cta: {
     heading: "Build Your Vision With Us",
