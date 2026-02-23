@@ -1,6 +1,7 @@
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
 import ExperienceHighlightsSection from "./ExperienceHighlightsSection";
+import FacilitiesSection from "./FacilitiesSection";
 import GallerySection from "./GallerySection";
 import CTASection from "./CTASection";
 import type { BusinessDetailData } from "@/data/business/types";
@@ -12,8 +13,10 @@ export default function BusinessDetailContent({ data }: { data: BusinessDetailDa
       <AboutSection data={data.about} />
       <ExperienceHighlightsSection
         sectionTitle={data.experienceHighlights.sectionTitle}
+        sectionSubtitle={data.experienceHighlights.sectionSubtitle}
         highlights={data.experienceHighlights.items}
       />
+      <FacilitiesSection facilities={data.facilities} />
       <GallerySection data={data.gallery} />
       <CTASection data={data.cta} />
     </main>

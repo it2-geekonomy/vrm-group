@@ -89,7 +89,7 @@ function StackCard({
   isTopCard: boolean;
 }) {
 
-  
+
   const GAP = 36; // vertical stack gap when moving
   const SCALE_GAP = 0.025; // size difference: front card bigger, back cards smaller
   const PEEK = 30; // how much back cards stick up (peek from top)
@@ -134,9 +134,8 @@ function StackCard({
     >
       <div className="grid w-full max-w-[50rem] md:max-w-[60rem] lg:max-w-[70rem] xl:max-w-[85rem] gap-10 rounded-2xl border border-white/15 bg-[#0d0d0d]/90 p-6 md:grid-cols-2 md:p-10">
         <div
-          className={`flex justify-center ${
-            index % 2 === 0 ? "md:order-1" : ""
-          }`}
+          className={`flex justify-center ${index % 2 === 0 ? "md:order-1" : ""
+            }`}
         >
           <img
             src={section.image}
@@ -176,7 +175,7 @@ function MobileCardList() {
           key={section.title}
           className="grid w-full max-w-6xl mx-auto gap-6 rounded-2xl border border-white/15 bg-[#0d0d0d]/90 p-5 text-center md:p-6 md:text-left"
         >
-          <div className="flex justify-center order-1"> 
+          <div className="flex justify-center order-1">
             <img
               src={section.image}
               alt={section.title}
@@ -259,7 +258,7 @@ export default function OurBusinessPage() {
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-          <Typography variant="display-2xl" className="max-w-5xl text-white">
+          <Typography variant="display-2xl" className="max-w-5xl text-white font-cormorant">
             Transforming Vision Into Lasting Development
           </Typography>
         </div>

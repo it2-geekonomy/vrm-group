@@ -42,6 +42,12 @@ export type BusinessDetailData = {
   about: AboutSectionData;
   experienceHighlights: {
     sectionTitle?: string;
+    sectionSubtitle?: string;
+    items: ExperienceHighlight[];
+  };
+  experienceHighlights2?: {
+    sectionTitle?: string;
+    sectionSubtitle?: string;
     items: ExperienceHighlight[];
   };
   facilities: FacilityItem[];
