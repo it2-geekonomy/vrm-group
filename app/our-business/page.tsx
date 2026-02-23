@@ -146,11 +146,11 @@ function StackCard({
         </div>
 
         <div className="flex flex-col justify-center">
-          <Typography variant="display-2xl" className="text-white">
+          <Typography variant="display-2xl" className="text-white font-cormorant">
             {section.title}
           </Typography>
 
-          <Typography variant="h2" className="mt-5 leading-relaxed text-white/80">
+          <Typography variant="h2" className="mt-5 leading-relaxed text-white/80 font-cormorant">
             {section.description}
           </Typography>
 
