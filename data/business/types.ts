@@ -32,6 +32,7 @@ export type BusinessDetailData = {
   name: string;
   hero: {
     backgroundImage: string;
+    videoSrc?: string;
     logo: string;
     title: string;
     description: string;
@@ -39,7 +40,10 @@ export type BusinessDetailData = {
     buttonLink: string;
   };
   about: AboutSectionData;
-  experienceHighlights: ExperienceHighlight[];
+  experienceHighlights: {
+    sectionTitle?: string;
+    items: ExperienceHighlight[];
+  };
   facilities: FacilityItem[];
   gallery: GallerySectionData;
   cta: CTASectionData;

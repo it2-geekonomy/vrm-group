@@ -19,22 +19,25 @@ export const exoticBarBistroData: BusinessDetailData = {
     image:
       "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
   },
-  experienceHighlights: [
-    {
-      image:
-        "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
-      title: "Curated menu",
-      description:
-        "A blend of local and international flavours prepared with care and presented with style.",
-    },
-    {
-      image:
-        "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
-      title: "Live entertainment",
-      description:
-        "Regular events and live music to elevate your dining experience.",
-    },
-  ],
+  experienceHighlights: {
+    sectionTitle: "Experience Highlights",
+    items: [
+      {
+        image:
+          "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
+        title: "Curated menu",
+        description:
+          "A blend of local and international flavours prepared with care and presented with style.",
+      },
+      {
+        image:
+          "https://www.figma.com/api/mcp/asset/2a0f7c42-05c7-4283-8481-dea7db4bc2a7",
+        title: "Live entertainment",
+        description:
+          "Regular events and live music to elevate your dining experience.",
+      },
+    ],
+  },
   facilities: [
     { image: "/images/facilities/indoor-outdoor-seating.png", label: "Indoor & Outdoor Seating" },
     { image: "/images/facilities/full-bar.png", label: "Full Bar" },

@@ -6,8 +6,10 @@ import type { ExperienceHighlight } from "@/data/business/types";
 
 export default function ExperienceHighlightsSection({
   highlights,
+  sectionTitle = "Experience Highlights",
 }: {
   highlights: ExperienceHighlight[];
+  sectionTitle?: string;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -51,12 +53,12 @@ export default function ExperienceHighlightsSection({
       <div className="mx-auto w-full max-w-[1200px] sm:w-[90%] md:w-[85%] lg:w-[80%]">
 
         {/* Header */}
-        <div className="mb-6 sm:mb-8 md:mb-12">
+        <div className="mb-6 sm:mb-8 md:mb-12 pl-3 sm:pl-16">
           <Typography
             variant="display-xl"
             className="font-cormorant text-white text-center sm:text-left"
           >
-            Experience Highlights
+            {sectionTitle}
           </Typography>
         </div>
 
@@ -69,7 +71,7 @@ export default function ExperienceHighlightsSection({
             onClick={() => scroll("left")}
             className="bg-black text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center"
           >
-          ←
+            ←
           </button>
 
           {/* Slider */}
@@ -123,7 +125,7 @@ export default function ExperienceHighlightsSection({
             onClick={() => scroll("right")}
             className="bg-black text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center"
           >
-       →
+            →
           </button>
 
         </div>

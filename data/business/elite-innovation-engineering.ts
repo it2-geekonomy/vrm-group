@@ -17,20 +17,23 @@ export const eliteInnovationEngineeringData: BusinessDetailData = {
       "Elite Innovation Engineering delivers precision engineering and innovative solutions for industry and infrastructure. We combine technical expertise with a focus on quality and reliability.",
     image: "/images/pool.jpg",
   },
-  experienceHighlights: [
-    {
-      image: "/images/pool.jpg",
-      title: "Technical expertise",
-      description:
-        "Skilled teams and modern equipment for complex engineering projects.",
-    },
-    {
-      image: "/images/pool.jpg",
-      title: "Innovation focus",
-      description:
-        "Continuous improvement and adoption of best practices and technology.",
-    },
-  ],
+  experienceHighlights: {
+    sectionTitle: "Experience Highlights",
+    items: [
+      {
+        image: "/images/pool.jpg",
+        title: "Technical expertise",
+        description:
+          "Skilled teams and modern equipment for complex engineering projects.",
+      },
+      {
+        image: "/images/pool.jpg",
+        title: "Innovation focus",
+        description:
+          "Continuous improvement and adoption of best practices and technology.",
+      },
+    ],
+  },
   facilities: [
     { image: "/images/facilities/design-engineering.png", label: "Design & Engineering" },
     { image: "/images/facilities/fabrication.png", label: "Fabrication" },
