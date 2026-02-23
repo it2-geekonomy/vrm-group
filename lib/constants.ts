@@ -172,8 +172,8 @@ export const TEAM_MEMBERS = [
   { name: "Padmaja M", image: "/female.png" },
   { name: "Kishore M", image: "/male.png" },
   { name: "Kavya M", image: "/female.png" },
-  { name: "Abhishekar G S", image: "/male.png" },
-  { name: "Meena Poli", image: "/female.png" },
+  { name: "Akhileshwar G S ", image: "/male.png" },
+  { name: "Meenu Puli", image: "/female.png" },
 ];
 
 export const JOURNEY_HEADING = "Our Journey";
