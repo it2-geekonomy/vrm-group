@@ -5,7 +5,7 @@ import Link from "next/link";
 import Typography from "@/lib/typography";
 
 interface HeroBannerProps {
-  backgroundImage: string;
+  videoSrc: string;
   logo: string;
   title: string;
   description: string;
@@ -14,7 +14,7 @@ interface HeroBannerProps {
 }
 
 export default function HeroBanner({
-  backgroundImage,
+  videoSrc,
   logo,
   title,
   description,
@@ -22,14 +22,17 @@ export default function HeroBanner({
   buttonLink,
 }: HeroBannerProps) {
   return (
-    <section
-      className="relative min-h-screen w-full flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 text-center text-white"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="relative min-h-screen w-full flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 text-center text-white overflow-hidden">
+      {/* Background Video */}
+      <video
+        src={videoSrc}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60" />
 
