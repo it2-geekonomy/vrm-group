@@ -155,7 +155,7 @@ function StackCard({
 
           <Link
             href={section.href}
-            className="mt-8 inline-flex w-fit items-center justify-center rounded-full border border-white bg-[#ED1C2475] px-14 py-4 text-white transition hover:bg-[#ed1c24a0]"
+            className="mt-8 inline-flex w-fit items-center justify-center rounded-full border border-white bg-[#ED1C2475] px-14 py-4 text-white transition"
           >
             <Typography variant="body-xl" className="text-white normal-case">
               VIEW MORE
