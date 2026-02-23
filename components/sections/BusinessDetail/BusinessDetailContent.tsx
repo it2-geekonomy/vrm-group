@@ -16,8 +16,8 @@ export default function BusinessDetailContent({ data }: { data: BusinessDetailDa
         sectionSubtitle={data.experienceHighlights.sectionSubtitle}
         highlights={data.experienceHighlights.items}
       />
-      <FacilitiesSection facilities={data.facilities} />
-      <GallerySection data={data.gallery} />
+      {data.facilities && <FacilitiesSection facilities={data.facilities} />}
+      {data.gallery && <GallerySection data={data.gallery} />}
       <CTASection data={data.cta} />
     </main>
   );

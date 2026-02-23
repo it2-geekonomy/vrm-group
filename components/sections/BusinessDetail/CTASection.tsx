@@ -10,7 +10,7 @@ export default function CTASection({ data }: { data: CTASectionData }) {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
         <Typography
   variant="h2"
-  className="text-white font-light text-[1.4rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[2rem] tracking-wide mb-6 sm:mb-8 md:mb-10"
+  className="text-white font-cormorant font-light text-[1.4rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[2rem] tracking-wide mb-6 sm:mb-8 md:mb-10"
 >
   {data.heading}
 </Typography>

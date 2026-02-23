@@ -148,13 +148,13 @@ export interface NavbarBusiness {
 }
 
 export const navbarBusinesses: NavbarBusiness[] = [
-  { name: "Exotic Retreat", image: "/navbardropdown/exoticretreat.webp", href: "/our-business/exotic-retreat" },
-  { name: "Elite Infraa", image: "/navbardropdown/infraa.webp", href: "/our-business/elite-infra" },
-  { name: "Exotic Enterprises", image: "/navbardropdown/exoticenterprises.webp", href: "/our-business/elite-enterprises" },
-  { name: "Exotic Bar & Bistro", image: "/navbardropdown/exoticbar&bistro.webp", href: "/our-business/exotic-bar-bistro" },
-  { name: "Elite Innovation & Engineering", image: "/navbardropdown/eliteinnovation&engineering.webp", href: "/our-business/elite-innovation-engineering" },
-  { name: "Exotic Hospitality", image: "/navbardropdown/exotichospitality.webp", href: "/our-business/exotic-hospitality" },
-  { name: "Greatway International School", image: "/navbardropdown/greatwayinternationalschool.webp", href: "/our-business/school" },
+  { name: "Exotic Retreat", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834904758-exoticretreat.webp", href: "/our-business/exotic-retreat" },
+  { name: "Elite Infraa", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834954008-infraa.webp", href: "/our-business/elite-infra" },
+  { name: "Exotic Enterprises", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834839854-exoticenterprises.webp", href: "/our-business/elite-enterprises" },
+  { name: "Exotic Bar & Bistro", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834814205-exoticbar_bistro.webp", href: "/our-business/exotic-bar-bistro" },
+  { name: "Elite Innovation & Engineering", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834776152-eliteinnovation_engineering.webp", href: "/our-business/elite-innovation-engineering" },
+  { name: "Exotic Hospitality", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834861460-exotichospitality.webp", href: "/our-business/exotic-hospitality" },
+  { name: "Greatway International School", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834920214-greatwayinternationalschool.webp", href: "/our-business/school" },
 ];
 
 // Navbar constants

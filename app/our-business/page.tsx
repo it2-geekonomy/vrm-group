@@ -44,8 +44,8 @@ const businessSections: BusinessSection[] = [
     title: "Exotic Enterprises",
     description:
       "Strategically developed warehousing facilities to support regional enterprise development.",
-    image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771822726858-Exotic_Enterprises_image.webp",
-    href: "/our-business/elite-enterprises",
+    image: "/our-business/Exotic Enterprises image.webp",
+    href: "/our-business/exotic-enterprises",
   },
   {
     title: "Exotic Bar & Bistro",

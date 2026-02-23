@@ -23,7 +23,7 @@ export default function EliteInfraPage() {
           highlights={data.experienceHighlights2.items}
         />
       )}
-      <GallerySection data={data.gallery} />
+      {data.gallery && <GallerySection data={data.gallery} />}
       <CTASection data={data.cta} />
     </main>
   );
