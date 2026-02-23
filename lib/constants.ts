@@ -172,8 +172,8 @@ export const TEAM_MEMBERS = [
   { name: "Padmaja M", image: "/female.png" },
   { name: "Kishore M", image: "/male.png" },
   { name: "Kavya M", image: "/female.png" },
-  { name: "Abhishekar G S", image: "/male.png" },
-  { name: "Meena Poli", image: "/female.png" },
+  { name: "Akhileshwar G S ", image: "/male.png" },
+  { name: "Meenu Puli", image: "/female.png" },
 ];
 
 export const JOURNEY_HEADING = "Our Journey";
@@ -182,7 +182,7 @@ export const JOURNEY_DESCRIPTION =
 
 export const TIMELINE_EVENTS: { year: number | string; title: string; description: string }[] = [
   { year: 2008, title: "GREATWAY INTERNATIONAL SCHOOL", description: "Launch of a fully residential institution nurturing academic and holistic student development." },
-  { year: 2014, title: "VRM GRAND SUITE", description: "Entry into real estate with premium villa development focused on comfort and modern living." },
+  { year: 2014, title: "VRM GRAND STAY", description: "Entry into real estate with premium villa development focused on comfort and modern living." },
   { year: "2015 - 2017", title: "ELITE INFRA EXPANSION", description: "Strengthening presence in construction, brick manufacturing, and infrastructure development." },
   { year: "2016 - 2017", title: "KUBERA HILLS PROJECTS", description: "Development of residential communities promoting sustainable design and refined lifestyles." },
   { year: 2020, title: "EXOTIC ENTERPRISES", description: "Establishment of large-scale warehousing and commercial infrastructure supporting industrial growth." },
