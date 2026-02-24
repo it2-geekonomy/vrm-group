@@ -5,7 +5,7 @@ import Typography from "@/lib/typography";
 
 export default function WhoWeAreSection() {
   return (
-    <section className="w-full bg-black py-6 xl:py-24 border-t border-b border-white/30">
+    <section className="w-full bg-[#090d12] py-6 xl:py-24 border-t border-b border-white/30">
       <div className="w-full max-auto px-6 lg:px-10 xl:px-24 2xl:px-36">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-2 xl:gap-4 items-center">
           

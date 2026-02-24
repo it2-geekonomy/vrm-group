@@ -255,7 +255,7 @@ export default function OurBusinessPage() {
           src="https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771822498911-Transforming_Vision_Into_Lasting_Development_image.webp" alt="Our Business Banner"
           className="h-[58vh] w-full object-cover md:h-[72vh]"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-[#090d12]/40" />
         <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
           <Typography variant="display-2xl" className="max-w-5xl text-white font-cormorant">
             Transforming Vision Into Lasting Development

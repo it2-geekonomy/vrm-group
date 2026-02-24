@@ -157,12 +157,12 @@ export default function BusinessEnquiryForm({ isOpen, onClose }: BusinessEnquiry
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 bg-[#090d12]/70 z-50 flex items-center justify-center p-4"
         onClick={onClose}
       >
         {/* Modal */}
         <div
-          className="bg-black border border-white/20 rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+          className="bg-[#090d12] border border-white/20 rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="p-6 lg:p-8">

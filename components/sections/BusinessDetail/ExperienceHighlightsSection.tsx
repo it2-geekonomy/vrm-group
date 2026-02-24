@@ -112,7 +112,7 @@ export default function ExperienceHighlightsSection({
           <button
             type="button"
             onClick={() => scroll("left")}
-            className={`bg-black text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-black border border-white/20 active:scale-95 ${canScrollLeft ? "opacity-100" : "opacity-0 pointer-events-none"
+            className={`bg-[#090d12] text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-black border border-white/20 active:scale-95 ${canScrollLeft ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
           >
             ←
@@ -167,7 +167,7 @@ export default function ExperienceHighlightsSection({
           <button
             type="button"
             onClick={() => scroll("right")}
-            className={`bg-black text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-black border border-white/20 active:scale-95 ${canScrollRight ? "opacity-100" : "opacity-0 pointer-events-none"
+            className={`bg-[#090d12] text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-black border border-white/20 active:scale-95 ${canScrollRight ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
           >
             →

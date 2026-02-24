@@ -3,7 +3,7 @@ import Typography from "@/components/ui/Typography";
 
 export default function ConnectSection() {
   return (
-    <section className="bg-black py-16 md:py-20 lg:py-24">
+    <section className="bg-[#090d12] py-16 md:py-20 lg:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <Typography 
           variant="display-xl" 

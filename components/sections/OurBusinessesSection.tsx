@@ -351,7 +351,7 @@ export default function OurBusinessesSection() {
                 >
                   <button
                     onClick={handlePrev}
-                    className="w-8 h-8 rounded-full bg-black hover:bg-black/60 flex items-center justify-center transition-colors"
+                    className="w-8 h-8 rounded-full bg-[#090d12] hover:bg-[#090d12]/60 flex items-center justify-center transition-colors"
                     aria-label="Previous"
                   >
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -360,7 +360,7 @@ export default function OurBusinessesSection() {
                   </button>
                   <button
                     onClick={handleNext}
-                    className="w-8 h-8 rounded-full bg-black hover:bg-black/60 flex items-center justify-center transition-colors"
+                    className="w-8 h-8 rounded-full bg-[#090d12] hover:bg-[#090d12]/60 flex items-center justify-center transition-colors"
                     aria-label="Next"
                   >
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
