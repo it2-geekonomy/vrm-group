@@ -3,7 +3,7 @@ import type { BusinessDetailData } from "./types";
 export const SchoolData: BusinessDetailData = {
   name: "School",
   hero: {
-    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4",
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771928530798-GREATWAY_INTERNATIONAL_SCHOOL.mp4",
     logo: "/images/logo.png",
     title: "Nurturing Future Generations",
     description:
