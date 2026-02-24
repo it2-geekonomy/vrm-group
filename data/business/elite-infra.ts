@@ -5,7 +5,7 @@ export const eliteInfraData: BusinessDetailData = {
   hero: {
 
     videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771928560137-ELITE_INFRAA_BRICK_FACTORY_.mp4", // ← replace with your actual video URL
-    logo: "/images/logo.png",
+    logo: "/images/VRM/Exotic-hospitality-2.png",
     title: "Developing Communities with Purpose",
     description:
       "Elite Infra leads VRM Group’s residential and infrastructure initiatives focused on durability, planning and long-term value.",
@@ -93,7 +93,7 @@ export const eliteInfraData: BusinessDetailData = {
         title: "",
         description: "",
       },
-      
+
       {
         image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838785528-paver4.webp",
         title: "",
@@ -118,16 +118,16 @@ export const eliteInfraData: BusinessDetailData = {
     title: "Our Residential Projects",
     subtitle: "Visual highlights capturing ambience, amenities and experiences.",
     images: ["https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837479110-VRM_GRAND_STAY__17_.webp",
-       "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837517500-VRM_GRAND_STAY__64_.webp",
-          "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837650188-VRM_GRAND_STAY__123_.webp" ,
-        "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837910490-VRM_GRAND_STAY__32_.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837517500-VRM_GRAND_STAY__64_.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837650188-VRM_GRAND_STAY__123_.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837910490-VRM_GRAND_STAY__32_.webp",
       "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771837937381-VRM_GRAND_STAY__70_.webp",
-    "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838020306-VRM_GRAND_STAY__60_.webp",
-  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838140005-VRM_GRAND_STAY__30_.webp",
-  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838174623-VRM_GRAND_STAY__125_.webp",
-  "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838198646-VRM_GRAND_STAY__26_.webp",
-"https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838274773-VRM_GRAND_STAY__126_.webp" ,
-"https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838459218-VRM_GRAND_STAY__67_.webp"],
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838020306-VRM_GRAND_STAY__60_.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838140005-VRM_GRAND_STAY__30_.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838174623-VRM_GRAND_STAY__125_.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838198646-VRM_GRAND_STAY__26_.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838274773-VRM_GRAND_STAY__126_.webp",
+      "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771838459218-VRM_GRAND_STAY__67_.webp"],
   },
   cta: {
     heading: "Build Your Vision With Us",
