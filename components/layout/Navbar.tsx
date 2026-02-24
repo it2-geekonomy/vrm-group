@@ -97,7 +97,7 @@ export default function Navbar() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </Link>
-          <div className={`absolute top-full right-0 mt-2 w-[700px] bg-[#1a1a1a] border border-white/20 shadow-xl rounded-md py-6 px-6 z-50 transition-all duration-200 origin-top-right ${isBusinessDropdownOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}>
+          <div className={`absolute top-full right-0 mt-2 w-[700px] bg-[#090d12] border border-white/20 shadow-xl rounded-md py-6 px-6 z-50 transition-all duration-200 origin-top-right ${isBusinessDropdownOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}>
             <div className="grid grid-cols-4 gap-x-6 gap-y-6">
               {navbarBusinesses.map((biz) => (
                 <Link key={biz.name} href={biz.href} className="flex flex-col items-start gap-2 group" onClick={() => setIsBusinessDropdownOpen(false)}>
@@ -181,7 +181,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-black border-b border-white/20 sticky top-0 z-50">
+      <nav className="bg-[#090d12] sticky top-0 z-50">
         <div className="px-4 sm:px-6 lg:px-8 py-1">
           <div className="flex items-center justify-between h-16 md:h-20">
             <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
