@@ -104,7 +104,7 @@ export default function GallerySection({ data }: { data?: GallerySectionData }) 
               <button
                 onClick={() => scroll("left")}
                 className="
-                  bg-black text-white
+                  bg-[#090d12] text-white
                   rounded-full
                   w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12
                   flex items-center justify-center
@@ -141,7 +141,7 @@ export default function GallerySection({ data }: { data?: GallerySectionData }) 
               className="
                 flex gap-4 sm:gap-6 md:gap-8
                 overflow-x-scroll no-scrollbar
-                bg-black
+                bg-[#090d12]
                 w-full
                 h-[200px] sm:h-[280px] md:h-[350px] lg:h-[400px]
               "
@@ -170,7 +170,7 @@ export default function GallerySection({ data }: { data?: GallerySectionData }) 
               <button
                 onClick={() => scroll("right")}
                 className="
-                  bg-black text-white
+                  bg-[#090d12] text-white
                   rounded-full
                   w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12
                   flex items-center justify-center

@@ -28,7 +28,7 @@ export default function LeadershipSection() {
 
   return (
     <section
-      className="w-full bg-black py-4 px-6 lg:px-24 lg:pb-16"
+      className="w-full bg-[#090d12] py-4 px-6 lg:px-24 lg:pb-16"
       ref={containerRef}
     >
       {/* Heading */}

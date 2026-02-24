@@ -81,13 +81,13 @@ export default function HeroBanner({
       />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-[#090d12]/60" />
 
       {/* Mute / Unmute Button */}
       <button
         onClick={toggleMute}
         aria-label={muted ? "Unmute video" : "Mute video"}
-        className="absolute bottom-2 right-2 lg:bottom-6 lg:right-6 z-20 flex items-center gap-2 rounded-full bg-black/50 px-4 py-2 text-white backdrop-blur-sm transition hover:bg-black/70"
+        className="absolute bottom-2 right-2 lg:bottom-6 lg:right-6 z-20 flex items-center gap-2 rounded-full bg-[#090d12]/50 px-4 py-2 text-white backdrop-blur-sm transition hover:bg-[#090d12]/70"
       >
         {muted ? (
           <>

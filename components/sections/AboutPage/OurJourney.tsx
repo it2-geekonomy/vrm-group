@@ -115,7 +115,7 @@ export default function TimelineSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full bg-black py-4 xl:py-24 px-2 sm:px-4 md:px-22 lg:px-4 xl:px-32"
+      className="relative w-full bg-[#090d12] py-4 xl:py-24 px-2 sm:px-4 md:px-22 lg:px-4 xl:px-32"
     >
       {/* HEADER */}
       <div className="mx-auto text-center lg:text-left mb-16 lg:mb-20 lg:px-6">
@@ -212,7 +212,7 @@ export default function TimelineSection() {
 
                 <Typography
                   variant="h4"
-                  className="mt-2 border border-white bg-black/40 px-4 py-3 rounded-lg text-white/90 font-cormorant"
+                  className="mt-2 border border-white bg-[#090d12]/40 px-4 py-3 rounded-lg text-white/90 font-cormorant"
                 >
                   {event.description}
                 </Typography>

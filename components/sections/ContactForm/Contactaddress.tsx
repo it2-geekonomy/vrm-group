@@ -11,7 +11,7 @@ import {
 
 export default function ContactForm() {
   return (
-    <section className="w-full bg-black text-white pt-6 pb-6 xl:pt-24 xl:pb-24 px-3 min-[363px]:px-4 min-[411px]:px-10 sm:px-16 md:pl-6 md:pr-4 lg:px-16 box-border">
+    <section className="w-full bg-[#090d12] text-white pt-6 pb-6 xl:pt-24 xl:pb-24 px-3 min-[363px]:px-4 min-[411px]:px-10 sm:px-16 md:pl-6 md:pr-4 lg:px-16 box-border">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[60%_40%] gap-6 md:gap-3 lg:grid-cols-2 lg:gap-16 items-center min-w-0 w-full">
         {/* Left column – text (stacked: after image; from 768px: left column) */}
         <div className="order-2 md:order-1 flex flex-col justify-center space-y-3 lg:space-y-6 min-w-0 w-full max-w-full overflow-hidden">

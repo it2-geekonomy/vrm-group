@@ -207,8 +207,8 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      <div aria-hidden="true" onClick={closeMobileMenu} className={`fixed inset-0 bg-black/40 z-40 md:hidden transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`} />
-      <div role="dialog" aria-modal="true" aria-label="Navigation menu" className={`fixed left-0 right-0 z-40 md:hidden bg-black shadow-lg overflow-y-auto transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-[110%]"}`} style={{ top: NAVBAR_HEIGHT_MOBILE, maxHeight: `calc(100dvh - ${NAVBAR_HEIGHT_MOBILE}px)` }}>
+      <div aria-hidden="true" onClick={closeMobileMenu} className={`fixed inset-0 bg-[#090d12]/40 z-40 md:hidden transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`} />
+      <div role="dialog" aria-modal="true" aria-label="Navigation menu" className={`fixed left-0 right-0 z-40 md:hidden bg-[#090d12] shadow-lg overflow-y-auto transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-[110%]"}`} style={{ top: NAVBAR_HEIGHT_MOBILE, maxHeight: `calc(100dvh - ${NAVBAR_HEIGHT_MOBILE}px)` }}>
         <div className="flex flex-col divide-y divide-white/20">
           {navLinks.map((link) => <MobileNavLink key={link.href} link={link} />)}
         </div>

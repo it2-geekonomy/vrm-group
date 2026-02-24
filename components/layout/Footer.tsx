@@ -6,7 +6,7 @@ import { footerLeftLinks, footerRightLinks, footerInfo } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-[#090d12] text-white">
       <div className="px-4 sm:px-6 lg:px-20 py-6 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
           {/* Left Section - Company Information */}
@@ -68,7 +68,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="px-4 sm:px-6 lg:px-8 py-2 bg-black border-t border-white/20">
+      <div className="px-4 sm:px-6 lg:px-8 py-2 bg-[#090d12] border-t border-white/20">
         <div className="flex flex-col sm:flex-row justify-between items-center lg:gap-4">
           <Typography variant="body-lg" className="text-white font-cormorant">
             {footerInfo.copyright}

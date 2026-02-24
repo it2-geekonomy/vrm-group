@@ -13,7 +13,7 @@ export default function LastSection() {
             />
 
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-[#090d12]/50" />
 
             {/* Centered Content */}
             <div className="relative z-10 flex items-center justify-center h-full text-center px-2 sm:px-2 md:px-6 lg:px-10 xl:px-24">
