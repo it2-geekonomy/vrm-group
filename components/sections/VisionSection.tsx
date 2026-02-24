@@ -56,6 +56,19 @@ export default function VisionSection() {
                   Your browser does not support the video tag.
                 </video>
               </div>
+              {/* Gradient overlay to hide video edge - top on mobile, left on desktop */}
+              <div 
+                className="absolute inset-x-0 top-0 h-[30%] xl:hidden pointer-events-none z-10"
+                style={{
+                  background: 'linear-gradient(to bottom, #F2FEFA 0%, rgba(242, 254, 250, 0) 100%)'
+                }}
+              />
+              <div 
+                className="hidden xl:block absolute inset-y-0 left-0 w-[30%] pointer-events-none z-10"
+                style={{
+                  background: 'linear-gradient(to right, #F2FEFA 0%, rgba(242, 254, 250, 0) 100%)'
+                }}
+              />
             </div>
           </div>
         </div>

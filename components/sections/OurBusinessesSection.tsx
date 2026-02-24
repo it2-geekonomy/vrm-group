@@ -171,7 +171,7 @@ export default function OurBusinessesSection() {
   const activeBusiness = businesses[activeIndex];
 
   return (
-    <section className="bg-[#1a1a1a] py-12 md:py-16 lg:py-20">
+    <section className="bg-[#090d12] py-12 md:py-16 lg:py-20">
       <div className="px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
