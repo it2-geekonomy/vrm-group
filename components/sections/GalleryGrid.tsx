@@ -56,18 +56,6 @@ export default function GalleryGrid() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  useEffect(() => {
-    const container = scrollRef.current;
-    const secondCard = visibleItems.length >= 2 ? cardRefs.current[1] : null;
-    if (!initialScrollDone.current && container && secondCard) {
-      initialScrollDone.current = true;
-      const scrollLeft =
-        secondCard.offsetLeft - container.offsetWidth / 2 + secondCard.offsetWidth / 2;
-      requestAnimationFrame(() => {
-        if (scrollRef.current) scrollRef.current.scrollLeft = Math.max(0, scrollLeft);
-      });
-    }
-  }, [visibleItems.length, activeTab]);
 
   useLayoutEffect(() => {
     const row = tabsRowRef.current;
@@ -90,16 +78,24 @@ export default function GalleryGrid() {
     return () => ro.disconnect();
   }, [activeTab]);
 
-  // Sticky filter: switch to fixed when filter bar would scroll past navbar
+  // Sticky filter: switch to fixed when filter bar would scroll past navbar (desktop only)
   useEffect(() => {
     const bar = filterBarRef.current;
     if (!bar) return;
 
     const getNavOffset = () => (typeof window !== "undefined" && window.innerWidth >= 768 ? NAVBAR_OFFSET_DESKTOP : NAVBAR_OFFSET_MOBILE);
+    const isDesktop = () => typeof window !== "undefined" && window.innerWidth >= 768;
 
     const updateSticky = () => {
+      // Mobile: never sticky, always in normal position
+      if (!isDesktop()) {
+        setIsFilterSticky(false);
+        return;
+      }
+
+      // Desktop: sticky behavior
       const scrollY = typeof window !== "undefined" ? window.scrollY : 0;
-      // Hysteresis: unstick when above UNSTICK_SCROLL_TOP, stick only when past STICK_SCROLL_TOP (stops mobile shake)
+      // Hysteresis: unstick when above UNSTICK_SCROLL_TOP, stick only when past STICK_SCROLL_TOP
       if (scrollY < UNSTICK_SCROLL_TOP) {
         setIsFilterSticky(false);
         return;
@@ -130,6 +126,37 @@ export default function GalleryGrid() {
     };
   }, []);
 
+
+  // Load more when user scrolls near the bottom (infinite scroll)
+  useEffect(() => {
+    const sentinel = loadMoreSentinelRef.current;
+    if (!sentinel || !hasMore) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setVisibleCount((prev) => prev + LOAD_MORE_COUNT);
+        }
+      },
+      { root: null, rootMargin: "200px", threshold: 0 }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [hasMore, visibleCount]);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    const secondCard = visibleItems.length >= 2 ? cardRefs.current[1] : null;
+    if (!initialScrollDone.current && container && secondCard) {
+      initialScrollDone.current = true;
+      const scrollLeft =
+        secondCard.offsetLeft - container.offsetWidth / 2 + secondCard.offsetWidth / 2;
+      requestAnimationFrame(() => {
+        if (scrollRef.current) scrollRef.current.scrollLeft = Math.max(0, scrollLeft);
+      });
+    }
+  }, [visibleItems.length, activeTab]);
+
   useEffect(() => {
     const container = scrollRef.current;
     const cards = cardRefs.current.slice(0, visibleItems.length).filter(Boolean);
@@ -159,23 +186,6 @@ export default function GalleryGrid() {
       observer.disconnect();
     };
   }, [visibleItems.length]);
-
-  // Load more when user scrolls near the bottom (infinite scroll)
-  useEffect(() => {
-    const sentinel = loadMoreSentinelRef.current;
-    if (!sentinel || !hasMore) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0]?.isIntersecting) {
-          setVisibleCount((prev) => prev + LOAD_MORE_COUNT);
-        }
-      },
-      { root: null, rootMargin: "200px", threshold: 0 }
-    );
-    observer.observe(sentinel);
-    return () => observer.disconnect();
-  }, [hasMore, visibleCount]);
 
   const handleTabChange = (tab: GalleryCategory) => {
     setActiveTab(tab);
