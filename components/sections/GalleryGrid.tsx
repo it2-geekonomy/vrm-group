@@ -3,7 +3,32 @@
 import { useMemo, useState, useRef, useEffect, useLayoutEffect } from "react";
 import Image from "next/image";
 import Typography from "@/components/ui/Typography";
-import { galleryItems, galleryTabs, type GalleryCategory } from "@/lib/constants";
+import { galleryItems, galleryTabs, type GalleryCategory, type GalleryItem } from "@/lib/constants";
+
+/** When showing ALL, interleave by category so the first images aren't all from one category. */
+function interleaveByCategory(items: GalleryItem[]): GalleryItem[] {
+  const categories: Exclude<GalleryCategory, "ALL">[] = [
+    "RESIDENTIAL & INFRASTRUCTURE",
+    "HOSPITALITY & EXPERIENCES",
+    "INDUSTRIAL OPERATIONS",
+    "COMMUNITY & EVENTS",
+  ];
+  const byCategory = categories.map((cat) => items.filter((i) => i.category === cat));
+  const result: GalleryItem[] = [];
+  let index = 0;
+  let hasMore = true;
+  while (hasMore) {
+    hasMore = false;
+    for (const group of byCategory) {
+      if (group[index]) {
+        result.push(group[index]);
+        hasMore = true;
+      }
+    }
+    index++;
+  }
+  return result;
+}
 
 // Sticky filter sits below navbar: mobile nav ~68px, desktop ~84px
 const NAVBAR_OFFSET_MOBILE = 68;
@@ -38,7 +63,7 @@ export default function GalleryGrid() {
 
   const filteredItems = useMemo(() => {
     if (activeTab === "ALL") {
-      return galleryItems;
+      return interleaveByCategory(galleryItems);
     }
     return galleryItems.filter((item) => item.category === activeTab);
   }, [activeTab]);
