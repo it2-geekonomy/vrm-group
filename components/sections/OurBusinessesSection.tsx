@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Typography from "@/components/ui/Typography";
 import { businesses } from "@/lib/constants";
 
@@ -232,23 +233,8 @@ export default function OurBusinessesSection() {
                       />
                     ))}
 
-                    {/* Dot indicators — just above the info bar */}
-                    {isActive && business.images.length > 1 && (
-                      <div className="absolute bottom-[calc(30%+8px)] left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                        {business.images.map((_, i) => (
-                          <button
-                            key={i}
-                            onClick={() => { setImgIndex(i); setImgFadeKey((k) => k + 1); }}
-                            className="w-2 h-2 rounded-full transition-all duration-300"
-                            style={{ background: i === imgIndex ? "#fff" : "rgba(255,255,255,0.4)" }}
-                            aria-label={`Image ${i + 1}`}
-                          />
-                        ))}
-                      </div>
-                    )}
-
                     {/* Info overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-white/90 backdrop-blur-sm p-4 flex flex-col justify-center">
+                    <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 flex flex-col min-h-[35%]">
                       <Typography
                         variant="h1"
                         className="font-cormorant text-black mb-1"
@@ -258,12 +244,42 @@ export default function OurBusinessesSection() {
                       </Typography>
                       <Typography
                         variant="body-lg"
-                        className="font-poppins text-black line-clamp-2"
+                        className="font-poppins text-black line-clamp-2 mb-3"
                         style={isActive ? { animation: `_vrm-fade-up 360ms 130ms ${SPRING} both` } : undefined}
                       >
                         {business.description}
                       </Typography>
+                      {/* View Details Button - Centered */}
+                      {isActive && (
+                        <div className="flex justify-center" style={isActive ? { animation: `_vrm-fade-up 360ms 200ms ${SPRING} both` } : undefined}>
+                          <Link
+                            href={business.href}
+                            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-full bg-[#090d12] hover:bg-[#090d12]/80 text-white text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105"
+                            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+                          >
+                            <span>View Details</span>
+                            <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                        </div>
+                      )}
                     </div>
+
+                    {/* Dot indicators — positioned well above the info overlay */}
+                    {isActive && business.images.length > 1 && (
+                      <div className="absolute bottom-[calc(38%+20px)] left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                        {business.images.map((_, i) => (
+                          <button
+                            key={i}
+                            onClick={() => { setImgIndex(i); setImgFadeKey((k) => k + 1); }}
+                            className="w-2.5 h-2.5 rounded-full transition-all duration-300 shadow-lg"
+                            style={{ background: i === imgIndex ? "#fff" : "rgba(255,255,255,0.6)" }}
+                            aria-label={`Image ${i + 1}`}
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -343,30 +359,45 @@ export default function OurBusinessesSection() {
                   {activeBusiness.description}
                 </Typography>
 
-                {/* Navigation Arrows */}
+                {/* Navigation Controls */}
                 <div
-                  key={`arrows-${animKey}`}
-                  className="flex justify-end gap-2 mt-1.5 lg:mt-1 xl:mt-2 2xl:mt-2.5 shrink-0"
+                  key={`controls-${animKey}`}
+                  className="flex items-center justify-between gap-3 mt-1.5 lg:mt-1 xl:mt-2 2xl:mt-2.5 shrink-0"
                   style={{ animation: `_vrm-fade-up 280ms 540ms ${SPRING} both` }}
                 >
-                  <button
-                    onClick={handlePrev}
-                    className="w-8 h-8 rounded-full bg-[#090d12] hover:bg-[#090d12]/60 flex items-center justify-center transition-colors"
-                    aria-label="Previous"
+                  {/* View Details Button */}
+                  <Link
+                    href={activeBusiness.href}
+                    className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-4 xl:px-5 2xl:px-6 py-1 sm:py-1.5 lg:py-1.5 xl:py-2 rounded-full bg-[#090d12] hover:bg-[#090d12]/80 text-white text-xs sm:text-sm lg:text-sm xl:text-base font-medium transition-all duration-300 hover:scale-105"
+                    style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
                   >
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-                  <button
-                    onClick={handleNext}
-                    className="w-8 h-8 rounded-full bg-[#090d12] hover:bg-[#090d12]/60 flex items-center justify-center transition-colors"
-                    aria-label="Next"
-                  >
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span>View Details</span>
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </button>
+                  </Link>
+
+                  {/* Navigation Arrows */}
+                  <div className="flex gap-2">
+                    <button
+                      onClick={handlePrev}
+                      className="w-8 h-8 rounded-full bg-[#090d12] hover:bg-[#090d12]/60 flex items-center justify-center transition-colors"
+                      aria-label="Previous"
+                    >
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={handleNext}
+                      className="w-8 h-8 rounded-full bg-[#090d12] hover:bg-[#090d12]/60 flex items-center justify-center transition-colors"
+                      aria-label="Next"
+                    >
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
