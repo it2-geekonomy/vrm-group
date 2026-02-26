@@ -128,7 +128,7 @@ export const businesses: Business[] = [
     id: 7,
     name: "Greatway International School",
     description: "Excellence in education with a focus on holistic development.",
-    href: "/our-business/greatway-international-school",
+    href: "/our-business/school",
     images: [
       "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828818041-school.webp",
       "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771832106986-school2.webp",
