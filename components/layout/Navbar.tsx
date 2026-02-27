@@ -90,9 +90,18 @@ export default function Navbar() {
           <Link 
             ref={(el) => { linkRefs.current[link.href] = el; }}
             href={link.href} 
-            className="transition-colors hover:text-primary relative flex items-center gap-1"
+            className="relative overflow-hidden flex items-center gap-1 group"
           >
-            <Typography variant="h4" className="font-cormorant text-white">{link.label}</Typography>
+            <div className="overflow-hidden h-[1.5em]">
+              <div className="flex flex-col transition-transform duration-300 ease-in-out group-hover:-translate-y-[1.5em]">
+                <div className="h-[1.5em] flex items-center shrink-0">
+                  <Typography variant="h4" className="font-cormorant text-white whitespace-nowrap">{link.label}</Typography>
+                </div>
+                <div className="h-[1.5em] flex items-center shrink-0">
+                  <Typography variant="h4" className="font-cormorant whitespace-nowrap bg-gradient-to-r from-[#ed1e24] via-[#ff4d5a] to-[#ed1e24] bg-clip-text text-transparent">{link.label}</Typography>
+                </div>
+              </div>
+            </div>
             <svg className={`w-3 h-3 mt-0.5 transition-transform duration-200 text-white ${isBusinessDropdownOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
@@ -118,9 +127,18 @@ export default function Navbar() {
         <Link 
           ref={(el) => { linkRefs.current[link.href] = el; }}
           href={link.href} 
-          className="transition-colors hover:text-primary relative"
+          className="relative inline-block group"
         >
-          <Typography variant="h4" className="font-cormorant text-white">{link.label}</Typography>
+          <div className="overflow-hidden h-[1.5em]">
+            <div className="flex flex-col transition-transform duration-300 ease-in-out group-hover:-translate-y-[1.5em]">
+              <div className="h-[1.5em] flex items-center shrink-0">
+                <Typography variant="h4" className="font-cormorant text-white whitespace-nowrap">{link.label}</Typography>
+              </div>
+              <div className="h-[1.5em] flex items-center shrink-0">
+                <Typography variant="h4" className="font-cormorant whitespace-nowrap bg-gradient-to-r from-[#ed1e24] via-[#ff4d5a] to-[#ed1e24] bg-clip-text text-transparent">{link.label}</Typography>
+              </div>
+            </div>
+          </div>
         </Link>
       </div>
     );
