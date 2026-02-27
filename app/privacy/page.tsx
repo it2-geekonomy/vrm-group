@@ -7,8 +7,8 @@ export default function PrivacyPolicyPage() {
         <div className="mb-10 sm:mb-12 lg:mb-16">
           <Typography
             variant="display-2xl"
-            className="font-cormorant text-white mb-4 sm:mb-6 text-center lg:text-left"
-          >
+            className="font-cinzel text-white mb-4 sm:mb-6 text-center lg:text-left"
+          > 
             Privacy Policy
           </Typography>
 
@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
           <section className="border-b border-white/10 pb-8 sm:pb-10 lg:pb-12">
             <Typography
               variant="h2"
-              className="font-cormorant text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
+              className="font-cinzel text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
             >
               1. Introduction
             </Typography>
@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
           <section className="border-b border-white/10 pb-8 sm:pb-10 lg:pb-12">
             <Typography
               variant="h2"
-              className="font-cormorant text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
+              className="font-cinzel text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
             >
               2. Information We Collect
             </Typography>
@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
               <div>
                 <Typography
                   variant="h3"
-                  className="font-cormorant text-white mb-3 sm:mb-4 text-lg sm:text-xl lg:text-2xl"
+                  className="font-cinzel text-white mb-3 sm:mb-4 text-lg sm:text-xl lg:text-2xl"
                 >
                   2.1 Personal Information
                 </Typography>
@@ -75,7 +75,7 @@ export default function PrivacyPolicyPage() {
               <div>
                 <Typography
                   variant="h3"
-                  className="font-cormorant text-white mb-3 sm:mb-4 text-lg sm:text-xl lg:text-2xl"
+                  className="font-cinzel text-white mb-3 sm:mb-4 text-lg sm:text-xl lg:text-2xl"
                 >
                   2.2 Automatically Collected Information
                 </Typography>
@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
           <section className="border-b border-white/10 pb-8 sm:pb-10 lg:pb-12">
             <Typography
               variant="h2"
-              className="font-cormorant text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
+              className="font-cinzel text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
             >
               3. How We Use Your Information
             </Typography>
@@ -126,7 +126,7 @@ export default function PrivacyPolicyPage() {
           <section className="border-b border-white/10 pb-8 sm:pb-10 lg:pb-12">
             <Typography
               variant="h2"
-              className="font-cormorant text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
+              className="font-cinzel text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
             >
               4. Information Sharing and Disclosure
             </Typography>
@@ -148,7 +148,7 @@ export default function PrivacyPolicyPage() {
           <section className="border-b border-white/10 pb-8 sm:pb-10 lg:pb-12">
             <Typography
               variant="h2"
-              className="font-cormorant text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
+              className="font-cinzel text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
             >
               5. Data Security
             </Typography>
@@ -164,7 +164,7 @@ export default function PrivacyPolicyPage() {
           <section className="border-b border-white/10 pb-8 sm:pb-10 lg:pb-12">
             <Typography
               variant="h2"
-              className="font-cormorant text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
+              className="font-cinzel text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
             >
               6. Your Rights
             </Typography>
@@ -194,7 +194,7 @@ export default function PrivacyPolicyPage() {
           <section className="border-b border-white/10 pb-8 sm:pb-10 lg:pb-12">
             <Typography
               variant="h2"
-              className="font-cormorant text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
+              className="font-cinzel text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
             >
               7. Cookies and Tracking Technologies
             </Typography>
@@ -210,7 +210,7 @@ export default function PrivacyPolicyPage() {
           <section className="border-b border-white/10 pb-8 sm:pb-10 lg:pb-12">
             <Typography
               variant="h2"
-              className="font-cormorant text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
+              className="font-cinzel text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
             >
               8. Third-Party Links
             </Typography>
@@ -226,7 +226,7 @@ export default function PrivacyPolicyPage() {
           <section className="border-b border-white/10 pb-8 sm:pb-10 lg:pb-12">
             <Typography
               variant="h2"
-              className="font-cormorant text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
+              className="font-cinzel text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
             >
               9. Children's Privacy
             </Typography>
@@ -242,7 +242,7 @@ export default function PrivacyPolicyPage() {
           <section className="border-b border-white/10 pb-8 sm:pb-10 lg:pb-12">
             <Typography
               variant="h2"
-              className="font-cormorant text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
+              className="font-cinzel text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
             >
               10. Changes to This Privacy Policy
             </Typography>
@@ -258,7 +258,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <Typography
               variant="h2"
-              className="font-cormorant text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
+              className="font-cinzel text-white mb-5 sm:mb-6 text-xl sm:text-2xl lg:text-3xl"
             >
               11. Contact Us
             </Typography>

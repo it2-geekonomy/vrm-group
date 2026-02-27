@@ -4,7 +4,7 @@ export const eliteInfraData: BusinessDetailData = {
   name: "Elite Infra",
   hero: {
 
-    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771928560137-ELITE_INFRAA_BRICK_FACTORY_.mp4", // ← replace with your actual video URL
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1772187930894-ELITE_INFRAA_BRICK_FACTORY___1_.mp4", // ← replace with your actual video URL
     logo: "/images/VRM.logos/elite infra-2.png",
     title: "Developing Communities with Purpose",
     description:

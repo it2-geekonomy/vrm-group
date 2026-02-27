@@ -3,7 +3,7 @@ import type { BusinessDetailData } from "./types";
 export const eliteInnovationEngineeringData: BusinessDetailData = {
   name: "Precision Engineering for Modern Industry",
   hero: {
-    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771928673783-VRM_Engineering_.mp4",
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1772188054693-VRM_Innovations.mp4",
     logo: "/images/VRM.logos/Exotic innovation Logo.png",
     title: "Precision Engineering for Modern Industry",
     description:
