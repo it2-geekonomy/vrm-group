@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Typography from "@/lib/typography";
 import {
   CONTACT_HEADING,
@@ -68,7 +69,7 @@ export default function ContactForm() {
 
         {/* Right column – image (stacked: first; from 768px: right column) */}
         <div
-          className="order-1 md:order-2 md:justify-self-end w-[clamp(140px,35vw,360px)] h-[clamp(140px,35vw,360px)] lg:w-[400px] lg:h-[400px] rounded overflow-hidden min-w-0 mx-auto md:mx-0"
+          className="order-1 md:order-2 md:justify-self-end w-[clamp(140px,35vw,360px)] h-[clamp(140px,35vw,360px)] lg:w-[400px] lg:h-[400px] rounded overflow-hidden min-w-0 mx-auto md:mx-0 relative"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -77,6 +78,54 @@ export default function ContactForm() {
             className="w-full h-full object-contain object-center"
             width={400}
             height={400}
+          />
+      
+          <Link
+            href="/our-business/school"
+            className="absolute top-[5%] left-1/2 -translate-x-1/2 w-[22%] h-[18%] cursor-pointer hover:opacity-80 transition-opacity z-10"
+            aria-label="Greatway International School"
+          />
+          
+          {/* Top Right - Elite Innovation & Engineering */}
+          <Link
+            href="/our-business/elite-innovation-engineering"
+            className="absolute top-[15%] right-[8%] w-[22%] h-[18%] cursor-pointer hover:opacity-80 transition-opacity z-10"
+            aria-label="Elite Innovation & Engineering"
+          />
+          
+          {/* Middle Right - Exotic Hospitality */}
+          <Link
+            href="/our-business/exotic-hospitality"
+            className="absolute top-[40%] right-[5%] w-[22%] h-[18%] cursor-pointer hover:opacity-80 transition-opacity z-10"
+            aria-label="Exotic Hospitality"
+          />
+          
+          {/* Bottom Right - Exotic Retreat */}
+          <Link
+            href="/our-business/exotic-retreat"
+            className="absolute bottom-[15%] right-[8%] w-[22%] h-[18%] cursor-pointer hover:opacity-80 transition-opacity z-10"
+            aria-label="Exotic Retreat"
+          />
+          
+          {/* Bottom - Exotic Enterprises */}
+          <Link
+            href="/our-business/exotic-enterprises"
+            className="absolute bottom-[5%] left-1/2 -translate-x-1/2 w-[22%] h-[18%] cursor-pointer hover:opacity-80 transition-opacity z-10"
+            aria-label="Exotic Enterprises"
+          />
+          
+          {/* Bottom Left - Elite Infraa */}
+          <Link
+            href="/our-business/elite-infra"
+            className="absolute bottom-[15%] left-[8%] w-[22%] h-[18%] cursor-pointer hover:opacity-80 transition-opacity z-10"
+            aria-label="Elite Infraa"
+          />
+          
+          {/* Middle Left - Exotic Bar & Bistro */}
+          <Link
+            href="/our-business/exotic-bar-bistro"
+            className="absolute top-[40%] left-[5%] w-[22%] h-[18%] cursor-pointer hover:opacity-80 transition-opacity z-10"
+            aria-label="Exotic Bar & Bistro"
           />
         </div>
       </div>
