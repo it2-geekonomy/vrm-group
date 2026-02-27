@@ -4,7 +4,7 @@ export const SchoolData: BusinessDetailData = {
   name: "School",
   hero: {
     videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771928530798-GREATWAY_INTERNATIONAL_SCHOOL.mp4",
-    logo: "/images/VRM/Exotic-hospitality-3.png",
+    logo: "/images/VRM.logos/greatway school.png",
     title: "Nurturing Future Generations",
     description:
       "The educational initiative within VRM Group contributes to community development through structured learning environments and holistic student growth.",

@@ -4,7 +4,7 @@ export const eliteEnterprisesData: BusinessDetailData = {
   name: "Exotic Enterprises",
   hero: {
     videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // fallback video
-    logo: "/images/logo.png",
+    logo: "/images/VRM.logos/EXOTIC ENTERPRISES.png",
     title: "Strategic Warehousing & Industrial Growth",
     description:
       "Strategically developed warehousing facilities supporting industrial growth.",

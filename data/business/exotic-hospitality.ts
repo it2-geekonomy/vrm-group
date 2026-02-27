@@ -5,7 +5,7 @@ export const exoticHospitalityData = {
   hero: {
     videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771928602874-excotic_Hospitality.mp4",
     backgroundImage: "/images/hospitality-hero.jpg",
-    logo: "/images/VRM/Exotic-hospitality-1.png",
+    logo: "/images/VRM.logos/Exotic-hospitality-1.png",
     title: "Residential Property Management, Delivered with Professional Care",
     description:
       "Exotic Hospitality, a venture under VRM Group, is a dedicated residential property management company focused on protecting, maintaining, and enhancing the value of residential assets. We manage properties with a structured, professional approach that ensures smooth operations, reliable maintenance and complete peace of mind for property owners.",

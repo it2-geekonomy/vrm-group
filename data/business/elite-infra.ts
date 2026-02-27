@@ -5,7 +5,7 @@ export const eliteInfraData: BusinessDetailData = {
   hero: {
 
     videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771928560137-ELITE_INFRAA_BRICK_FACTORY_.mp4", // ← replace with your actual video URL
-    logo: "/images/VRM/Exotic-hospitality-2.png",
+    logo: "/images/VRM.logos/elite infra-2.png",
     title: "Developing Communities with Purpose",
     description:
       "Elite Infra leads VRM Group’s residential and infrastructure initiatives focused on durability, planning and long-term value.",
