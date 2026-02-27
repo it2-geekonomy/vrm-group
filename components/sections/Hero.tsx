@@ -118,7 +118,7 @@ export default function Hero() {
           <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <Link
               href="/our-business"
-              className="inline-flex items-center justify-center rounded-2xl border border-white px-8 py-3 md:px-10 md:py-3.5 text-white transition bg-[#ED1C2475] shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]"
+              className="btn-animated inline-flex items-center justify-center rounded-2xl border border-white px-8 py-3 md:px-10 md:py-3.5 text-white bg-[#ED1C2475] shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]"
             >
               <Typography variant="h4" className="font-cormorant text-white">
                 Explore Our Businesses
@@ -126,7 +126,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-2xl border border-white px-8 py-3 md:px-10 md:py-3.5 text-white transition bg-[#ED1C2475] shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]"
+              className="btn-animated inline-flex items-center justify-center rounded-2xl border border-white px-8 py-3 md:px-10 md:py-3.5 text-white bg-[#ED1C2475] shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]"
             >
               <Typography variant="h4" className="font-cormorant text-white">
                 Make an Enquiry

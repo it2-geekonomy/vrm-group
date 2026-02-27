@@ -28,18 +28,18 @@ export default function CTASection({ data, onEnquiryClick }: CTASectionProps) {
         {onEnquiryClick ? (
           <button
             onClick={onEnquiryClick}
-            className="inline-flex items-center justify-center rounded-full px-10 sm:px-12 md:px-16 py-2 md:py-3 text-white font-bold uppercase tracking-wider text-lg bg-[#ED1C2475] border border-white transition-all duration-300 cursor-pointer"
+            className="btn-animated inline-flex items-center justify-center rounded-full px-10 sm:px-12 md:px-16 py-2 md:py-3 text-white font-bold uppercase tracking-wider text-lg bg-[#ED1C2475] border border-white cursor-pointer"
             style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
           >
-            {data.buttonText}
+            <span>{data.buttonText}</span>
           </button>
         ) : (
           <Link
             href={data.buttonLink}
-            className="inline-flex items-center justify-center rounded-full px-10 sm:px-12 md:px-16 py-2 md:py-3 text-white font-bold uppercase tracking-wider text-lg bg-[#ED1C2475] border border-white transition-all duration-300"
+            className="btn-animated inline-flex items-center justify-center rounded-full px-10 sm:px-12 md:px-16 py-2 md:py-3 text-white font-bold uppercase tracking-wider text-lg bg-[#ED1C2475] border border-white"
             style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
           >
-            {data.buttonText}
+            <span>{data.buttonText}</span>
           </Link>
         )}
       </div>

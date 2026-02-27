@@ -155,7 +155,7 @@ function StackCard({
 
           <Link
             href={section.href}
-            className="mt-8 inline-flex w-fit items-center justify-center rounded-full border border-white bg-[#ED1C2475] px-14 py-4 text-white transition"
+            className="btn-animated mt-8 inline-flex w-fit items-center justify-center rounded-full border border-white bg-[#ED1C2475] px-14 py-4 text-white"
           >
             <Typography variant="body-xl" className="text-white normal-case">
               VIEW MORE
@@ -191,7 +191,7 @@ function MobileCardList() {
             </Typography>
             <Link
               href={section.href}
-              className="mt-6 inline-flex w-fit items-center justify-center rounded-full border border-white bg-[#ED1C2475] px-10 py-3 text-white transition hover:bg-[#ed1c24a0] md:mt-8 md:px-14 md:py-4"
+              className="btn-animated mt-6 inline-flex w-fit items-center justify-center rounded-full border border-white bg-[#ED1C2475] px-10 py-3 text-white md:mt-8 md:px-14 md:py-4"
             >
               <Typography variant="overline" className="text-white normal-case">
                 VIEW MORE

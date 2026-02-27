@@ -175,7 +175,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={loading}
-                className={`cursor-pointer px-12 py-2 rounded-full border border-gray-300 transition-all duration-300 ${
+                className={`btn-animated cursor-pointer px-12 py-2 rounded-full border border-gray-300 ${
                   loading
                     ? "bg-gray-500 cursor-not-allowed"
                     : "bg-[#ED1C2475]"
