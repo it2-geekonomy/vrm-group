@@ -93,7 +93,7 @@ export default function Navbar() {
             className="relative overflow-hidden flex items-center gap-1 group"
           >
             <div className="overflow-hidden h-[1.5em]">
-              <div className="flex flex-col transition-transform duration-300 ease-in-out group-hover:-translate-y-[1.5em]">
+              <div className="flex flex-col transition-transform duration-500 ease-in-out group-hover:-translate-y-[1.5em]">
                 <div className="h-[1.5em] flex items-center shrink-0">
                   <Typography variant="h4" className="font-cormorant text-white whitespace-nowrap">{link.label}</Typography>
                 </div>
@@ -130,7 +130,7 @@ export default function Navbar() {
           className="relative inline-block group"
         >
           <div className="overflow-hidden h-[1.5em]">
-            <div className="flex flex-col transition-transform duration-300 ease-in-out group-hover:-translate-y-[1.5em]">
+            <div className="flex flex-col transition-transform duration-500 ease-in-out group-hover:-translate-y-[1.5em]">
               <div className="h-[1.5em] flex items-center shrink-0">
                 <Typography variant="h4" className="font-cormorant text-white whitespace-nowrap">{link.label}</Typography>
               </div>
