@@ -3,7 +3,7 @@ import type { BusinessDetailData } from "./types";
 export const eliteEnterprisesData: BusinessDetailData = {
   name: "Exotic Enterprises",
   hero: {
-    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // fallback video
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1772188005888-WARE_HOUSE_1.mp4", 
     logo: "/images/VRM.logos/EXOTIC ENTERPRISES.png",
     title: "Strategic Warehousing & Industrial Growth",
     description:

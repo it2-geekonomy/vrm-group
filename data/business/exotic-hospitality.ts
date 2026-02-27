@@ -3,7 +3,7 @@ import type { BusinessDetailData } from "./types";
 export const exoticHospitalityData = {
   name: "Exotic Hospitality",
   hero: {
-    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771928602874-excotic_Hospitality.mp4",
+    videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1772188106371-K_BLOCK_Interior.mp4",
     backgroundImage: "/images/hospitality-hero.jpg",
     logo: "/images/VRM.logos/Exotic-hospitality-1.png",
     title: "Residential Property Management, Delivered with Professional Care",
