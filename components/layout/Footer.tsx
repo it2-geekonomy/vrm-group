@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="flex flex-col items-center lg:items-start pr-0 lg:pr-12 pb-8 lg:pb-0 mb-8 lg:mb-0 lg:border-r-2 border-white">
             <Link href="/" className="mb-6">
               <Image
-                src="/logo.png"
+                src="https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1772174921691-logo__3_.png"
                 alt="VRM Group Logo"
                 width={150}
                 height={50}
