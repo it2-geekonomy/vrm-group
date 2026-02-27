@@ -203,7 +203,7 @@ export default function Navbar() {
         <div className="px-4 sm:px-6 lg:px-8 py-1">
           <div className="flex items-center justify-between h-16 md:h-20">
             <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
-              <Image src="/logo.png" alt="VRM Group Logo" width={120} height={40} className="w-auto" priority />
+              <Image src="https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1772174921691-logo__3_.png" alt="VRM Group Logo" width={120} height={40} className="w-auto" priority />
             </Link>
             <div ref={containerRef} className="hidden md:flex items-center space-x-6 lg:space-x-8 nav-links-container relative">
               {navLinks.map((link) => <DesktopNavLink key={link.href} link={link} />)}
