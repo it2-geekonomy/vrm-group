@@ -5,7 +5,7 @@ export const exoticEnterprisesData: BusinessDetailData = {
 
   hero: {
     videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // fallback video
-    logo: "/our-business inside/exotic-enterprises/exotic-enterprises image1.webp",
+    logo: "/images/VRM.logos/EXOTIC ENTERPRISES.png",
     title: "Infrastructure Supporting Industry",
     description:
       "Exotic Enterprises delivers warehousing and commercial storage solutions positioned to support industrial growth and logistics continuity.",

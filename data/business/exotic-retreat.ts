@@ -5,7 +5,7 @@ export const exoticRetreatData: BusinessDetailData = {
   hero: {
 
     videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1771928480842-excotic_Retreat__1_.mp4", // fallback video
-    logo: "/images/logo.png",
+    logo: "/images/VRM.logos/EXOTIC RETREAT - FINAL LOGO.png",
     title: "A Destination Designed for Relaxation and Celebration",
     description:
       "Exotic Retreat offers a refined hospitality experience combining comfort, ambience and thoughtful amenities, ideal for leisure stays, gatherings and events.",

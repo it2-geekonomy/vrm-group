@@ -5,7 +5,7 @@ export const exoticBarBistroData: BusinessDetailData = {
   hero: {
 
     videoSrc: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771743800305-IMG_2789.MP4", // fallback video
-    logo: "/images/logo.png",
+    logo: "/images/VRM.logos/exotic bar & bistro logo.png",
     title: "Where Dining Meets Atmosphere",
     description:
       "Exotic Bar & Bistro delivers a curated social and culinary environment designed for gatherings, celebrations and relaxed evenings. ",

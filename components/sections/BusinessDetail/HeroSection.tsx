@@ -113,13 +113,13 @@ export default function HeroBanner({
       {/* Mobile logo – top-right with gradient background */}
       {logo ? (
         <div
-          className="absolute top-0 right-0 z-20 sm:hidden h-[120px] w-[80px] flex items-start justify-center p-3 backdrop-blur-[1px] transition-all duration-300"
+          className="absolute top-0 right-0 z-20 sm:hidden h-[100px] w-[80px] flex items-start justify-center p-3 backdrop-blur-[1px] transition-all duration-300"
           style={{
             background:
               "linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 28%, rgba(255,255,255,0.45) 55%, rgba(255,255,255,0.12) 70%, rgba(255,255,255,0) 80%)",
           }}
         >
-          <div className="relative w-full aspect-square max-w-[80%]">
+          <div className="relative w-full aspect-square max-w-[100%]">
             <Image
               src={logo}
               alt="Logo"
@@ -134,7 +134,7 @@ export default function HeroBanner({
       {/* Desktop/laptop dynamic logo with gradient corner background */}
       {logo ? (
         <div
-          className="hidden sm:flex absolute top-0 right-0 z-20 h-[200px] w-[130px] sm:h-[220px] sm:w-[150px] md:h-[250px] md:w-[170px] lg:h-[280px] lg:w-[190px] xl:h-[320px] xl:w-[220px] items-start justify-center p-3 md:p-4 lg:p-6 backdrop-blur-[1px] transition-all duration-300"
+          className="hidden sm:flex absolute top-0 right-0 z-20   sm:h-[130px] sm:w-[100px] md:h-[150px] md:w-[120px] lg:h-[200px] lg:w-[170px] xl:h-[260px] xl:w-[200px] items-start justify-center p-3 md:p-4 lg:p-6 backdrop-blur-[1px] transition-all duration-300"
           style={{
             background:
               "linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 28%, rgba(255,255,255,0.45) 55%, rgba(255,255,255,0.12) 70%, rgba(255,255,255,0) 80%)",
