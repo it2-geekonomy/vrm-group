@@ -299,7 +299,7 @@ export default function BusinessEnquiryForm({ isOpen, onClose }: BusinessEnquiry
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-8 py-3 bg-[#ED1C2475] border border-white text-white font-cormorant text-lg rounded-lg hover:bg-[#ED1C24] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="btn-animated px-8 py-3 bg-[#ED1C2475] border border-white text-white font-cormorant text-lg rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? "Submitting..." : "Submit Enquiry"}
                 </button>

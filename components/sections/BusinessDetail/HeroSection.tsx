@@ -172,24 +172,24 @@ export default function HeroBanner({
         {onEnquiryClick ? (
           <button
             onClick={onEnquiryClick}
-            className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border border-white shadow-md transition-all duration-300 cursor-pointer"
+            className="btn-animated inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border border-white shadow-md cursor-pointer"
             style={{
               fontFamily: "Arial, Helvetica, sans-serif",
               background: "#ED1C2475",
             }}
           >
-            {buttonText}
+            <span>{buttonText}</span>
           </button>
         ) : (
           <Link
             href={buttonLink}
-            className="inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border border-white shadow-md transition-all duration-300"
+            className="btn-animated inline-flex items-center justify-center mt-8 px-10 sm:px-14 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold uppercase tracking-wide text-white border border-white shadow-md"
             style={{
               fontFamily: "Arial, Helvetica, sans-serif",
               background: "#ED1C2475",
             }}
           >
-            {buttonText}
+            <span>{buttonText}</span>
           </Link>
         )}
       </div>
