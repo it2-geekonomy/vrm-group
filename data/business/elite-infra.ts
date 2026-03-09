@@ -104,6 +104,16 @@ export const eliteInfraData: BusinessDetailData = {
         title: "",
         description: "",
       },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1773047617835-450mm.webp",
+        title: "",
+        description: "",
+      },
+      {
+        image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/ourbusiness/1773047642363-speedbreaker.webp",
+        title: "",
+        description: "",
+      },
     ],
   },
   facilities: [
