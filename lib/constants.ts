@@ -102,9 +102,9 @@ export const businesses: Business[] = [
   },
   {
     id: 5,
-    name: "Elite Innovation & Engineering",
+    name: "Exotic Innovation and Engineering",
     description: "Cutting-edge engineering solutions and innovative technologies.",
-    href: "/our-business/elite-innovation-engineering",
+    href: "/our-business/exotic-innovation-engineering",
     images: [
       "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/homepage/1771828761359-exotic_engineering_image.webp",
       "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/gallery/1771832040082-exotic_innovation2.webp",
@@ -150,7 +150,7 @@ export const navbarBusinesses: NavbarBusiness[] = [
   { name: "Elite Infraa", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834954008-infraa.webp", href: "/our-business/elite-infra" },
   { name: "Exotic Enterprises", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834839854-exoticenterprises.webp", href: "/our-business/exotic-enterprises" },
   { name: "Exotic Bar & Bistro", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834814205-exoticbar_bistro.webp", href: "/our-business/exotic-bar-bistro" },
-  { name: "Elite Innovation & Engineering", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834776152-eliteinnovation_engineering.webp", href: "/our-business/elite-innovation-engineering" },
+  { name: "Exotic Innovation and Engineering", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834776152-eliteinnovation_engineering.webp", href: "/our-business/elite-innovation-engineering" },
   { name: "Exotic Hospitality", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834861460-exotichospitality.webp", href: "/our-business/exotic-hospitality" },
   { name: "Greatway International School", image: "https://pub-8ef2b42cbdf94e97a856dc5176f846d8.r2.dev/website/others/1771834920214-greatwayinternationalschool.webp", href: "/our-business/school" },
 ];
